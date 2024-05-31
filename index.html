@@ -1,38 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bacca Bucci | Explore The Treasure Of Sneakers</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Coustard:wght@400;900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+        .swiper-pagination-bullet-active {
+            width: 12px;
+            height: 12px;
+            
+        }
+
     
-    <div class="main-container">
+        .swiper-pagination-bullet{
+            background: #f7f9fa;
+            opacity: 1;
 
-        <section class="hero">
-        </section>
+        }
+    </style>
 
-        <section class="category">
-        </section>
+  </head>
+  <body>
+    <div class="main-container w-full">
+      <div
+        class="navbar w-full h-[80px] bg-brand_yellow fixed transition-all z-20"
+      >
+        <i
+          class="checkbtn fa fa-bars block text-[white] text-[36px] float-start m-4 md:opacity-0"
+        ></i>
 
-        <section class="best-seller">
-        </section>
+        <label class="logo float-left my-4">
+          <img class="w-8 h-fit" src="media/Bacca Bucci.webp" alt="" />
+        </label>
 
-        <section class="collection">
-        </section>
+        <ul
+          class="right flex h-[100%] items-center justify-evenly w-[30%] float-right text-lg text-[#4E3505]"
+        >
+          <li>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-bag-shopping"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-user"></i>
+          </li>
+        </ul>
 
-        <section class="featured">
-        </section>
+        <ul
+          class="center fixed top-[80px] left-[-1000px] block text-center bg-brand_yellow w-11/12 font-[Anton] text-[#4E3505] shadow-lg text-lg transition-all ease-in-out duration-1000 md:flex justify-center gap-10 md:shadow-none md:top-0 md:bg-opacity-0 md:h-[80px] items-center md:left-0 md:transition-none border-8 border-brand_yellow"
+        >
+          <li
+            class="p-10 font-bold border-8 border-brand_yellow md:border-none md:p-0 bg-[#FADDA6] md:bg-opacity-0"
+          >
+            <a href="#">Men</a>
+          </li>
 
-        <section class="season">
-        </section>
+          <li
+            class="p-10 font-bold border-8 border-brand_yellow :border-none md:p-0 bg-[#FADDA6] md:bg-opacity-0"
+          >
+            <a href="# ">Women</a>
+          </li>
 
-        <section class="footer">
-        </section>
+          <li
+            class="p-10 font-bold border-8 border-brand_yellow md:border-none md:p-0 bg-[#FADDA6] md:bg-opacity-0"
+          >
+            <a href="#">Accessories</a>
+          </li>
 
+          <li
+            class="p-10 font-bold border-8 border-brand_yellow md:border-none md:p-0 bg-[#FADDA6] md:bg-opacity-0"
+          >
+            <a href="#">Collections</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="heroSlider">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper ">
+            <div class="swiper-slide bg-brand_yellow">
+              <img class="m-auto w-[90%]" src="media/hero1.png" alt="" />
+            </div>
+            <div class="swiper-slide bg-brand_yellow">
+              <iframe
+                class="w-[90%] aspect-video m-auto"
+                src="https://www.youtube.com/embed/DY9C-3lQIzE?list=TLGGArGWn_hfqykzMTA1MjAyNA"
+                title="Discover Allure of Bacca Bucci Boots | A Cinematic Boot Adventure | Unleashing Essence of Adventure"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="swiper-slide bg-brand_yellow">
+              <img class="m-auto w-[90%]" src="media/slider3.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <section class="category"></section>
+
+      <section class="best-seller"></section>
+
+      <section class="collection"></section>
+
+      <section class="featured"></section>
+
+      <section class="season"></section>
+
+      <section class="footer"></section>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-</body>
+    
+  </body>
 </html>
