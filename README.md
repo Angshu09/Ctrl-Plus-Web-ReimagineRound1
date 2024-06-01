@@ -7,8 +7,13 @@ Run the code in the terminal
 
 #To install node modules#
 
+```bash
 npm i
+```
 
 #To run the website #
 
+```bash
 npm run start
+```
+
