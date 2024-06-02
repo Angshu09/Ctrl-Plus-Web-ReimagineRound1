@@ -64,3 +64,60 @@ var swiper = new Swiper(".mySwiper", {
       },
     },
   });
+
+  $('.playbutton').hover(function(){
+    swiper.autoplay.stop();
+  }, function(){
+    swiper.autoplay.start();
+  });
+  
+  $('.video').hover(function(){
+    swiper.autoplay.stop();
+  }, function(){
+    swiper.autoplay.start();
+  });
+  
+  $('.swiper-slide').mouseleave(function(){
+    let iframe=document.querySelector('iframe');
+    if(iframe){
+      var iframeSrc=iframe.src;
+      iframe.src=iframeSrc;
+    }
+  });
+
+
+ 
+  
+  
+
+  
+  const playbutton= document.querySelector('.playbutton');
+  const backbutton= document.querySelector('.backbutton');
+  const videoEl = document.querySelector('.video');
+  const videoImageEl= document.querySelector('.videoImage');
+
+  playbutton.addEventListener('click',()=>{
+    playbutton.classList.add('hidden');
+    backbutton.classList.remove('hidden');
+    videoEl.classList.remove('hidden');
+    videoImageEl.classList.add('hidden');
+  })
+  backbutton.addEventListener('click',()=>{
+    playbutton.classList.remove('hidden');
+    backbutton.classList.add('hidden');
+    videoEl.classList.add('hidden');
+    videoImageEl.classList.remove('hidden');
+
+    let iframe=document.querySelector('iframe');
+    if(iframe){
+      var iframeSrc=iframe.src;
+      iframe.src=iframeSrc;
+    }
+  })
+
+  
+
+
+
+
+
