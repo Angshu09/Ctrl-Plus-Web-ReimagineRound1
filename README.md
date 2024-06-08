@@ -1,14 +1,18 @@
 # Ctrl-Plus-Web-ReimagineRound1
-This is the repo of Reimagine round 1
+**This is the repo of Reimagine round 1**
 
-##Run the following in bash/terminal
+## Run the following in bash/terminal
 
-#To install node modules folder
+### To install node modules folder
 
-`npm i`
+```bash
+npm i
+```
 
-#To run the app
+### To run the app
 
-`npm run start`
+```bash
+npm run start
+```
 
 

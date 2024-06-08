@@ -83,6 +83,11 @@ var swiper = new Swiper(".mySwiper", {
       var iframeSrc=iframe.src;
       iframe.src=iframeSrc;
     }
+    playbutton.classList.remove('hidden');
+    backbutton.classList.add('hidden');
+    videoEl.classList.add('hidden');
+    videoImageEl.classList.remove('hidden');
+
   });
 
 
@@ -114,6 +119,94 @@ var swiper = new Swiper(".mySwiper", {
       iframe.src=iframeSrc;
     }
   })
+
+  var swiper2 = new Swiper(".tabSlider", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    loop:true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+
+  const tabEls=document.querySelectorAll('.tab')
+
+  const tabLabelEls=document.querySelectorAll('.tab-label')
+
+  tabLabelEls.forEach((element, idx) => {
+    
+    element.addEventListener('click',()=>{
+      tabEls.forEach((item,index) => {
+        if(idx===index){
+          item.classList.remove('hidden');
+        }else{
+          item.classList.add('hidden');
+        }
+        
+      });
+      element.classList.add('active');
+      tabLabelEls.forEach((item, index) => {
+        if(idx!==index){
+          item.classList.remove('active');
+        }
+      });
+    })
+    
+    
+  });
+
+
+
+  var swiper3 = new Swiper(".featuredSwiperBelow", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    autoplay:{
+      delay: 2500,
+      disableOnInteraction:false,
+  },
+    
+  });
+  var swiper4 = new Swiper(".featuredSwiper", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay:{
+      delay: 2500,
+      disableOnInteraction:false,
+  },
+    thumbs: {
+      swiper: swiper3,
+    },
+  });
+
+  const shoeSizeEls=document.querySelectorAll('.size');
+
+  shoeSizeEls.forEach((element, idx) => {
+    element.addEventListener('click', ()=>{
+      element.classList.add('active');
+
+      document.querySelector('.sizeDisplay').innerHTML=`Size : ${element.innerHTML}`
+      shoeSizeEls.forEach((item, index) => {
+        if(idx!==index){
+          item.classList.remove('active');
+        }
+      });
+      
+    });
+
+    
+    
+  });
+
+
 
   
 
