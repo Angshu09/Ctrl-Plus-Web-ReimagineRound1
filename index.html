@@ -29,6 +29,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <style>
+      .custom-left{
+        left: calc(50% - 11rem);
+      }
+
       .swiper-pagination-bullet-active {
         width: 12px;
         height: 12px;
@@ -175,7 +179,48 @@
           </div>
         </div>
 
-       
+        <div class="collections-container mt-10 flex flex-col md:flex-row justify-between">
+          <div class="left w-full md:w-[30%] flex pl-7 md:p-0 md:justify-center items-center">
+            <div>
+              <div class="mt-3 font-[Lora]">
+                <h1
+                  class="text-5xl lg:text-6xl tracking-tighter font-semibold text-[#054E35]"
+                >
+                  New
+                </h1>
+                <h1
+                  class="text-5xl md:text-4xl lg:text-6xl font-semibold tracking-tighter text-[#076173]"
+                >
+                  Collections
+                </h1>
+              </div>
+              <div class="mt-5">
+                <button
+                  class="bg-[#4E3505] hover:animate-pulse text-center font-[Arvo] rounded-full py-3 px-4 bor text-xl text-brand_yellow"
+                >
+                  View All >>>
+                </button>
+              </div>
+            </div>
+          </div>
+    
+          <div
+            class="right bg-[#FF794A] w-full md:w-[70%] mt-9  flex items-center pb-3 pt-14 gap-5 justify-center flex-col md:rounded-l-[20px]"
+          >
+            <div
+              class="collection-slider relative z-10 h-[22rem] w-full overflow-hidden"
+            >   
+
+            </div>
+
+            <div class="flex gap-6">
+              <button id="prev" class=""><i class="fa-solid fa-circle-arrow-left text-4xl text-[#4E3505] hover:animate-pulse transition-all"></i></button>
+              <button id="next" class=""><i class="fa-solid fa-circle-arrow-right text-4xl text-[#4E3505] hover:animate-pulse transition-all"></i></button>
+            </div>
+          </div>
+
+        </div>
+
       </section>
 
       <section class="collection"></section>
