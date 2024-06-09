@@ -1,3 +1,5 @@
+// Navbar Handling
+
 const checkbtnEl = document.querySelector(".checkbtn");
 
 const centerEl = document.querySelector(".center");
@@ -6,6 +8,7 @@ const navEl=document.querySelector(".navbar")
 
 
 let screenWidth= window.innerWidth
+
 
 
 function handleNavbar(){
@@ -51,6 +54,8 @@ window.addEventListener('resize',()=>{
     
 })
 
+// HeroSlider 
+
 var swiper = new Swiper(".mySwiper", {
     loop:true,
     autoplay:{
@@ -91,11 +96,6 @@ var swiper = new Swiper(".mySwiper", {
 
   });
 
-
- 
-  
-  
-
   
   const playbutton= document.querySelector('.playbutton');
   const backbutton= document.querySelector('.backbutton');
@@ -120,6 +120,10 @@ var swiper = new Swiper(".mySwiper", {
       iframe.src=iframeSrc;
     }
   })
+
+
+
+  // Best Collection
 
   var swiper2 = new Swiper(".tabSlider", {
     slidesPerView: 'auto',
@@ -158,6 +162,7 @@ var swiper = new Swiper(".mySwiper", {
     
   });
 
+  // Featured Product 
 
 
   var swiper3 = new Swiper(".featuredSwiperBelow", {
