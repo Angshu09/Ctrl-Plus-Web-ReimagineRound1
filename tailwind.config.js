@@ -2,7 +2,11 @@
 module.exports = {
   content: ["*"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'custom': '415px',
+      },
+    },
     colors:{
       brand_yellow:'#F5C15C'
     },
