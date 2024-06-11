@@ -338,3 +338,17 @@ fillBestSellerWrapper();
     
     
   });
+
+  //Footer 
+function changeBannerImage(){
+  const img = document.querySelector('.footer-banner-img')
+  if (window.innerWidth <= 768) {
+    img.src = 'media/smallBanner.jpg';
+  }
+  else{
+    img.src = 'media/banner.jpg';
+  } 
+}
+
+window.addEventListener('resize', changeBannerImage);
+window.addEventListener('DOMContentLoaded', changeBannerImage);
