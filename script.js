@@ -339,14 +339,14 @@ fillBestSellerWrapper();
     
   });
 
-  //Footer 
+//Footer 
 function changeBannerImage(){
   const img = document.querySelector('.footer-banner-img')
   if (window.innerWidth <= 768) {
-    img.src = 'media/smallBanner.jpg';
+    img.src = 'https://res.cloudinary.com/dojcchveo/image/upload/v1718272363/baccabucci/footer/lnzeezctpp3p7obpeauo.webp';
   }
   else{
-    img.src = 'media/banner.jpg';
+    img.src = 'https://res.cloudinary.com/dojcchveo/image/upload/v1718270252/baccabucci/footer/egeraxcf41x4boobjcuv.jpg';
   } 
 }
 
