@@ -250,17 +250,116 @@ async function fillBestSellerWrapper() {
 fillBestSellerWrapper();
 
 
-  // Best Collection
+  // Best Collection  
 
-  var swiper2 = new Swiper(".tabSlider", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    loop:true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+async function collectionProducts() {
+    const res = await fetch("http://localhost:5173/assets.json");
+    const data = await res.json();
+    const wrapper = document.querySelectorAll(".collectionTabSliders");
+    console.log(wrapper)
+    
+  
+    let list= data.collection;
+    wrapper.forEach(slider => {
+      // console.log(slider);
+  
+      list.forEach(element => {
+        slider.innerHTML=slider.innerHTML+`<div class=" h-max swiper-slide card  ">
+                  <div class=" w-[200px] sm:w-[220px] h-max rounded-[5%]  py-3 px-4 bg-[white] m-auto shadow-lg">
+                  <img
+                    class=" w-[180px] sm:w-[200px] rounded-[5%] mb-2 collectionImg"
+                    src=" ${element.url} "
+                    alt=""
+                  />
+    
+                  <p class="font-[lora] text-[black] font-bold text-sm">
+                    ${(element.name).slice(12,30)}...
+                  </p>
+                  <p class="font-[lora] text-xs font-bold text-[black]">2024</p>
+    
+                  <p
+                    class="font-[lato] text-[#c1860f] font-[500] leading-8 text-sm tracking-widest"
+                  >
+                    Bacca Bucci
+                  </p>
+    
+                  <span class="font-[oswald] font-bold text-md">Rs ${element.price}</span>
+                  <span class="font-[lora] text-[grey] line-through text-xs"
+                    >Mrp 2,799</span
+                  >
+    
+                  <div class="item-color gap-2 py-2 flex">
+                    <div
+                      class="border-[1px] border-[black] w-[24px] h-[24px] rounded-full p-[1px]"
+                    >
+                      <div class="w-[20px] h-[20px] rounded-full bg-[black]"></div>
+                    </div>
+                    <div
+                      class="border-[1px] border-[grey] w-[24px] h-[24px] rounded-full p-[1px]"
+                    >
+                      <div class="w-[20px] h-[20px] rounded-full bg-[grey]"></div>
+                    </div>
+                    <div
+                      class="border-[1px] border-[olive] w-[24px] h-[24px] rounded-full p-[1px]"
+                    >
+                      <div class="w-[20px] h-[20px] rounded-full bg-[olive]"></div>
+                    </div>
+                    <div
+                      class="border-[1px] border-[brown] w-[24px] h-[24px] rounded-full p-[1px]"
+                    >
+                      <div class="w-[20px] h-[20px] rounded-full bg-[brown]"></div>
+                    </div>
+                  </div>
+    
+                  <div
+                    class="Add_to_cart_btn border bg-[#4E3505] text-brand_yellow text-center rounded-full p-2 text-sm w-max mx-[-5px]"
+                  >
+                    <i class="fa-solid fa-plus"></i> Add To Cart
+                  </div>
+                </div>
+        </div> `;
+        
+      });
+
+      
+    });
+
+    
+  
+    const collectionImgEl=document.querySelectorAll('.collectionImg');
+    collectionImgEl.forEach((element, idx) => {
+      element.addEventListener('mouseenter',()=>{
+        
+        element.src=`${list[idx].hoverUrl}`;
+      })
+      element.addEventListener('mouseleave',()=>{
+        
+        element.src=`${list[idx].url}`;
+      })
+      
+    });
+
+    var swiper2 = new Swiper(".tabSlider", {
+      effect: "coverflow",
+      grabCursor: true,
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      loop:true,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 0,
+        modifier: 0,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+}
+collectionProducts()
+
 
 
   const tabEls=document.querySelectorAll('.tab')
@@ -291,34 +390,81 @@ fillBestSellerWrapper();
 
   // Featured Product 
 
+  async function featureProducts() {
+    const res = await fetch("http://localhost:5173/assets.json");
+    const data = await res.json();
+    const wrapper = document.querySelector(".featureWrapper");
+    const wrapper2 = document.querySelector(".featuredWrapperBelow");
+  
+    let list= data.feature;
+    console.log(list);
+  
+    list.forEach(element => {
+      wrapper.innerHTML=wrapper.innerHTML+`<div class="swiper-slide">
+                    <img
+                      src=" ${element} "
+                      class="w-full"
+                      alt=""
+                    />
+                  </div>`;
+      
+      wrapper2.innerHTML=wrapper2.innerHTML+`<div class="swiper-slide">
+      <img
+        src=" ${element} "
+        class="w-full"
+        alt=""
+      />
+      </div>`;
+      
+    });
+  
+    const featureImgEl=document.querySelectorAll('.seasonImg');
+    featureImgEl.forEach((element, idx) => {
+      element.addEventListener('mouseenter',()=>{
+        
+        element.src=`${list[idx].hoverUrl}`;
+      })
+      element.addEventListener('mouseleave',()=>{
+        
+        element.src=`${list[idx].url}`;
+      })
+      
+    });
 
-  var swiper3 = new Swiper(".featuredSwiperBelow", {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-    autoplay:{
-      delay: 2500,
-      disableOnInteraction:false,
-  },
-    
-  });
-  var swiper4 = new Swiper(".featuredSwiper", {
-    loop: true,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    var swiper3 = new Swiper(".featuredSwiperBelow", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+      autoplay:{
+        delay: 2500,
+        disableOnInteraction:false,
     },
-    autoplay:{
-      delay: 2500,
-      disableOnInteraction:false,
-  },
-    thumbs: {
-      swiper: swiper3,
+      
+    });
+    var swiper4 = new Swiper(".featuredSwiper", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay:{
+        delay: 2500,
+        disableOnInteraction:false,
     },
-  });
+      thumbs: {
+        swiper: swiper3,
+      },
+    });
+  
+  }
+  featureProducts()
+  
+
+
+  
 
   const shoeSizeEls=document.querySelectorAll('.size');
 
@@ -338,6 +484,97 @@ fillBestSellerWrapper();
     
     
   });
+
+//Seasonal Products
+
+async function seasonalProducts() {
+  const res = await fetch("http://localhost:5173/assets.json");
+  const data = await res.json();
+  const wrapper = document.querySelector(".cardContainer");
+  
+  wrapper.innerHTML 
+
+  let list= data.season;
+  console.log(list);
+
+  list.forEach(element => {
+    wrapper.innerHTML=wrapper.innerHTML+`<div class=" h-max ">
+              <div class=" sm:w-[230px] xl:w-[250px] h-max rounded-[5%]  py-3 px-4 bg-[white] m-auto shadow-lg">
+              <img
+                class=" sm:w-[200px] xl:w-[230px] rounded-[10%] mb-2 seasonImg"
+                src=" ${element.url} "
+                alt=""
+              />
+
+              <p class="font-[lora] text-[black] font-bold text-sm">
+                Flame 7-Eye Moto..
+              </p>
+              <p class="font-[lora] text-xs font-bold text-[black]">2024</p>
+
+              <p
+                class="font-[lato] text-[#c1860f] font-[500] leading-8 text-sm"
+              >
+                Bacca Bucci
+              </p>
+
+              <span class="font-[oswald] font-bold text-md">Rs 1,799</span>
+              <span class="font-[lora] text-[grey] line-through text-xs"
+                >Mrp 2,799</span
+              >
+
+              <div class="item-color gap-2 py-2 flex">
+                <div
+                  class="border-[1px] border-[black] w-[24px] h-[24px] rounded-full p-[1px]"
+                >
+                  <div class="w-[20px] h-[20px] rounded-full bg-[black]"></div>
+                </div>
+                <div
+                  class="border-[1px] border-[grey] w-[24px] h-[24px] rounded-full p-[1px]"
+                >
+                  <div class="w-[20px] h-[20px] rounded-full bg-[grey]"></div>
+                </div>
+                <div
+                  class="border-[1px] border-[olive] w-[24px] h-[24px] rounded-full p-[1px]"
+                >
+                  <div class="w-[20px] h-[20px] rounded-full bg-[olive]"></div>
+                </div>
+                <div
+                  class="border-[1px] border-[brown] w-[24px] h-[24px] rounded-full p-[1px]"
+                >
+                  <div class="w-[20px] h-[20px] rounded-full bg-[brown]"></div>
+                </div>
+              </div>
+
+              <div
+                class="Add_to_cart_btn border bg-[#4E3505] text-brand_yellow text-center rounded-full p-2 text-sm w-max mx-[-5px]"
+              >
+                <i class="fa-solid fa-plus"></i> Add To Cart
+              </div>
+            </div>
+    </div> `;
+    
+  });
+
+  const featureImgEl=document.querySelectorAll('.seasonImg');
+  featureImgEl.forEach((element, idx) => {
+    element.addEventListener('mouseenter',()=>{
+      
+      element.src=`${list[idx].hoverUrl}`;
+    })
+    element.addEventListener('mouseleave',()=>{
+      
+      element.src=`${list[idx].url}`;
+    })
+    
+  });
+
+
+  
+  
+
+
+}
+seasonalProducts()
 
 //Footer 
 function changeBannerImage(){

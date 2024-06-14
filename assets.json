@@ -181,7 +181,7 @@
             "index": 0,
             "hoverUrl": "https://res.cloudinary.com/dojcchveo/image/upload/v1716627147/baccabucci/collection/qnyk4cxymku03cds3qfc.avif",
             "name": "Bacca Bucci VEERA Mid-top White Sneakers for Men | Athletic Yet Sleek, Futuristic Design",
-            "price": "1,599.00",
+            "price": "1,599",
             "rating": "4.5/5"
         },
         {
@@ -189,7 +189,7 @@
             "index": 1,
             "hoverUrl": "https://res.cloudinary.com/dojcchveo/image/upload/v1716627227/baccabucci/collection/c9ldqpxybodrpwmo3uvg.webp",
             "name": "Bacca Bucci SKYLINE CHUNK Hi-Top Street Fashion Flat-Sole Sneakers",
-            "price": "1,299.00",
+            "price": "1,299",
             "rating": "4.3/5"
         },
         {
@@ -197,7 +197,7 @@
             "index": 2,
             "hoverUrl": "https://res.cloudinary.com/dojcchveo/image/upload/v1716627302/baccabucci/collection/xwrqnaz7im2zxmkzls13.avif",
             "name": "Bacca Bucci TIGER Comfy Mid-Top Casual Chunky Streetwear Fashion Sneakers",
-            "price": "1,499.00",
+            "price": "1,499",
             "rating": "4.5/5"
         },
         {
@@ -205,7 +205,7 @@
             "index": 3,
             "hoverUrl": "https://res.cloudinary.com/dojcchveo/image/upload/v1716627386/baccabucci/collection/kgrbxwgc19umbcmuxaxv.avif",
             "name": "Bacca Bucci STUNNER Hi-top Streetwear Sneakers with 360 degree Cushioning",
-            "price": "1699.00",
+            "price": "1699",
             "rating": "4.5/5"
         },
         {
@@ -213,7 +213,7 @@
             "index": 4,
             "hoverUrl": "https://res.cloudinary.com/dojcchveo/image/upload/v1716627453/baccabucci/collection/wjdrhtobekpbxd6o4ys9.avif",
             "name": "Bacca Bucci MEGA FLEX Hi-Top Street Fashion Chunky Sneakers",
-            "price": "1799.00",
+            "price": "1799",
             "rating": "4.5/5"
         },
         {
@@ -221,7 +221,7 @@
             "index": 5,
             "hoverUrl": "https://res.cloudinary.com/dojcchveo/image/upload/v1716627469/baccabucci/collection/txxa3a8tit4jq2ir3kbq.avif",
             "name": "Bacca Bucci URBAN RETRO Series 2.0 Color Blocked Sneakers Shoes for Men",
-            "price": "1399.00",
+            "price": "1399",
             "rating": "4.5/5"
         },
         {
@@ -229,7 +229,7 @@
             "index": 6,
             "hoverUrl": "https://res.cloudinary.com/dojcchveo/image/upload/v1716631063/baccabucci/collection/ybsf6ecwjyyh4yughsgy.webp",
             "name": "Bacca Bucci NEO Comfy Mid-Top Casual Chunky Streetwear Fashion Sneakers",
-            "price": "1699.00",
+            "price": "1699",
             "rating": "4.5/5"
         },
         {
@@ -237,7 +237,7 @@
             "index": 7,
             "hoverUrl": "https://res.cloudinary.com/dojcchveo/image/upload/v1716627631/baccabucci/collection/fhnt9dlwwqljvexrs0k7.avif",
             "name": "Bacca Bucci REDFOX Hi-Top Casual Chunky Streetwear Fashion Sneakers | White Red Ankle Shoe Quilted Designed",
-            "price": "1799.00",
+            "price": "1799",
             "rating": "4.5/5"
         },
         {
@@ -245,7 +245,7 @@
             "index": 8,
             "hoverUrl": "https://res.cloudinary.com/dojcchveo/image/upload/v1716627650/baccabucci/collection/h622kmieoptip0fsmuls.avif",
             "name": "Bacca Bucci SKYLINE CHUNK Hi-Top Street Fashion Flat-Sole",
-            "price": "1599.00",
+            "price": "1599",
             "rating": "4.5/5"
         },
         {
@@ -253,20 +253,21 @@
             "index": 9,
             "hoverUrl": "https://res.cloudinary.com/dojcchveo/image/upload/v1716628011/baccabucci/collection/rripvtfrh7b8julifzq6.avif",
             "name": "Bacca Bucci THUNDER Mid-Top Casual Chunky Streetwear Fashion Sneaker",
-            "price": "1299.00",
+            "price": "1299",
             "rating": "4.5/5"
         }
     ],
 
     "feature": [
-        "https://res.cloudinary.com/dojcchveo/image/upload/v1716631519/baccabucci/featureProduct/zrskdviqeweu8oztwjeq.jpg",
         "https://res.cloudinary.com/dojcchveo/image/upload/v1716631338/baccabucci/featureProduct/vecwsumko4ghnkafl2kd.webp",
         "https://res.cloudinary.com/dojcchveo/image/upload/v1716631488/baccabucci/featureProduct/ivdubqjvkhu8jlydon1d.webp",
         "https://res.cloudinary.com/dojcchveo/image/upload/v1716631550/baccabucci/featureProduct/ghnsspnvjygj0rjoxiex.webp",
         "https://res.cloudinary.com/dojcchveo/image/upload/v1716631581/baccabucci/featureProduct/f2789w2zjjedh1a4ic3g.webp",
         "https://res.cloudinary.com/dojcchveo/image/upload/v1716631590/baccabucci/featureProduct/lfgmhi7hkxenud9onifd.jpg",
         "https://res.cloudinary.com/dojcchveo/image/upload/v1716631631/baccabucci/featureProduct/axzgsekgy2dv0ddhdiml.webp",
+        "https://res.cloudinary.com/dojcchveo/image/upload/v1716631519/baccabucci/featureProduct/zrskdviqeweu8oztwjeq.jpg",
         "https://res.cloudinary.com/dojcchveo/image/upload/v1716631664/baccabucci/featureProduct/vmsbyqlkzuung8qlpmkj.webp"
+
     ],
 
     "season": [
