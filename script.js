@@ -129,22 +129,39 @@ async function fillBestSellerWrapper() {
     wrapper.innerHTML =
       wrapper.innerHTML +
       `
-        <div class="swiper-slide tranding-slide lg:!w-[42rem] sm:!w-[32rem] !w-[20rem]">
+        <div class="swiper-slide tranding-slide  sm:!w-[32rem] !w-[20rem]">
           <div class="swiper-card w-full flex bg-[white] p-3  rounded-3xl flex-col sm:flex-row">
             <div class="tranding-slide-img w-full h-[17rem] sm:h-full sm:w-[45%] overflow-hidden rounded-3xl">
               <img class="w-full h-full object-cover object-bottom" src="${data.bestsellers[i].url}" alt="">
             </div>
 
             <div class="tranding-slide-content flex gap-2 sm:gap-0 sm:justify-between flex-col w-full sm:w-[55%] pl-[15px] py-[15px]">
-              <div><h3 class="font-[Nunito-Sans-light] text-brand_yellow text-xl font-semibold">BACCA BUCCI</h3></div>
-              <div><p class="font-[Lato] text-[#4E3505] font-extrabold lg:text-xl text-[13px]">${data.bestsellers[i].name}</p></div>
-              <div class="flex gap-2">
-                <div class="h-7 w-7 p-[1px] rounded-full border-[1px] border-[brown] flex justify-center items-center"><div class="red h-5 w-5 rounded-full bg-[brown]"></div></div>
-                <div class="h-7 w-7 p-[1px] rounded-full border-[1px] border-[olive] flex justify-center items-center"><div class="olive h-5 w-5 rounded-full bg-[olive]"></div></div>
-                <div class="h-7 w-7 p-[1px] rounded-full border-[1px] border-[black] flex justify-center items-center">   <div class="black  h-5 w-5 rounded-full bg-[black]"></div></div>
-              </div>
+              <div><h3 class="font-[Nunito-Sans-light] text-[#AA740A] text-xs font-semibold">BACCA BUCCI</h3></div>
+              <div><p class="font-spartan text-[#4E3505] font-bold text-xl lg:text-2xl">${(data.bestsellers[i].name).slice(12,50)}...</p></div>
+              <div class="item-color gap-2 py-2 flex">
+                    <div
+                      class="border-[1px] border-[black] w-[24px] h-[24px] rounded-full p-[1px]"
+                    >
+                      <div class="w-[20px] h-[20px] rounded-full bg-[black]"></div>
+                    </div>
+                    <div
+                      class="border-[1px] border-[grey] w-[24px] h-[24px] rounded-full p-[1px]"
+                    >
+                      <div class="w-[20px] h-[20px] rounded-full bg-[grey]"></div>
+                    </div>
+                    <div
+                      class="border-[1px] border-[olive] w-[24px] h-[24px] rounded-full p-[1px]"
+                    >
+                      <div class="w-[20px] h-[20px] rounded-full bg-[olive]"></div>
+                    </div>
+                    <div
+                      class="border-[1px] border-[brown] w-[24px] h-[24px] rounded-full p-[1px]"
+                    >
+                      <div class="w-[20px] h-[20px] rounded-full bg-[brown]"></div>
+                    </div>
+                  </div>
               <div>
-                <p class="font-[Lato] text-[#4e3405d6] font-semibold text-xl">Rs. ${data.bestsellers[i].price} <s class="text-[14px] text-[grey]">MRP. 2,999.00</s></p>
+                <p class="font-[oswald] text-[#4e3405d6] font-semibold text-lg">Rs. ${data.bestsellers[i].price} <s class="text-xs text-[lora] text-[grey]">MRP. 2,999.00</s></p>
               </div>
               <div class="flex gap-2 text-[#4e3405d6] font-semibold">
                 <p>${data.bestsellers[i].ratings}</P>
@@ -181,71 +198,13 @@ async function fillBestSellerWrapper() {
     },
   });
 
-  for (let i = 0; i < data.collection.length; i++) {
-    collectionSlider.innerHTML =
-      collectionSlider.innerHTML +
-      `
-        <div
-          class="collection-card transition duration-500 w-[22rem] h-full p-2 rounded-2xl bg-[white] absolute custom-left top-0"
-        >
-          <div class="collection-card-img rounded-2xl overflow-hidden">
-            <img
-              class="w-full object-cover"
-              src="${data.collection[i].url}"
-              alt=""
-            />
-          </div>
-        </div>
-    `;
-  }
+  
 
-  let items = document.querySelectorAll(".collection-slider .collection-card");
-  let next = document.getElementById("next");
-  let prev = document.getElementById("prev");
+d
 
-  let active = 3;
+  
 
-  function loadShow() {
-    let stt = 0;
-    items[active].style.transform = `none`;
-    items[active].style.zIndex = 1;
-    items[active].style.filter = "none";
-    items[active].style.opacity = 1;
-
-    for (var i = active + 1; i < items.length; i++) {
-      stt++;
-      items[i].style.transform = `translateX(${120 * stt}px) scale(${
-        1 - 0.2 * stt
-      }) perspective(16px) rotateY(-1deg)`;
-      items[i].style.zIndex = -stt;
-      items[i].style.filter = "blur(5px)";
-      items[i].style.opacity = stt > 3 ? 0 : 0.6;
-    }
-
-    stt = 0;
-
-    for (var i = active - 1; i >= 0; i--) {
-      stt++;
-      items[i].style.transform = `translateX(${-120 * stt}px) scale(${
-        1 - 0.2 * stt
-      }) perspective(16px) rotateY(1deg)`;
-      items[i].style.zIndex = -stt;
-      items[i].style.filter = "blur(5px)";
-      items[i].style.opacity = stt > 3 ? 0 : 0.6;
-    }
-  }
-   
-  loadShow();
-
-  next.onclick = function () {
-    active = (active + 1) % items.length;
-    loadShow();
-  };
-
-  prev.onclick = function () {
-    active = (active - 1 + items.length) % items.length;
-    loadShow();
-  };
+  
 }
 fillBestSellerWrapper();
 
