@@ -42,8 +42,8 @@
             "url": "https://res.cloudinary.com/dojcchveo/image/upload/v1716520050/baccabucci/category/uckct0d47tp2gvfu5btp.jpg"
         },
         {
-            "name" : "Flip Flops",
-            "url": "https://res.cloudinary.com/dojcchveo/image/upload/v1716520049/baccabucci/category/gsioo1pfwhpnwufmlucw.jpg"
+            "name" : "Sale",
+            "url": "https://res.cloudinary.com/dojcchveo/image/upload/v1716520050/baccabucci/category/k0omgqdac1xqd5khphou.jpg"
         },
         {
             "name" : "Big Kids",
@@ -70,9 +70,9 @@
             "url": "https://res.cloudinary.com/dojcchveo/image/upload/v1716520049/baccabucci/category/lkz0esbpmhcoagq28f93.jpg"
         },
         {
-            "name" : "Sale",
-            "url": "https://res.cloudinary.com/dojcchveo/image/upload/v1716520050/baccabucci/category/k0omgqdac1xqd5khphou.jpg"
-        }
+            "name" : "Flip Flops",
+            "url": "https://res.cloudinary.com/dojcchveo/image/upload/v1716520049/baccabucci/category/gsioo1pfwhpnwufmlucw.jpg"
+        }       
     ],
 
     "bestsellers": [
