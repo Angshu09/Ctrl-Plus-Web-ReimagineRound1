@@ -6,7 +6,17 @@ const centerEl = document.querySelector(".center");
 
 const navEl = document.querySelector(".navbar");
 
+const headingNewCollection=document.querySelector('.heading');
+
 let screenWidth = window.innerWidth;
+
+if(screenWidth>768){
+  headingNewCollection.classList.remove('hidden');
+}
+else{
+  headingNewCollection.classList.add('hidden');
+  
+}
 
 
 
@@ -28,6 +38,8 @@ function handleNavbar(){
 let v = 0;
 checkbtnEl.addEventListener("click", handleNavbar);
 
+
+
 window.addEventListener("scroll", () => {
   if (scrollY > 80) {
     navEl.style.boxShadow = "2px 2px 5px rgba(0, 0, 0, 0.4)";
@@ -40,8 +52,11 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 766) {
     centerEl.style.left = 0 + "px";
     centerEl.style.opacity = 1;
+    headingNewCollection.classList.remove('hidden');
+
   } else {
     centerEl.style.left = -1000 + "px";
+    headingNewCollection.classList.add('hidden');
   }
 });
 
@@ -202,7 +217,11 @@ async function fillBestSellerWrapper() {
 fillBestSellerWrapper();
 
 
-  // Best Collection  
+console.log(screenWidth)
+
+
+
+// Best Collection  
 
 async function collectionProducts() {
     const res = await fetch("http://localhost:5173/assets.json");
