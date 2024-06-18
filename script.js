@@ -635,23 +635,40 @@ async function fillCategory(){
   });
 
   //Categories
-  for(let i=0; i<data.categories.length; i++){
-    if(i===0 || i===8){
-      mainCategory.innerHTML = mainCategory.innerHTML + `
-      <div class="custom2:row-span-2 flex items-center justify-center flex-col">
-        <div class="hover:scale-[1.1] transition duration-150 flex items-center justify-center p-1 border-4 overflow-hidden rounded-full border-solid border-[#f4c153]"><div><img class="w-[4rem] lg:w-[5rem] xl:w-[6rem] 2xl:w-[8rem]" src="${data.categories[i].url}" alt=""></div></div>
-        <div class="w-full"><p class="text-[10px] lg:text-xs xl:text-[14px] relative z-10  2xl:text-[18px] py-2 2xl:py-3 text-[Lato] font-semibold rounded-full text-[#3f2d15] text-center bg-[#eec794]">${data.categories[i].name}</p></div>
-      </div>
-    `
-    }else{
-      mainCategory.innerHTML = mainCategory.innerHTML + `
-      <div>
-        <div class="hover:scale-[1.1] transition duration-150  flex items-center justify-center p-1 border-4 overflow-hidden rounded-full border-solid border-[#f4c153]"><div><img class="w-[4rem] lg:w-[5rem] xl:w-[6rem] 2xl:w-[8rem]" src="${data.categories[i].url}" alt=""></div></div>
-        <div><p class="text-[10px]  lg:text-xs xl:text-[14px] relative z-10 2xl:text-[18px] py-2 2xl:py-3 text-[Lato] font-semibold rounded-full text-[#3f2d15] text-center bg-[#eec794]">${data.categories[i].name}</p></div>
-      </div>
-    `
+  for(let i = 0; i < data.categories.length; i++){
+    if(i === 0 || i === 8){
+      mainCategory.innerHTML += `
+        <div class="custom2:row-span-2 flex items-center justify-center flex-col">
+          <div class="hover:scale-[1.1] transition duration-150 flex items-center justify-center p-1 border-4 overflow-hidden rounded-full border-solid" style="border-color: ${data.categories[i].bg};">
+            <div>
+              <img class="w-[4rem] lg:w-[5rem] xl:w-[6rem] 2xl:w-[8rem]" src="${data.categories[i].url}" alt="">
+            </div>
+          </div>
+          <div class="w-full">
+            <p class="text-[10px] lg:text-xs xl:text-[14px] relative z-10 2xl:text-[18px] py-2 2xl:py-3 text-[Lato] font-bold rounded-full text-center" style="background-color: ${data.categories[i].bg}; color: ${data.categories[i].color};">
+              ${data.categories[i].name}
+            </p>
+          </div>
+        </div>
+      `;
+    } else {
+      mainCategory.innerHTML += `
+        <div>
+          <div class="hover:scale-[1.1] transition duration-150 flex items-center justify-center p-1 border-4 overflow-hidden rounded-full border-solid" style="border-color: ${data.categories[i].bg};">
+            <div>
+              <img class="w-[4rem] lg:w-[5rem] xl:w-[6rem] 2xl:w-[8rem]" src="${data.categories[i].url}" alt="">
+            </div>
+          </div>
+          <div>
+            <p class="text-[10px] lg:text-xs xl:text-[14px] relative z-10 2xl:text-[18px] py-2 2xl:py-3 text-[Lato] font-bold rounded-full text-center" style="background-color: ${data.categories[i].bg}; color: ${data.categories[i].color};">
+              ${data.categories[i].name}
+            </p>
+          </div>
+        </div>
+      `;
     }
   }
+  
 }
 
 fillCategory()
