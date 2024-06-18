@@ -29,6 +29,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <style>
+      :root{
+        --item-transform:translate(-100%, -5%) scale(1.5);
+        --item-filter:blur(30px);
+        --item-zindex:7;
+        --item-opacity:0;
+
+        --item2-transform:translate(0, 0);
+        --item2-filter:blur(0);
+        --item2-zindex:6;
+        --item2-opacity:1; 
+        
+        --item3-transform:translate(50%,10%) scale(0.8);
+        --item3-filter:blur(10px);
+        --item3-zindex:5;
+        --item3-opacity:1;
+        
+        --item4-transform:translate(90%, 20%) scale(0.5);
+        --item4-filter:blur(30px);
+        --item4-zindex:4;
+        --item4-opacity:1;
+
+        --item5-transform:translate(120%, 30%) scale(0.3);
+        --item5-filter:blur(40px);
+        --item5-zindex:3;
+        --item5-opacity:0;
+
+      }
+
       li{
         cursor: pointer;
       }
@@ -69,6 +97,182 @@
         color: #000 !important;
         fill: black !important;
         stroke: black !important;
+      }
+
+      .carousel .list .item:nth-child(2) .intro{
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity 0.5s;
+      }
+
+      .carousel .list .item:nth-child(2) .intro .brand,
+      .carousel .list .item:nth-child(2) .intro .pName,
+      .carousel .list .item:nth-child(2) .intro .price,
+      .carousel .list .item:nth-child(2) .intro .button,
+      .carousel .list .item:nth-child(2) .intro .des{
+        opacity: 0;
+        animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+
+      }
+
+      .carousel .list .item:nth-child(2) .intro .pName{
+        animation-delay:0.9s;
+      } 
+      .carousel .list .item:nth-child(2) .intro .price{
+        animation-delay:1.1s;
+      }
+      .carousel .list .item:nth-child(2) .intro .des{
+        animation-delay:1.3s;
+      }
+      .carousel .list .item:nth-child(2) .intro .button{
+        animation-delay:1.5s;
+      }
+
+      .carousel .list .item:nth-child(2){
+        transform:var(--item2-transform);
+        filter: var(--item2-filter);
+        z-index: var(--item2-zindex);
+        opacity: var(--item2-opacity);
+      }
+     .carousel .list .item:nth-child(1){
+        transform:var(--item-transform);
+        filter: var(--item-filter);
+        z-index:var(--item-zindex);
+        opacity: var(--item-opacity);
+        pointer-events: none;
+      }
+       .carousel .list .item:nth-child(3){
+        transform:var(--item3-transform);
+        filter: var(--item3-filter);
+        z-index: var(--item3-zindex);
+        opacity: var(--item3-opacity);
+        
+      }
+
+      .carousel .list .item:nth-child(4){
+        transform:var(--item4-transform);
+        filter: var(--item4-filter);
+        z-index: var(--item4-zindex);
+        opacity: var(--item4-opacity);
+      }
+      .carousel .list .item:nth-child(5){
+        transform:var(--item5-transform);
+        filter: var(--item5-filter);
+        z-index: var(--item5-zindex);
+        opacity: var(--item5-opacity);
+        pointer-events: none;
+
+      }
+
+      .carousel .list .item:nth-child(n+4){
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      /* next click effect */
+      .carousel.next .list .item:nth-child(1){
+        animation: positionItem2 0.5s ease-in-out 1 forwards;
+      }
+      .carousel.next .list .item:nth-child(2){
+        animation: positionItem3 0.7s ease-in-out 1 forwards;
+      }
+      .carousel.next .list .item:nth-child(3){
+        animation: positionItem4 0.9s ease-in-out 1 forwards;
+      }
+
+      /* effect click prev button */
+      .carousel.prev .list .item:nth-child(2){
+        animation: positionItem1 0.5s ease-in-out 1 forwards;
+      }
+      .carousel.prev .list .item:nth-child(3){
+        animation: positionItem2 0.7s ease-in-out 1 forwards;
+      }
+      .carousel.prev .list .item:nth-child(4){
+        animation: positionItem3 0.9s ease-in-out 1 forwards;
+      }
+
+      .best-seller::after{
+        width: 80%;
+        height: 10%;
+        content: '';
+        background-image: linear-gradient(45deg, #F5C15C, #FF794A);
+        position: absolute;
+        z-index: -1;
+        border-radius: 90% 90% 90% 10%;
+        /* top: 235%; */
+        /* bottom: 10px; */
+        /* filter: blur(10px); */
+        transform: translate(0%, -250%);
+
+        
+
+      }
+      
+
+      .carousel::before{
+        width: 500px;
+        height: 300px;
+        content: '';
+        background-image: linear-gradient(45deg, #F5C15C, #FF794A);
+        position: absolute;
+        z-index: -1;
+        border-radius: 20% 30% 80% 10%;
+        filter: blur(150px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-10%, -50%);
+        transition: 1s;
+      }
+      
+      
+
+
+      @keyframes positionItem1 {
+        from{
+          transform:var(--item-transform);
+          filter: var(--item-filter);
+          z-index: var(--item-zindex);
+          opacity: var(--item-opacity);
+
+        }
+        
+      }
+
+      @keyframes positionItem2 {
+        from{
+          transform:var(--item2-transform);
+          filter: var(--item2-filter);
+          z-index: var(--item2-zindex);
+          opacity: var(--item2-opacity);
+        }
+      }
+      @keyframes positionItem3 {
+        from{
+          transform:var(--item3-transform);
+          filter: var(--item3-filter);
+          z-index: var(--item3-zindex);
+          opacity: var(--item3-opacity);
+        }
+      }
+      @keyframes positionItem4 {
+        from{
+          transform:var(--item4-transform);
+          filter: var(--item4-filter);
+          z-index: var(--item4-zindex);
+          opacity: var(--item4-opacity);
+        }
+      }
+
+      @keyframes showContent {
+        from{
+          transform: translateY(50px);
+          filter: blur(30px);
+        }
+        to{
+          transform: translateY(0);
+          opacity: 1;
+          filter: blur(0);
+        }
       }
     </style>
   </head>
@@ -181,7 +385,7 @@
 
       <section class="category"></section>
 
-      <section class="best-seller mt-14 mb-44 md-[w]">
+      <section class="best-seller mt-10 md-[w]">
 
         <div class="bestseller-container gap-10 md:gap-0 flex flex-col-reverse md:flex-row justify-between">
 
@@ -208,27 +412,42 @@
 
           <div class="right flex w-full pl-7 md:p-0 md:w-[30%]  items-center">
             <div>
-                <h1 class="text-7xl tracking-widest
-                font-light  text-[#FF794A]">EXPLORE</h1>
-              
-              <div class="mt-3 font-[Lora]">
-                <h1 class="text-6xl  tracking-wide font-semibold text-[#054E35]">BEST</h1>
-                <h1 class="text-6xl tracking-wide font-semibold text-[#076173]">SELLERS</h1>
+              <div>
+                <h1 class="text-7xl md:text-6xl lg:text-7xl tracking-tight font-[Nunito-Sans-light] text-[#FF794A]">Explore</h1>
               </div>
-              <div class="mt-5 ">
+              <div class="mt-3 font-[Lora]">
+                <h1 class="text-6xl lg:text-7xl tracking-tighter font-semibold text-[#054E35]">Best</h1>
+                <h1 class="text-6xl lg:text-7xl tracking-tighter font-semibold text-[#076173]">Sellers</h1>
+              </div>
+              <div class="mt-5">
                 <button class="bg-[#4E3505] hover:animate-pulse text-center font-[Arvo] rounded-full py-3 px-4 bor text-xl text-brand_yellow">View All >>></button>
               </div>
             </div>
           </div>
         </div>
 
-       
+        <div class="carousel  h-[600px] md:h-[800px] overflow-hidden relative ">
+          <div class="list absolute top-0 w-[1140px] max-w-[90%] left-[50%] translate-x-[-50%] h-[100%] md:h-[80%] ">
+
+          </div>
+          <div class="arrows absolute bottom-[100px] w-[1140px] max-w-[90%] left-[50%] translate-x-[-50%] flex justify-between items-center">
+
+            <div  id="prev"> 
+              <i class="fa-solid fa-circle-chevron-left text-5xl  bg-[black] text-[white] rounded-full"></i>
+            </div>
+
+            <div  id="next">  
+              <i class="fa-solid fa-circle-chevron-right text-5xl bg-[black] text-[white] rounded-full"></i>
+            </div>
+          </div>
+
+        </div>
 
       </section>
 
-      <section class="collection">
+      <section class="collection ">
         <div
-          class="multiTab-container mt-10 w-full h-max text-[#601406] relative overflow-hidden pb-[3%]"
+          class=" multiTab-container mt-10 w-full h-max text-[#601406] relative overflow-hidden pb-[3%]"
         >
           <p
             class="best_bacca_bucci mt-[20px] text-center text-[roboto] font-[600] tracking-widest text-3xl sm:text-4xl md:text-4xl lg:text-5xl"

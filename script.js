@@ -197,13 +197,6 @@ async function fillBestSellerWrapper() {
       prevEl: ".swiper-button-prev",
     },
   });
-
-  
-
-d
-
-  
-
   
 }
 fillBestSellerWrapper();
@@ -215,7 +208,7 @@ async function collectionProducts() {
     const res = await fetch("http://localhost:5173/assets.json");
     const data = await res.json();
     const wrapper = document.querySelectorAll(".collectionTabSliders");
-    console.log(wrapper)
+    // console.log(wrapper)
     
   
     let list= data.collection;
@@ -321,31 +314,31 @@ collectionProducts()
 
 
 
-  const tabEls=document.querySelectorAll('.tab')
+const tabEls=document.querySelectorAll('.tab')
 
-  const tabLabelEls=document.querySelectorAll('.tab-label')
+const tabLabelEls=document.querySelectorAll('.tab-label')
 
-  tabLabelEls.forEach((element, idx) => {
-    
-    element.addEventListener('click',()=>{
-      tabEls.forEach((item,index) => {
-        if(idx===index){
-          item.classList.remove('hidden');
-        }else{
-          item.classList.add('hidden');
-        }
-        
-      });
-      element.classList.add('active');
-      tabLabelEls.forEach((item, index) => {
-        if(idx!==index){
-          item.classList.remove('active');
-        }
-      });
-    })
-    
-    
-  });
+tabLabelEls.forEach((element, idx) => {
+  
+  element.addEventListener('click',()=>{
+    tabEls.forEach((item,index) => {
+      if(idx===index){
+        item.classList.remove('hidden');
+      }else{
+        item.classList.add('hidden');
+      }
+      
+    });
+    element.classList.add('active');
+    tabLabelEls.forEach((item, index) => {
+      if(idx!==index){
+        item.classList.remove('active');
+      }
+    });
+  })
+  
+  
+});
 
   // Featured Product 
 
@@ -356,7 +349,7 @@ collectionProducts()
     const wrapper2 = document.querySelector(".featuredWrapperBelow");
   
     let list= data.feature;
-    console.log(list);
+    // console.log(list);
   
     list.forEach(element => {
       wrapper.innerHTML=wrapper.innerHTML+`<div class="swiper-slide">
@@ -454,7 +447,7 @@ async function seasonalProducts() {
   wrapper.innerHTML 
 
   let list= data.season;
-  console.log(list);
+  // console.log(list);
 
   list.forEach(element => {
     wrapper.innerHTML=wrapper.innerHTML+`<div class=" h-max ">
@@ -548,3 +541,123 @@ function changeBannerImage(){
 
 window.addEventListener('resize', changeBannerImage);
 window.addEventListener('DOMContentLoaded', changeBannerImage);
+
+
+//New Collection
+let nextButton=document.getElementById('next');
+let prevButton=document.getElementById('prev');
+let carousel= document.querySelector('.carousel');
+
+
+
+async function newCollectionProducts() {
+  const res = await fetch("http://localhost:5173/assets.json");
+  const data = await res.json();
+  const wrapper = document.querySelector(".carousel .list");
+  
+
+  let list= data.collection;
+  // console.log(list);
+
+  list.forEach(element => {
+    wrapper.innerHTML=wrapper.innerHTML+ `<div class="item  absolute top-0 left-0 
+    w-[90%] lg:w-[75%] h-[100%] text-[10px] md:text-[15px]">
+              <img src=" ${element.url} " class="pImg w-[40%] lg:w-[50%] absolute right-0 top-[50%] translate-y-[-50%] rounded-full " alt="">
+
+               <div class="intro absolute top-[50%] translate-y-[-50%] w-[50%] md:w-[350px] opacity-0  pointer-events-none ">
+                <div class="brand font-[coustard] text-[#AA740A] tracking-widest  leading-8 text-[12px] md:text-[15px]">
+                  BACCA BUCCI
+                </div>
+                <div class="pName w-[300px] my-4 font-spartan font-[500] text-4xl md:text-5xl ">
+                  Lorem ipsum 
+                </div>
+                <div class="price flex flex-wrap ">
+
+                <div
+                class="font-[oswald] font-bold text-lg lg:text-2xl text-[#601406]"
+                >Rs. 1,399.00</div
+                >
+                <div
+                  class="font-[lora] text-[grey] line-through text-xs lg:text-sm flex items-center px-2"
+                  >Mrp. 3499.00</div
+                >
+                </div>
+
+
+                <div class="des  mt-4 font-[lato] h-[70px] md:h-[200px] overflow-auto ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente cupiditate ratione? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente cupiditate ratione? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente cupiditate ratione? </div>
+
+                <div
+                class="button mt-4 border  rounded-full px-2 py-2 text-[#ddc56f] font-[lora] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max flex justify-center"
+              >
+                <i class="fa-solid fa-plus text-xl mr-2"></i> ADD TO CART
+              </div>
+              </div> 
+
+            </div>`;
+    
+  });
+
+  nextButton.onclick=function(){
+    showSlider('next');
+
+  }
+  prevButton.onclick=function(){
+    showSlider('prev');
+    
+  }
+
+
+  let sliderAutoplay= setInterval(() => {
+    carousel.classList.remove('prev','next');
+    let items=document.querySelectorAll('.carousel .list .item');
+    wrapper.appendChild(items[0]);
+    carousel.classList.add('next');
+    
+  }, 4000);
+
+
+  let unAcceptClick;
+  
+  const showSlider=(type)=>{
+    clearInterval(sliderAutoplay);
+    nextButton.style.pointerEvents='none';
+    prevButton.style.pointerEvents='none';
+
+    
+
+    carousel.classList.remove('prev','next');
+    let items=document.querySelectorAll('.carousel .list .item');
+    if(type==='next'){
+      wrapper.appendChild(items[0]);
+      carousel.classList.add('next');
+    }
+    else{
+      let positionLast= items.length-1;
+      wrapper.prepend(items[positionLast]);
+      carousel.classList.add('prev');
+    }
+
+    clearTimeout(unAcceptClick);
+    unAcceptClick=setTimeout(()=>{
+      nextButton.style.pointerEvents='auto';
+      prevButton.style.pointerEvents='auto';
+      sliderAutoplay= setInterval(() => {
+        carousel.classList.remove('prev','next');
+        let items=document.querySelectorAll('.carousel .list .item');
+        wrapper.appendChild(items[0]);
+        carousel.classList.add('next');
+        
+      }, 4000);
+
+    }, 2000);
+
+   
+
+
+  }
+
+  
+
+
+}
+newCollectionProducts()
