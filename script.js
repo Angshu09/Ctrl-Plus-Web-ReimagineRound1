@@ -571,15 +571,23 @@ async function seasonalProducts() {
 }
 seasonalProducts()
 
-//Footer 
+//changing images in specific screen sizes
 function changeBannerImage(){
   const img = document.querySelector('.footer-banner-img')
+  const deliveryImg = document.querySelector('.delivery-img')
   if (window.innerWidth <= 768) {
     img.src = 'https://res.cloudinary.com/dojcchveo/image/upload/v1718272363/baccabucci/footer/lnzeezctpp3p7obpeauo.webp';
   }
   else{
     img.src = 'https://res.cloudinary.com/dojcchveo/image/upload/v1718270252/baccabucci/footer/egeraxcf41x4boobjcuv.jpg';
   } 
+
+  if(window.innerWidth <= 640){
+    deliveryImg.src = 'https://res.cloudinary.com/dojcchveo/image/upload/v1718794130/baccabucci/mtz28rxkgtv8skb0jvgd.png'
+  }
+  else{
+    deliveryImg.src = 'https://res.cloudinary.com/dojcchveo/image/upload/v1718625792/baccabucci/yxzmmolgdtagp1ov3mp6.png'
+  }
 }
 
 window.addEventListener('resize', changeBannerImage);
@@ -592,17 +600,22 @@ async function fillCategory(){
   const mainCategory = document.querySelector('.main-category')
   const discoverWrapper = document.querySelector('.discover-wrapper')
 
-  //Discover
-  for(let i=0; i<data.discover.length; i++){
-    discoverWrapper.innerHTML = discoverWrapper.innerHTML + `
-      <div class="swiper-slide p-2 bg-[#F8CF81] rounded-3xl shadow">
-        <div class="img-box rounded-2xl w-full overflow-hidden">
-          <img src="${data.discover[i]}" alt="Sneakers" class="w-full">
-        </div>
+  // Discover
+  const discoverFragment = document.createDocumentFragment();
+  data.discover.forEach((item) => {
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide p-2 bg-[#F8CF81] rounded-3xl shadow';
+    slide.innerHTML = `
+      <div class="img-box rounded-2xl w-full overflow-hidden">
+        <img src="${item}" alt="Sneakers" class="w-full">
       </div>
-    `
-  }
-  var swiper = new Swiper('.card-slider', {
+    `;
+    discoverFragment.appendChild(slide);
+  });
+  discoverWrapper.appendChild(discoverFragment);
+
+  // Initialize Swiper
+  new Swiper('.card-slider', {
     grabCursor: true,
     loop: true,
     speed: 1000, 
@@ -634,41 +647,28 @@ async function fillCategory(){
     }
   });
 
-  //Categories
-  for(let i = 0; i < data.categories.length; i++){
-    if(i === 0 || i === 8){
-      mainCategory.innerHTML += `
-        <div class="custom2:row-span-2 flex items-center justify-center flex-col">
-          <div class="hover:scale-[1.1] transition duration-150 flex items-center justify-center p-1 border-4 overflow-hidden rounded-full border-solid" style="border-color: ${data.categories[i].bg};">
-            <div>
-              <img class="w-[4rem] lg:w-[5rem] xl:w-[6rem] 2xl:w-[8rem]" src="${data.categories[i].url}" alt="">
-            </div>
-          </div>
-          <div class="w-full">
-            <p class="text-[10px] lg:text-xs xl:text-[14px] relative z-10 2xl:text-[18px] py-2 2xl:py-3 text-[Lato] font-bold rounded-full text-center" style="background-color: ${data.categories[i].bg}; color: ${data.categories[i].color};">
-              ${data.categories[i].name}
-            </p>
-          </div>
-        </div>
-      `;
-    } else {
-      mainCategory.innerHTML += `
-        <div>
-          <div class="hover:scale-[1.1] transition duration-150 flex items-center justify-center p-1 border-4 overflow-hidden rounded-full border-solid" style="border-color: ${data.categories[i].bg};">
-            <div>
-              <img class="w-[4rem] lg:w-[5rem] xl:w-[6rem] 2xl:w-[8rem]" src="${data.categories[i].url}" alt="">
-            </div>
-          </div>
-          <div>
-            <p class="text-[10px] lg:text-xs xl:text-[14px] relative z-10 2xl:text-[18px] py-2 2xl:py-3 text-[Lato] font-bold rounded-full text-center" style="background-color: ${data.categories[i].bg}; color: ${data.categories[i].color};">
-              ${data.categories[i].name}
-            </p>
-          </div>
-        </div>
-      `;
+  // Categories
+  const categoryFragment = document.createDocumentFragment();
+  data.categories.forEach((category, i) => {
+    const categoryDiv = document.createElement('div');
+    if (i === 0 || i === 8) {
+      categoryDiv.className = 'custom2:row-span-2 flex items-center justify-center flex-col';
     }
-  }
-  
+    categoryDiv.innerHTML = `
+      <div class="hover:scale-[1.1] transition duration-150 flex items-center justify-center p-1 border-4 overflow-hidden rounded-full border-solid" style="border-color: ${category.bg};">
+        <div>
+          <img class="w-[4rem] lg:w-[5rem] xl:w-[6rem] 2xl:w-[8rem]" src="${category.url}" alt="">
+        </div>
+      </div>
+      <div class="w-full">
+        <p class="text-[10px] lg:text-xs xl:text-[14px] relative z-10 2xl:text-[18px] py-2 2xl:py-3 text-[Lato] font-bold rounded-full text-center" style="background-color: ${category.bg}; color: ${category.color};">
+          ${category.name}
+        </p>
+      </div>
+    `;
+    categoryFragment.appendChild(categoryDiv);
+  });
+  mainCategory.appendChild(categoryFragment);
 }
 
 fillCategory()
