@@ -124,7 +124,7 @@ backbutton.addEventListener("click", () => {
 
 //Best Seller
 async function fillBestSellerWrapper() {
-  const res = await fetch("assets.json");
+  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
   const data = await res.json();
   const wrapper = document.querySelector(".bestSeller-wrapper");
   const collectionSlider = document.querySelector(".collection-slider");
@@ -237,7 +237,7 @@ fillBestSellerWrapper();
 // Best Collection
 
 async function collectionProducts() {
-  const res = await fetch("assets.json");
+  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
   const data = await res.json();
   const wrapper = document.querySelectorAll(".collectionTabSliders");
   // console.log(wrapper)
@@ -366,7 +366,7 @@ tabLabelEls.forEach((element, idx) => {
 // Featured Product
 
 async function featureProducts() {
-  const res = await fetch("assets.json");
+  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
   const data = await res.json();
   const wrapper = document.querySelector(".featureWrapper");
   const wrapper2 = document.querySelector(".featuredWrapperBelow");
@@ -455,7 +455,7 @@ shoeSizeEls.forEach((element, idx) => {
 //Seasonal Products
 
 async function seasonalProducts() {
-  const res = await fetch("assets.json");
+  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
   const data = await res.json();
   const wrapper = document.querySelector(".cardContainer");
 
@@ -561,7 +561,7 @@ window.addEventListener("DOMContentLoaded", changeBannerImage);
 
 //Category section
 async function fillCategory() {
-  const res = await fetch("assets.json");
+  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
   const data = await res.json();
   const mainCategory = document.querySelector(".main-category");
   const discoverWrapper = document.querySelector(".discover-wrapper");
@@ -666,7 +666,7 @@ let prevButton = document.getElementById("prev");
 let carousel = document.querySelector(".carousel");
 
 async function newCollectionProducts() {
-  const res = await fetch("assets.json");
+  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
   const data = await res.json();
   const wrapper = document.querySelector(".carousel .list");
 
