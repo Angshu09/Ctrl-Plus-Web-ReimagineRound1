@@ -74,13 +74,14 @@
         opacity: 1;
       }
 
-      .tranding-slider-control .slider-arrow::after {
+      .slider-arrow::after {
         content: "";
       }
 
       .best_bacca_bucci,
       .textShadow {
-        text-shadow: 2px 4px 10px rgb(193, 193, 193);
+        text-shadow: 2px 4px 10px rgb(115, 114, 114);
+
       }
 
       .active {
@@ -268,9 +269,10 @@
     <div class="main-container w-full overflow-hidden">
 
       <!-- Hero Section and navbar -->
-      <section class="hero">
+      <section class="hero relative">
+        
         <div
-          class="navbar w-full h-[80px] bg-brand_yellow fixed transition-all z-20"
+          class="navbar w-full h-[80px] bg-brand_yellow fixed transition-all z-30"
         >
           <i
             class="checkbtn fa fa-bars block text-[#4E3505] text-[30px] float-start m-4 md:opacity-0"
@@ -287,7 +289,7 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </li>
             <li>
-              <i class="fa-solid fa-bag-shopping cart"></i>
+              <i class="fa-solid fa-bag-shopping cartIcon"></i>
             </li>
             <li>
               <i class="fa-solid fa-user"></i>
@@ -321,6 +323,14 @@
               <a href="#">Collections</a>
             </li>
           </ul>
+        </div>
+
+        <div class="cart w-[90%] min-h-[400px] shadow-lg fixed bg-[white] top-[80px]  right-[-10px] z-20 rounded-lg hidden" >
+
+
+          <p class="cartTotal font-[lato] w-[85%] font-bold absolute bottom-[65px] left-[50%] translate-x-[-50%]">Total : 0</p>
+          <div class="checkout absolute bottom-4 text-center w-[90%] py-2 font-[lora] rounded-full bg-brand_yellow left-[50%] translate-x-[-50%] font-bold text-[#4E3505]">Proceed To Buy</div>
+
         </div>
 
         <div class="heroSlider">
@@ -385,7 +395,7 @@
                 <i class="fa-solid fa-arrow-right-long px-10 md:px-16 text-[#982009]"></i>
               </h3>
               <h1
-                class="font-[lato] text-[#734E07] font-[450] text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-10 tracking-tighter sm:tracking-wider drop-shadow-2xl textShadow "
+                class="font-[lato] text-[#734E07] font-[450] text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-10 tracking-tighter sm:tracking-wide drop-shadow-2xl textShadow "
               >
                 DISCOVER YOUR NEXT OBSESSION
               </h1>
@@ -431,8 +441,9 @@
         <div class="category-container">
           <div class="text-center mt-[5rem] mb-[3rem] px-3">
             <h1
-              class="font-[lato] text-[#601406] font-[500]
-               text-2xl sm:text-4xl mb-5 leading-10 drop-shadow-2xl textShadow"
+              class="font-[lato] text-[#601406] font-[550]
+              text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
+              mb-5 leading-10 textShadow"
             >
               ALL CATEGORIES
             </h1>
@@ -588,8 +599,28 @@
             >
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+
+                <div
+                class="swiper-button-prev slider-arrow absolute "
+              >
+                <div
+                  class="ping  w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse "
+                ></div>
+                <i
+                  class="fa-solid fa-arrow-left text-2xl text-[black] transition-all absolute"
+                ></i>
+                </div>
+                <div
+                  class="swiper-button-next slider-arrow absolute  "
+                >
+                    <div
+                    class="ping  w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse "
+                  ></div>
+                  <i
+                    class="fa-solid fa-arrow-right text-2xl text-[black] transition-all absolute"
+                  ></i>
+                </div>
+
               </div>
             </div>
 
@@ -599,8 +630,27 @@
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
 
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div
+                class="swiper-button-prev slider-arrow absolute "
+              >
+                <div
+                  class="ping  w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse "
+                ></div>
+                <i
+                  class="fa-solid fa-arrow-left text-2xl text-[black] transition-all absolute"
+                ></i>
+                </div>
+                <div
+                  class="swiper-button-next slider-arrow absolute  "
+                >
+                    <div
+                    class="ping  w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse "
+                  ></div>
+                  <i
+                    class="fa-solid fa-arrow-right text-2xl text-[black] transition-all absolute"
+                  ></i>
+                </div>
+
               </div>
             </div>
 
@@ -609,8 +659,27 @@
             >
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                
+                <div
+                class="swiper-button-prev slider-arrow absolute "
+              >
+                <div
+                  class="ping  w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse "
+                ></div>
+                <i
+                  class="fa-solid fa-arrow-left text-2xl text-[black] transition-all absolute"
+                ></i>
+                </div>
+                <div
+                  class="swiper-button-next slider-arrow absolute  "
+                >
+                    <div
+                    class="ping  w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse "
+                  ></div>
+                  <i
+                    class="fa-solid fa-arrow-right text-2xl text-[black] transition-all absolute"
+                  ></i>
+                </div>
               </div>
             </div>
 
@@ -619,8 +688,28 @@
             >
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+
+                <div
+                class="swiper-button-prev slider-arrow absolute "
+              >
+                <div
+                  class="ping  w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse "
+                ></div>
+                <i
+                  class="fa-solid fa-arrow-left text-2xl text-[black] transition-all absolute"
+                ></i>
+                </div>
+                <div
+                  class="swiper-button-next slider-arrow absolute  "
+                >
+                    <div
+                    class="ping  w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse "
+                  ></div>
+                  <i
+                    class="fa-solid fa-arrow-right text-2xl text-[black] transition-all absolute"
+                  ></i>
+                </div>
+
               </div>
             </div>
 
@@ -629,9 +718,29 @@
             >
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+
+                <div
+                class="swiper-button-prev slider-arrow absolute "
+              >
+                <div
+                  class="ping  w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse "
+                ></div>
+                <i
+                  class="fa-solid fa-arrow-left text-2xl text-[black] transition-all absolute"
+                ></i>
+                </div>
+                <div
+                  class="swiper-button-next slider-arrow absolute  "
+                >
+                    <div
+                    class="ping  w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse "
+                  ></div>
+                  <i
+                    class="fa-solid fa-arrow-right text-2xl text-[black] transition-all absolute"
+                  ></i>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -767,7 +876,7 @@
               </div>
 
               <div
-                class="button mt-4 border text-center rounded-full px-5 py-2 text-[white] font-[lora] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max"
+                class="addToCart button mt-4 border text-center rounded-full px-5 py-2 text-[white] font-[lora] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max"
               >
                 <i class="fa-solid fa-plus text-2xl mr-3"></i> ADD TO CART
               </div>

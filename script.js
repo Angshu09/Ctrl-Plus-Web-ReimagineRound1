@@ -308,7 +308,7 @@ async function collectionProducts() {
       modifier: 0,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
+      nextEl: ".collection-next",
       prevEl: ".swiper-button-prev",
     },
    
@@ -490,7 +490,7 @@ async function seasonalProducts() {
               </div>
 
               <div
-                class="Add_to_cart_btn border bg-[#4E3505] text-brand_yellow text-center rounded-full p-2 text-sm w-max mx-[-5px]"
+                class="addToCart border bg-[#4E3505] text-brand_yellow text-center rounded-full p-2 text-sm w-max mx-[-5px]"
               >
                 <i class="fa-solid fa-plus"></i> Add To Cart
               </div>
@@ -678,7 +678,7 @@ async function newCollectionProducts() {
                 <div class="des  mt-4 font-[lato] h-[70px] md:h-[200px] overflow-auto ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente cupiditate ratione? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente cupiditate ratione? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente cupiditate ratione? </div>
 
                 <div
-                class="button mt-4 border  rounded-full px-2 py-2 text-[#ddc56f] font-[lora] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max flex justify-center"
+                class="addToCart button mt-4 border  rounded-full px-2 py-2 text-[#ddc56f] font-[lora] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max flex justify-center"
               >
                 <i class="fa-solid fa-plus text-sm sm:text-xl mr-2"></i> ADD TO CART
               </div>
