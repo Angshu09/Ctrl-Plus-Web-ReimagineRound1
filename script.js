@@ -285,15 +285,17 @@ async function collectionProducts() {
     });
   });
 
-  const collectionImgEl = document.querySelectorAll(".collectionImg");
-  collectionImgEl.forEach((element, idx) => {
-    element.addEventListener("mouseenter", () => {
-      element.src = `${list[idx].hoverUrl}`;
-    });
-    element.addEventListener("mouseleave", () => {
-      element.src = `${list[idx].url}`;
-    });
-  });
+  //Yet to be done
+
+  // const collectionImgEl = document.querySelectorAll(".collectionImg");
+  // collectionImgEl.forEach((element, idx) => {
+  //   element.addEventListener("mouseenter", () => {
+  //     element.src = `${list[idx].hoverUrl}`;
+  //   });
+  //   element.addEventListener("mouseleave", () => {
+  //     element.src = `${list[idx].url}`;
+  //   });
+  // });
 
   var swiper2 = new Swiper(".tabSlider", {
     effect: "coverflow",
@@ -308,7 +310,7 @@ async function collectionProducts() {
       modifier: 0,
     },
     navigation: {
-      nextEl: ".collection-next",
+      nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
    
@@ -630,7 +632,7 @@ async function fillCategory() {
   mainCategory.appendChild(categoryFragment);
 
   let list= data.categories;
-  console.log(list)
+  // console.log(list)
 }
 
 fillCategory();
@@ -688,6 +690,7 @@ async function newCollectionProducts() {
   });
 
   nextButton.onclick = function () {
+    console.log('connected')
     showSlider("next");
   };
   prevButton.onclick = function () {
