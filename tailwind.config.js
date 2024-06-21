@@ -13,6 +13,7 @@ module.exports = {
     },
     fontFamily:{
       spartan:'League Spartan',
+      josefin:'josefin sans'
     }
   },
   plugins: [],

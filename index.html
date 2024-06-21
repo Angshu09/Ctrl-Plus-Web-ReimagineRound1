@@ -89,7 +89,8 @@
       }
 
       .tabSlider .card {
-        width: 230px;
+       
+        max-width: fit-content;
       }
 
       .collection .swiper-button-next,
@@ -276,7 +277,7 @@
           ></i>
 
           <label class="logo float-left my-4">
-            <img class="w-8 h-fit" src="media/Bacca Bucci.webp" alt="" />
+            <img class="w-8 " src="media/Bacca Bucci.webp" alt="" />
           </label>
 
           <ul
@@ -286,7 +287,7 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </li>
             <li>
-              <i class="fa-solid fa-bag-shopping"></i>
+              <i class="fa-solid fa-bag-shopping cart"></i>
             </li>
             <li>
               <i class="fa-solid fa-user"></i>
@@ -326,11 +327,11 @@
           <div class="swiper mySwiper">
             <div class="swiper-wrapper pt-[40px]">
               <div class="swiper-slide bg-brand_yellow">
-                <img class="m-auto w-[90%]" src="media/hero1.png" alt="" />
+                <img class="m-auto w-full pt-[40px]" src="https://res.cloudinary.com/dojcchveo/image/upload/v1718898312/baccabucci/jfyedeh6pko0tuuwuzdc.jpg" alt="" />
               </div>
-              <div class="swiper-slide bg-[black] overflow-hidden">
+              <div class="swiper-slide bg-[black] overflow-hidden border ">
                 <img
-                  class="videoImage m-auto w-full"
+                  class="videoImage m-auto w-full pt-[40px]"
                   src="media/image.png"
                   alt=""
                 />
@@ -346,7 +347,7 @@
                 <iframe
                   src="https://www.youtube.com/embed/DY9C-3lQIzE?list=TLGGArGWn_hfqykwMzA2MjAyNA"
                   type=""
-                  class="video w-[90%] aspect-video m-auto hidden pt-[40px]"
+                  class="video w-full aspect-video m-auto hidden pt-[40px]"
                   id="videoId"
                 ></iframe>
 
@@ -364,7 +365,7 @@
               </div>
 
               <div class="swiper-slide bg-brand_yellow">
-                <img class="m-auto w-[90%]" src="media/slider3.png" alt="" />
+                <img class="m-auto w-full pt-[40px]" src="https://res.cloudinary.com/dojcchveo/image/upload/v1718898312/baccabucci/nsgmwyyuiil8l1ljj7o6.jpg" alt="" />
               </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -373,23 +374,29 @@
       </section>
 
       <!-- Discover and Category section -->
-      <section class="category">
+      <section class="category ">
         <div class="discover-container">
-          <div class="my-[5rem]">
-            <div class="text-center px-3">
+          <div class="my-[3rem] md:my-[5rem]">
+            <div class="text-center px-1.5 sm:px-3">
+              
+              <h3 class="font-josefin text-[#AA740A] text-xs md:text-lg py-2 md:py-3 lg:py-4 font-bold">
+                <i class="fa-solid fa-arrow-left-long px-10 md:px-16 text-[#982009]"></i>
+                BACCA BUCCI “BE PRO”
+                <i class="fa-solid fa-arrow-right-long px-10 md:px-16 text-[#982009]"></i>
+              </h3>
               <h1
-                class="font-spartan text-[#4E3505] font-[550] text-4xl sm:text-5xl mb-5 leading-10 tracking-tight drop-shadow-2xl textShadow"
+                class="font-[lato] text-[#734E07] font-[450] text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-10 tracking-tighter sm:tracking-wider drop-shadow-2xl textShadow "
               >
                 DISCOVER YOUR NEXT OBSESSION
               </h1>
             </div>
-            <div class="flex justify-center gap-4">
+            <div class="flex justify-center items-center gap-4 text-xs sm:text-sm md:text-lg pt-2 sm:pt-4 md:pt-5 lg:pt-6 ">
               <div>
-                <p class="font-[Lora] font-semibold text-[#3f2d15]">BEST OF</p>
+                <p class="font-[Lora] font-[100]  text-[#3f2d15]">BEST OF</p>
               </div>
               <div>
                 <img
-                  class="w-[150px]"
+                  class=" w-[100px] sm:w-[120px] md:w-[150px]"
                   src="https://res.cloudinary.com/dojcchveo/image/upload/v1718519059/baccabucci/cli9m22eo8iqclhvgkhq.png"
                   alt="logo"
                 />
@@ -397,22 +404,24 @@
             </div>
           </div>
 
-          <div class="discover-swiper-container relative px-4">
+          <div class="discover-swiper-container relative px-4 md:px-8 lg:px-14 xl:px-20">
             <div class="swiper card-slider">
               <div class="swiper-wrapper discover-wrapper"></div>
 
               <div
                 class="flex justify-between absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10 w-[97%]"
               >
-                <div class="discover-prev">
+                <div class="discover-prev bg-[#808080b4] rounded-full w-[40px] h-[40px] justify-center flex items-center">
                   <i
-                    class="fa-solid fa-circle-arrow-left text-4xl text-[#4E3505] hover:animate-pulse transition-all"
+                    class="fa-solid fa-arrow-left text-3xl  text-[white] hover:animate-pulse transition-all"
                   ></i>
+
                 </div>
-                <div class="discover-next">
+                <div class="discover-next bg-[#808080b4]  rounded-full w-[40px] h-[40px] justify-center flex items-center">
                   <i
-                    class="fa-solid fa-circle-arrow-right text-4xl text-[#4E3505] hover:animate-pulse transition-all"
+                    class="fa-solid fa-arrow-right text-3xl  text-[white] hover:animate-pulse transition-all "
                   ></i>
+
                 </div>
               </div>
             </div>
@@ -422,11 +431,12 @@
         <div class="category-container">
           <div class="text-center mt-[5rem] mb-[3rem] px-3">
             <h1
-              class="font-spartan text-[#4E3505] font-[550] text-4xl sm:text-5xl mb-5 leading-10 tracking-tight drop-shadow-2xl textShadow"
+              class="font-[lato] text-[#601406] font-[500]
+               text-2xl sm:text-4xl mb-5 leading-10 drop-shadow-2xl textShadow"
             >
-              OUR CATEGORIES
+              ALL CATEGORIES
             </h1>
-          </div>
+        </div>
 
           <div class="flex justify-center items-center">
             <div
@@ -441,7 +451,7 @@
       </section>
 
       <!-- Best Sellers and New Collections Section  -->
-      <section class="best-seller mb-44 md-[w]">
+      <section class="best-seller  md-[w]">
         <div
           class="bestseller-container gap-10 md:gap-0 flex flex-col-reverse md:flex-row justify-between"
         >
@@ -511,16 +521,16 @@
         </div>
 
         <div
-          class="heading my-10 hidden text-center text-6xl lg:text-7xl font-[lora] tracking-widest text-[#ba542f]"
+          class="heading my-10 hidden text-center  text-4xl lg:text-5xl font-spartan tracking-widest text-[#ba542f] textShadow font-[500]"
         >
-          New Collection
+          NEW COLLECTION
         </div>
 
         <div class="carousel h-[600px] md:h-[800px] overflow-hidden relative">
           <div
-            class="text-center pt-10 text-5xl font-[lora] tracking-widest text-[#ba542f] md:hidden"
+            class="text-center pt-10 text-3xl sm:text-4xl font-spartan tracking-widest text-[#ba542f] md:hidden font-[550] textShadow" 
           >
-            New Collection
+          NEW COLLECTION
           </div>
 
           <div
@@ -550,7 +560,7 @@
           class="multiTab-container mt-10 w-full h-max text-[#601406] relative overflow-hidden pb-[3%]"
         >
           <p
-            class="best_bacca_bucci mt-[20px] text-center text-[roboto] font-[600] tracking-widest text-3xl sm:text-4xl md:text-4xl lg:text-5xl"
+            class="best_bacca_bucci mt-[20px] text-center font-spartan font-[550] tracking-widest text-3xl sm:text-4xl md:text-4xl lg:text-5xl textShadow "
           >
             BEST OF BACCA <br />
             BUCCI
@@ -574,7 +584,7 @@
             </div>
 
             <div
-              class="tab w-[95%] m-auto my-5 md:my-8 shadow-lg bg-[#F6E5C4] p-3 rounded-2xl hidden"
+              class="tab w-[95%] m-auto my-5 md:my-8 bg-[white] p-3 rounded-2xl hidden"
             >
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
@@ -584,7 +594,7 @@
             </div>
 
             <div
-              class="tab w-[95%] m-auto my-5 md:my-8 shadow-lg bg-[#F6E5C4] p-3 rounded-2xl hidden"
+              class="tab w-[95%] m-auto my-5 md:my-8 bg-[white] p-3 rounded-2xl hidden"
             >
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
@@ -595,7 +605,7 @@
             </div>
 
             <div
-              class="tab w-[95%] m-auto my-5 md:my-8 shadow-lg bg-[#F6E5C4] p-3 rounded-2xl"
+              class="tab w-[95%] m-auto my-5 md:my-8 bg-[white] p-3 rounded-2xl"
             >
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
@@ -640,7 +650,7 @@
             Pick Of The Month
           </p>
           <p
-            class="font-spartan text-[#4E3505] font-[700] text-4xl text-center leading-10 mb-10 tracking-widest drop-shadow-2xl textShadow"
+            class="font-spartan text-[#4E3505] font-[700] text-3xl sm:text-4xl text-center leading-10 mb-10 tracking-widest textShadow"
           >
             FEATURED PRODUCT
           </p>

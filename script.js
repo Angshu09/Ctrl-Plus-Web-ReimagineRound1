@@ -41,7 +41,7 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 766) {
+  if (window.innerWidth > 767) {
     centerEl.style.left = 0 + "px";
     centerEl.style.opacity = 1;
     headingNewCollection.classList.remove("hidden");
@@ -124,7 +124,7 @@ backbutton.addEventListener("click", () => {
 
 //Best Seller
 async function fillBestSellerWrapper() {
-  const res = await fetch("http://localhost:5173/assets.json");
+  const res = await fetch("assets.json");
   const data = await res.json();
   const wrapper = document.querySelector(".bestSeller-wrapper");
   const collectionSlider = document.querySelector(".collection-slider");
@@ -209,12 +209,12 @@ async function fillBestSellerWrapper() {
 }
 fillBestSellerWrapper();
 
-console.log(screenWidth);
+// console.log(screenWidth);
 
 // Best Collection
 
 async function collectionProducts() {
-  const res = await fetch("http://localhost:5173/assets.json");
+  const res = await fetch("assets.json");
   const data = await res.json();
   const wrapper = document.querySelectorAll(".collectionTabSliders");
   // console.log(wrapper)
@@ -227,7 +227,7 @@ async function collectionProducts() {
       slider.innerHTML =
         slider.innerHTML +
         `<div class=" h-max swiper-slide card  ">
-                  <div class=" w-[200px] sm:w-[220px] h-max rounded-[5%]  py-3 px-4 bg-[white] m-auto shadow-lg">
+                  <div class=" w-[200px] sm:w-[220px] h-max rounded-xl  py-3 px-4 bg-[white] m-auto shadow-lg my-2">
                   <img
                     class=" w-[180px] sm:w-[200px] rounded-[5%] mb-2 collectionImg"
                     src=" ${element.url} "
@@ -299,7 +299,7 @@ async function collectionProducts() {
     effect: "coverflow",
     grabCursor: true,
     slidesPerView: "auto",
-    spaceBetween: 10,
+    spaceBetween: 15,
     loop: true,
     coverflowEffect: {
       rotate: 0,
@@ -311,6 +311,7 @@ async function collectionProducts() {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+   
   });
 }
 collectionProducts();
@@ -340,7 +341,7 @@ tabLabelEls.forEach((element, idx) => {
 // Featured Product
 
 async function featureProducts() {
-  const res = await fetch("http://localhost:5173/assets.json");
+  const res = await fetch("assets.json");
   const data = await res.json();
   const wrapper = document.querySelector(".featureWrapper");
   const wrapper2 = document.querySelector(".featuredWrapperBelow");
@@ -429,7 +430,7 @@ shoeSizeEls.forEach((element, idx) => {
 //Seasonal Products
 
 async function seasonalProducts() {
-  const res = await fetch("http://localhost:5173/assets.json");
+  const res = await fetch("assets.json");
   const data = await res.json();
   const wrapper = document.querySelector(".cardContainer");
 
@@ -535,7 +536,7 @@ window.addEventListener("DOMContentLoaded", changeBannerImage);
 
 //Category section
 async function fillCategory() {
-  const res = await fetch("http://localhost:5173/assets.json");
+  const res = await fetch("assets.json");
   const data = await res.json();
   const mainCategory = document.querySelector(".main-category");
   const discoverWrapper = document.querySelector(".discover-wrapper");
@@ -569,25 +570,40 @@ async function fillCategory() {
     },
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 1.5,
         spaceBetween: 20,
       },
       480: {
-        slidesPerView: 2,
+        slidesPerView: 2.25,
+        spaceBetween: 20,
+      },
+      620: {
+        slidesPerView: 2.6,
         spaceBetween: 20,
       },
       768: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      1024: {
-        slidesPerView: 4,
+      900: {
+        slidesPerView: 3.5,
         spaceBetween: 22,
       },
+      1024:{
+        slidesPerView: 4,
+        spaceBetween: 22,
+
+      },
+      1250:{
+        slidesPerView: 4,
+        spaceBetween: 22,
+
+      }
+      
     },
   });
 
-  // Categories
+ // Categories
   const categoryFragment = document.createDocumentFragment();
   data.categories.forEach((category, i) => {
     const categoryDiv = document.createElement("div");
@@ -602,14 +618,19 @@ async function fillCategory() {
         </div>
       </div>
       <div class="w-full">
-        <p class="text-[10px] lg:text-xs xl:text-[14px] relative z-10 2xl:text-[18px] py-2 2xl:py-3 text-[Lato] font-bold rounded-full text-center" style="background-color: ${category.bg}; color: ${category.color};">
+        <p class="text-[10px] lg:text-xs xl:text-[14px] relative z-10 2xl:text-[18px] py-2 2xl:py-3 font-[Lato] font-bold rounded-full text-center" style="background-color: ${category.bg}; color: ${category.color};">
           ${category.name}
-        </p>
+          
+          </p>
+        
       </div>
     `;
     categoryFragment.appendChild(categoryDiv);
   });
   mainCategory.appendChild(categoryFragment);
+
+  let list= data.categories;
+  console.log(list)
 }
 
 fillCategory();
@@ -620,7 +641,7 @@ let prevButton = document.getElementById("prev");
 let carousel = document.querySelector(".carousel");
 
 async function newCollectionProducts() {
-  const res = await fetch("http://localhost:5173/assets.json");
+  const res = await fetch("assets.json");
   const data = await res.json();
   const wrapper = document.querySelector(".carousel .list");
 
@@ -659,7 +680,7 @@ async function newCollectionProducts() {
                 <div
                 class="button mt-4 border  rounded-full px-2 py-2 text-[#ddc56f] font-[lora] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max flex justify-center"
               >
-                <i class="fa-solid fa-plus text-xl mr-2"></i> ADD TO CART
+                <i class="fa-solid fa-plus text-sm sm:text-xl mr-2"></i> ADD TO CART
               </div>
               </div> 
 
