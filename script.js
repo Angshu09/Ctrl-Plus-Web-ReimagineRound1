@@ -132,37 +132,37 @@ async function fillBestSellerWrapper() {
     wrapper.innerHTML =
       wrapper.innerHTML +
       `
-        <div class="swiper-slide tranding-slide  sm:!w-[32rem] !w-[20rem]">
+        <div class="swiper-slide cursor-pointer tranding-slide  sm:!w-[30rem] md:!w-[37rem] !w-[17rem]">
           <div class="swiper-card w-full flex bg-[white] p-3  rounded-3xl flex-col sm:flex-row">
-            <div class="tranding-slide-img w-full h-[17rem] sm:h-full sm:w-[45%] overflow-hidden rounded-3xl">
+            <div class="tranding-slide-img w-full h-[13rem] sm:h-full sm:w-[45%] overflow-hidden rounded-xl">
               <img class="w-full h-full object-cover object-bottom" src="${
                 data.bestsellers[i].url
               }" alt="">
             </div>
 
             <div class="tranding-slide-content flex gap-2 sm:gap-0 sm:justify-between flex-col w-full sm:w-[55%] pl-[15px] py-[15px]">
-              <div><h3 class="font-[Nunito-Sans-light] text-[#AA740A] text-xs font-semibold">BACCA BUCCI</h3></div>
-              <div><p class="font-spartan text-[#4E3505] font-bold text-xl lg:text-2xl">${data.bestsellers[
+              <div><h3 class="font-[Nunito-Sans-light] text-[#AA740A] text-[16px] font-semibold">BACCA BUCCI</h3></div>
+              <div><p class="font-spartan text-[#4E3505] font-bold text-[18px] lg:text-2xl">${data.bestsellers[
                 i
               ].name.slice(12, 50)}...</p></div>
-              <div class="item-color gap-2 py-2 flex">
+              <div class="item-color gap-2 flex">
                     <div
-                      class="border-[1px] border-[black] w-[24px] h-[24px] rounded-full p-[1px]"
+                      class="border-[1px] border-[black] w-[24px] h-[24px] rounded-full p-[1px] flex items-center justify-center"
                     >
                       <div class="w-[20px] h-[20px] rounded-full bg-[black]"></div>
                     </div>
                     <div
-                      class="border-[1px] border-[grey] w-[24px] h-[24px] rounded-full p-[1px]"
+                      class="border-[1px] border-[grey] w-[24px] h-[24px] rounded-full p-[1px] flex items-center justify-center"
                     >
                       <div class="w-[20px] h-[20px] rounded-full bg-[grey]"></div>
                     </div>
                     <div
-                      class="border-[1px] border-[olive] w-[24px] h-[24px] rounded-full p-[1px]"
+                      class="border-[1px] border-[olive] w-[24px] h-[24px] rounded-full p-[1px] flex items-center justify-center"
                     >
                       <div class="w-[20px] h-[20px] rounded-full bg-[olive]"></div>
                     </div>
                     <div
-                      class="border-[1px] border-[brown] w-[24px] h-[24px] rounded-full p-[1px]"
+                      class="border-[1px] border-[brown] w-[24px] h-[24px] rounded-full p-[1px] flex items-center justify-center"
                     >
                       <div class="w-[20px] h-[20px] rounded-full bg-[brown]"></div>
                     </div>
@@ -192,7 +192,7 @@ async function fillBestSellerWrapper() {
     loop: true,
     slidesPerView: "auto",
     coverflowEffect: {
-      rotate: 0,
+      rotate: 7,
       stretch: 0,
       depth: 100,
       modifier: 2.5,
@@ -202,9 +202,32 @@ async function fillBestSellerWrapper() {
       disableOnInteraction: false,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".tranding-next",
+      prevEl: ".tranding-prev",
     },
+  });
+
+  const slides = document.querySelectorAll('.swiper-slide');
+
+  slides.forEach(slide => {
+    slide.addEventListener('mouseenter', () => {
+      TrandingSlider.autoplay.stop();
+    });
+
+    slide.addEventListener('mouseleave', () => {
+      TrandingSlider.autoplay.start();
+    });
+  });
+
+  const trandingImg = document.querySelectorAll('.tranding-slide-img img')
+  console.log(trandingImg)
+  trandingImg.forEach((element, idx) => {
+    element.addEventListener("mouseenter", () => {
+      element.src = `${data[idx].hoverUrl}`;
+    });
+    element.addEventListener("mouseleave", () => {
+      element.src = `${data[idx].url}`;
+    });
   });
 }
 fillBestSellerWrapper();
@@ -516,22 +539,22 @@ seasonalProducts();
 function changeBannerImage() {
   const img = document.querySelector(".footer-banner-img");
   const deliveryImg = document.querySelector(".delivery-img");
-  if (window.innerWidth <= 768) {
-    img.src =
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1718272363/baccabucci/footer/lnzeezctpp3p7obpeauo.webp";
-  } else {
-    img.src =
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1718270252/baccabucci/footer/egeraxcf41x4boobjcuv.jpg";
-  }
+  const windowWidth = window.innerWidth;
 
-  if (window.innerWidth <= 640) {
-    deliveryImg.src =
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1718794130/baccabucci/mtz28rxkgtv8skb0jvgd.png";
-  } else {
-    deliveryImg.src =
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1718625792/baccabucci/yxzmmolgdtagp1ov3mp6.png";
-  }
+  const bannerImages = {
+    small: "https://res.cloudinary.com/dojcchveo/image/upload/v1718272363/baccabucci/footer/lnzeezctpp3p7obpeauo.webp",
+    large: "https://res.cloudinary.com/dojcchveo/image/upload/v1718270252/baccabucci/footer/egeraxcf41x4boobjcuv.jpg"
+  };
+
+  const deliveryImages = {
+    small: "https://res.cloudinary.com/dojcchveo/image/upload/v1718794130/baccabucci/mtz28rxkgtv8skb0jvgd.png",
+    large: "https://res.cloudinary.com/dojcchveo/image/upload/v1718952469/baccabucci/nqbc4fr7w7v0insklvy8.png"
+  };
+
+  img.src = windowWidth <= 768 ? bannerImages.small : bannerImages.large;
+  deliveryImg.src = windowWidth <= 640 ? deliveryImages.small : deliveryImages.large;
 }
+
 
 window.addEventListener("resize", changeBannerImage);
 window.addEventListener("DOMContentLoaded", changeBannerImage);
