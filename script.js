@@ -573,32 +573,32 @@ async function fillCategory() {
     breakpoints: {
       320: {
         slidesPerView: 1.5,
-        spaceBetween: 20,
+        spaceBetween: 13,
       },
       480: {
         slidesPerView: 2.25,
-        spaceBetween: 20,
+        spaceBetween: 13,
       },
       620: {
         slidesPerView: 2.6,
-        spaceBetween: 20,
+        spaceBetween: 15,
       },
       768: {
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 15,
       },
       900: {
         slidesPerView: 3.5,
-        spaceBetween: 22,
+        spaceBetween: 15,
       },
       1024:{
         slidesPerView: 4,
-        spaceBetween: 22,
+        spaceBetween: 15,
 
       },
       1250:{
         slidesPerView: 4,
-        spaceBetween: 22,
+        spaceBetween: 15,
 
       }
       
