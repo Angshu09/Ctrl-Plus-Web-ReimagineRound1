@@ -567,7 +567,7 @@ function changeBannerImage() {
   }
 
   heroSlider1.src = windowWidth <= 768 ? heroSlider1Images.small : heroSlider1Images.large;
-  heroSlider2.src = windowWidth <= 768 ? heroSlider2Images.small : heroSlider2Image.large;
+  heroSlider2.src = windowWidth <= 768 ? heroSlider2Images.small : heroSlider2Images.large;
   footerImg.src = windowWidth <= 768 ? bannerImages.small : bannerImages.large;
   deliveryImg.src = windowWidth <= 640 ? deliveryImages.small : deliveryImages.large;
 }
