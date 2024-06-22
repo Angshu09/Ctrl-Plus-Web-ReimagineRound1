@@ -540,8 +540,10 @@ seasonalProducts();
 
 //changing images in specific screen sizes
 function changeBannerImage() {
-  const img = document.querySelector(".footer-banner-img");
+  const footerImg = document.querySelector(".footer-banner-img");
   const deliveryImg = document.querySelector(".delivery-img");
+  const heroSlider1 = document.querySelector(".hero-slider-1");
+  const heroSlider2 = document.querySelector(".hero-slider-2");
   const windowWidth = window.innerWidth;
 
   const bannerImages = {
@@ -554,7 +556,19 @@ function changeBannerImage() {
     large: "https://res.cloudinary.com/dojcchveo/image/upload/v1718952469/baccabucci/nqbc4fr7w7v0insklvy8.png"
   };
 
-  img.src = windowWidth <= 768 ? bannerImages.small : bannerImages.large;
+  const heroSlider1Images = {
+    small: "media/hero1SliderMin.jpg",
+    large: "media/hero1Slider.jpg"
+  }
+
+  const heroSlider2Images = {
+    small: "media/hero2SliderMin.jpg",
+    large: "media/hero2Slider.jpg"
+  }
+
+  heroSlider1.src = windowWidth <= 768 ? heroSlider1Images.small : heroSlider1Images.large;
+  heroSlider2.src = windowWidth <= 768 ? heroSlider2Images.small : heroSlider2Image.large;
+  footerImg.src = windowWidth <= 768 ? bannerImages.small : bannerImages.large;
   deliveryImg.src = windowWidth <= 640 ? deliveryImages.small : deliveryImages.large;
 }
 
