@@ -173,8 +173,12 @@ async function fillBestSellerWrapper() {
                 } <s class="text-xs text-[lora] text-[grey]">MRP. 2,999.00</s></p>
               </div>
               <div class="flex gap-2 text-[#4e3405d6] font-semibold">
-                <p>${data.bestsellers[i].ratings}</P>
-                <img class="w-[5rem]" src="media/ratings.png" alt="">
+                <p>(${data.bestsellers[i].ratings})</P>
+                <i class="fa-solid fa-star text-brand_yellow"></i>
+                <i class="fa-solid fa-star text-brand_yellow"></i>
+                <i class="fa-solid fa-star text-brand_yellow"></i>
+                <i class="fa-solid fa-star text-brand_yellow"></i>
+                <i class="fa-solid fa-star text-brand_yellow"></i>
               </div>
               <div>
                 <button class="bg-[#4E3505] hover:animate-pulse text-center font-[Arvo] rounded-full py-3 px-4 bor text-[15px] text-brand_yellow">+ Add To Cart </button>
