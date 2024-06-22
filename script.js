@@ -717,7 +717,7 @@ async function newCollectionProducts() {
   });
 
   nextButton.onclick = function () {
-    console.log('connected')
+    // console.log('connected')
     showSlider("next");
   };
   prevButton.onclick = function () {
