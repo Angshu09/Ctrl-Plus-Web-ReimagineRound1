@@ -573,7 +573,7 @@ async function fillCategory() {
   const discoverFragment = document.createDocumentFragment();
   data.discover.forEach((item) => {
     const slide = document.createElement("div");
-    slide.className = "swiper-slide p-2 bg-[#F8CF81] rounded-3xl shadow";
+    slide.className = "swiper-slide rounded-3xl shadow";
     slide.innerHTML = `
       <div class="img-box rounded-2xl w-full overflow-hidden">
         <img src="${item}" alt="Sneakers" class="w-full">
