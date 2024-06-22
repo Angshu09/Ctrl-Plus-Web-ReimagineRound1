@@ -224,7 +224,6 @@ async function fillBestSellerWrapper() {
   });
 
   const trandingImg = document.querySelectorAll('.tranding-slide-img img')
-  console.log(trandingImg)
   trandingImg.forEach((element, idx) => {
     element.addEventListener("mouseenter", () => {
       element.src = `${data[idx].hoverUrl}`;
