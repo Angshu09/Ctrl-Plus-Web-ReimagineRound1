@@ -557,13 +557,13 @@ function changeBannerImage() {
   };
 
   const heroSlider1Images = {
-    small: "media/hero1SliderMin.jpg",
-    large: "media/hero1Slider.jpg"
+    small: "https://res.cloudinary.com/dojcchveo/image/upload/v1718946487/baccabucci/qj4rrjkvluouhveojmch.jpg",
+    large: "https://res.cloudinary.com/dojcchveo/image/upload/v1718898312/baccabucci/jfyedeh6pko0tuuwuzdc.jpg"
   }
 
   const heroSlider2Images = {
-    small: "media/hero2SliderMin.jpg",
-    large: "media/hero2Slider.jpg"
+    small: "https://res.cloudinary.com/dojcchveo/image/upload/v1719048669/baccabucci/nmoo1fuw0ig7ljl1nh2d.jpg",
+    large: "https://res.cloudinary.com/dojcchveo/image/upload/v1718898312/baccabucci/nsgmwyyuiil8l1ljj7o6.jpg"
   }
 
   heroSlider1.src = windowWidth <= 768 ? heroSlider1Images.small : heroSlider1Images.large;
