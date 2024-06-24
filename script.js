@@ -246,16 +246,18 @@ async function collectionProducts() {
   // console.log(wrapper)
 
   let list = data.collection;
-  wrapper.forEach((slider) => {
+  wrapper.forEach((slider, idx) => {
+    // console.log(idx)
     // console.log(slider);
 
-    list.forEach((element) => {
+    list[idx].forEach((element) => {
       slider.innerHTML =
         slider.innerHTML +
-        `<div class=" h-max swiper-slide card  ">
-                  <div class=" w-[200px] sm:w-[220px] h-max rounded-xl  py-3 px-4 bg-[white] m-auto shadow-lg my-2">
+        `<div class=" h-max swiper-slide card my-3 ">
+                  <div class=" w-[200px] sm:w-[220px] h-max rounded-xl  py-3 px-4 bg-[white] m-auto shadow-lg my-2" >
+                  
                   <img
-                    class=" w-[180px] sm:w-[200px] rounded-[5%] mb-2 collectionImg"
+                    class=" w-[180px]  sm:w-[200px] rounded-[5%] mb-2 collectionImg" id="${element.hoverUrl}"
                     src=" ${element.url} "
                     alt=""
                   />
@@ -309,19 +311,33 @@ async function collectionProducts() {
                 </div>
         </div> `;
     });
+
+
+  
+    // collectionImgEl.forEach((element, idx) => {
+    //   element.addEventListener("mouseenter", () => {
+    //     element.src = `${list[idx].hoverUrl}`;
+    //   });
+    //   element.addEventListener("mouseleave", () => {
+    //     element.src = `${list[idx].url}`;
+    //   });
+    // });
   });
 
   //Yet to be done
+  const collectionImgEl = document.querySelectorAll(".collectionImg");
+    // console.log(collectionImgEl)
+    collectionImgEl.forEach((element, idx)=>{
+      let image= element.src;
+      element.addEventListener('mouseenter',()=>{
+        element.src=element.id;
+      });
+      element.addEventListener('mouseleave', ()=>{
+        element.src= image;
+      })
 
-  // const collectionImgEl = document.querySelectorAll(".collectionImg");
-  // collectionImgEl.forEach((element, idx) => {
-  //   element.addEventListener("mouseenter", () => {
-  //     element.src = `${list[idx].hoverUrl}`;
-  //   });
-  //   element.addEventListener("mouseleave", () => {
-  //     element.src = `${list[idx].url}`;
-  //   });
-  // });
+    })
+
 
   var swiper2 = new Swiper(".tabSlider", {
     effect: "coverflow",
@@ -470,31 +486,31 @@ async function seasonalProducts() {
   list.forEach((element) => {
     wrapper.innerHTML =
       wrapper.innerHTML +
-      `<div class=" h-max ">
-              <div class=" sm:w-[230px] xl:w-[250px] h-max rounded-[5%]  py-3 px-4 bg-[white] m-auto shadow-lg">
+      `<div class=" h-max  ">
+              <div class=" md:w-[230px] xl:w-[250px] h-max rounded-[5%]  py-3 px-4 bg-[white] m-auto shadow-lg">
               <img
                 class=" sm:w-[200px] xl:w-[230px] rounded-[10%] mb-2 seasonImg"
                 src=" ${element.url} "
                 alt=""
               />
 
-              <p class="font-[lora] text-[black] font-bold text-sm">
-                Flame 7-Eye Moto..
+              <p class="font-[lora] text-[black] font-bold text-xs sm:text-sm">
+                ${(element.name).slice(12, 30)}...
               </p>
               <p class="font-[lora] text-xs font-bold text-[black]">2024</p>
 
               <p
-                class="font-[lato] text-[#c1860f] font-[500] leading-8 text-sm"
+                class="font-[lato] text-[#c1860f] font-[500] leading-4 sm:leading-8 text-xs sm:text-sm"
               >
                 Bacca Bucci
               </p>
 
-              <span class="font-[oswald] font-bold text-md">Rs 1,799</span>
+              <span class="font-[oswald] font-bold text-sm sm:text-md">Rs ${(element.price).slice(0,-2)}</span>
               <span class="font-[lora] text-[grey] line-through text-xs"
                 >Mrp 2,799</span
               >
 
-              <div class="item-color gap-2 py-2 flex">
+              <div class="item-color gap-2 py-2 flex ">
                 <div
                   class="border-[1px] border-[black] w-[24px] h-[24px] rounded-full p-[1px]"
                 >
@@ -673,40 +689,40 @@ async function newCollectionProducts() {
   const data = await res.json();
   const wrapper = document.querySelector(".carousel .list");
 
-  let list = data.collection;
-  // console.log(list);
+  let list = data.newCollection;
+  
 
   list.forEach((element) => {
     wrapper.innerHTML =
       wrapper.innerHTML +
       `<div class="item  absolute top-0 left-0 
     w-[90%] lg:w-[75%] h-[100%] text-[10px] md:text-[15px]">
-              <img src=" ${element.url} " class="pImg w-[40%] lg:w-[50%] absolute right-0 top-[50%] translate-y-[-50%] rounded-full " alt="">
+              <img src=" ${element.url} " class="pImg w-[50%] absolute right-0 top-[50%] translate-y-[-50%] " alt="">
 
                <div class="intro absolute top-[50%] translate-y-[-50%] w-[50%] md:w-[350px] opacity-0  pointer-events-none ">
-                <div class="brand font-[coustard] text-[#AA740A] tracking-widest  leading-8 text-[12px] md:text-[15px]">
+                <div class="brand font-[coustard] text-[#AA740A] tracking-widest  leading-8 text-[8px] md:text-[15px]">
                   BACCA BUCCI
                 </div>
-                <div class="pName w-[300px] my-4 font-spartan font-[500] text-4xl md:text-5xl ">
+                <div class="pName w-[300px] md:my-4 font-spartan font-[500] text-2xl sm:text-4xl md:text-5xl ">
                   Lorem ipsum 
                 </div>
-                <div class="price flex flex-wrap ">
+                <div class="price flex flex-wrap items-center">
 
                 <div
-                class="font-[oswald] font-bold text-lg lg:text-2xl text-[#601406]"
-                >Rs. 1,399.00</div
+                class="font-[oswald] font-bold text-sm sm:text-base md:text-xl lg:text-2xl text-[#601406] pr-2"
+                >Rs. ${element.price}</div
                 >
                 <div
-                  class="font-[lora] text-[grey] line-through text-xs lg:text-sm flex items-center px-2"
+                  class="font-[lora] text-[grey] line-through text-[8px] md:text-xs lg:text-sm text-center pr-10"
                   >Mrp. 3499.00</div
                 >
                 </div>
 
 
-                <div class="des  mt-4 font-[lato] h-[70px] md:h-[200px] overflow-auto ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente cupiditate ratione? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente cupiditate ratione? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente cupiditate ratione? </div>
+                <div class="des md:w-[280px] mt-4 font-[lato] ">${element.name} </div>
 
                 <div
-                class="addToCart button mt-4 border  rounded-full px-2 py-2 text-[#ddc56f] font-[lora] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max flex justify-center"
+                class="addToCart button mt-4 border  rounded-full px-2 py-2 text-[#ddc56f] font-[lato] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max flex justify-center"
               >
                 <i class="fa-solid fa-plus text-sm sm:text-xl mr-2"></i> ADD TO CART
               </div>
