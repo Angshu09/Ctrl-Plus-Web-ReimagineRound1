@@ -257,7 +257,7 @@ async function collectionProducts() {
                   <div class=" w-[200px] sm:w-[220px] h-max rounded-xl  py-3 px-4 bg-[white] m-auto shadow-lg my-2" >
                   
                   <img
-                    class=" w-[180px]  sm:w-[200px] rounded-[5%] mb-2 collectionImg" id="${element.hoverUrl}"
+                    class=" w-[180px]  sm:w-[200px] rounded-[5%] mb-2 collectionImg aspect-square" id="${element.hoverUrl}"
                     src=" ${element.url} "
                     alt=""
                   />
@@ -489,7 +489,7 @@ async function seasonalProducts() {
       `<div class=" h-max  ">
               <div class=" md:w-[230px] xl:w-[250px] h-max rounded-[5%]  py-3 px-4 bg-[white] m-auto shadow-lg">
               <img
-                class=" sm:w-[200px] xl:w-[230px] rounded-[10%] mb-2 seasonImg"
+                class=" sm:w-[200px] xl:w-[230px] rounded-[10%] mb-2 seasonImg aspect-square"
                 src=" ${element.url} "
                 alt=""
               />
