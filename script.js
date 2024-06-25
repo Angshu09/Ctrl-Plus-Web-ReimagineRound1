@@ -124,7 +124,9 @@ backbutton.addEventListener("click", () => {
 
 //Best Seller
 async function fillBestSellerWrapper() {
-  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
+  const res = await fetch(
+    "https://jayasaha811733.github.io/ReimagineAPI/assets.json"
+  );
   const data = await res.json();
   const wrapper = document.querySelector(".bestSeller-wrapper");
   const collectionSlider = document.querySelector(".collection-slider");
@@ -211,19 +213,19 @@ async function fillBestSellerWrapper() {
     },
   });
 
-  const slides = document.querySelectorAll('.swiper-slide');
+  const slides = document.querySelectorAll(".swiper-slide");
 
-  slides.forEach(slide => {
-    slide.addEventListener('mouseenter', () => {
+  slides.forEach((slide) => {
+    slide.addEventListener("mouseenter", () => {
       TrandingSlider.autoplay.stop();
     });
 
-    slide.addEventListener('mouseleave', () => {
+    slide.addEventListener("mouseleave", () => {
       TrandingSlider.autoplay.start();
     });
   });
 
-  const trandingImg = document.querySelectorAll('.tranding-slide-img img')
+  const trandingImg = document.querySelectorAll(".tranding-slide-img img");
   trandingImg.forEach((element, idx) => {
     element.addEventListener("mouseenter", () => {
       element.src = `${data[idx].hoverUrl}`;
@@ -235,12 +237,12 @@ async function fillBestSellerWrapper() {
 }
 fillBestSellerWrapper();
 
-// console.log(screenWidth);
-
 // Best Collection
 
 async function collectionProducts() {
-  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
+  const res = await fetch(
+    "https://jayasaha811733.github.io/ReimagineAPI/assets.json"
+  );
   const data = await res.json();
   const wrapper = document.querySelectorAll(".collectionTabSliders");
   // console.log(wrapper)
@@ -355,7 +357,6 @@ async function collectionProducts() {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-   
   });
 }
 collectionProducts();
@@ -385,7 +386,9 @@ tabLabelEls.forEach((element, idx) => {
 // Featured Product
 
 async function featureProducts() {
-  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
+  const res = await fetch(
+    "https://jayasaha811733.github.io/ReimagineAPI/assets.json"
+  );
   const data = await res.json();
   const wrapper = document.querySelector(".featureWrapper");
   const wrapper2 = document.querySelector(".featuredWrapperBelow");
@@ -481,7 +484,6 @@ async function seasonalProducts() {
   wrapper.innerHTML;
 
   let list = data.season;
-  // console.log(list);
 
   list.forEach((element) => {
     wrapper.innerHTML =
@@ -512,22 +514,22 @@ async function seasonalProducts() {
 
               <div class="item-color gap-2 py-2 flex ">
                 <div
-                  class="border-[1px] border-[black] w-[24px] h-[24px] rounded-full p-[1px]"
+                  class="border-[1px] border-[black] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                 >
                   <div class="w-[20px] h-[20px] rounded-full bg-[black]"></div>
                 </div>
                 <div
-                  class="border-[1px] border-[grey] w-[24px] h-[24px] rounded-full p-[1px]"
+                  class="border-[1px] border-[grey] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                 >
                   <div class="w-[20px] h-[20px] rounded-full bg-[grey]"></div>
                 </div>
                 <div
-                  class="border-[1px] border-[olive] w-[24px] h-[24px] rounded-full p-[1px]"
+                  class="border-[1px] border-[olive] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                 >
                   <div class="w-[20px] h-[20px] rounded-full bg-[olive]"></div>
                 </div>
                 <div
-                  class="border-[1px] border-[brown] w-[24px] h-[24px] rounded-full p-[1px]"
+                  class="border-[1px] border-[brown] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                 >
                   <div class="w-[20px] h-[20px] rounded-full bg-[brown]"></div>
                 </div>
@@ -563,38 +565,50 @@ function changeBannerImage() {
   const windowWidth = window.innerWidth;
 
   const bannerImages = {
-    small: "https://res.cloudinary.com/dojcchveo/image/upload/v1718272363/baccabucci/footer/lnzeezctpp3p7obpeauo.webp",
-    large: "https://res.cloudinary.com/dojcchveo/image/upload/v1718270252/baccabucci/footer/egeraxcf41x4boobjcuv.jpg"
+    small:
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1718272363/baccabucci/footer/lnzeezctpp3p7obpeauo.webp",
+    large:
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1718270252/baccabucci/footer/egeraxcf41x4boobjcuv.jpg",
   };
 
   const deliveryImages = {
-    small: "https://res.cloudinary.com/dojcchveo/image/upload/v1718794130/baccabucci/mtz28rxkgtv8skb0jvgd.png",
-    large: "https://res.cloudinary.com/dojcchveo/image/upload/v1718952469/baccabucci/nqbc4fr7w7v0insklvy8.png"
+    small:
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1718794130/baccabucci/mtz28rxkgtv8skb0jvgd.png",
+    large:
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1718952469/baccabucci/nqbc4fr7w7v0insklvy8.png",
   };
 
   const heroSlider1Images = {
-    small: "https://res.cloudinary.com/dojcchveo/image/upload/v1718946487/baccabucci/qj4rrjkvluouhveojmch.jpg",
-    large: "https://res.cloudinary.com/dojcchveo/image/upload/v1718898312/baccabucci/jfyedeh6pko0tuuwuzdc.jpg"
-  }
+    small:
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1719238176/baccabucci/hx01xmk9jfg8fbxgiqci.jpg",
+    large:
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1719238761/baccabucci/qg2be42m2ccskau5xmvp.jpg",
+  };
 
   const heroSlider2Images = {
-    small: "https://res.cloudinary.com/dojcchveo/image/upload/v1719048669/baccabucci/nmoo1fuw0ig7ljl1nh2d.jpg",
-    large: "https://res.cloudinary.com/dojcchveo/image/upload/v1718898312/baccabucci/nsgmwyyuiil8l1ljj7o6.jpg"
-  }
+    small:
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1719238178/baccabucci/mhxxgfq2uwanec2oigiq.jpg",
+    large:
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1719238759/baccabucci/dtyot6kt9vrldqks9phs.jpg",
+  };
 
-  heroSlider1.src = windowWidth <= 768 ? heroSlider1Images.small : heroSlider1Images.large;
-  heroSlider2.src = windowWidth <= 768 ? heroSlider2Images.small : heroSlider2Images.large;
+  heroSlider1.src =
+    windowWidth <= 768 ? heroSlider1Images.small : heroSlider1Images.large;
+  heroSlider2.src =
+    windowWidth <= 768 ? heroSlider2Images.small : heroSlider2Images.large;
   footerImg.src = windowWidth <= 768 ? bannerImages.small : bannerImages.large;
-  deliveryImg.src = windowWidth <= 640 ? deliveryImages.small : deliveryImages.large;
+  deliveryImg.src =
+    windowWidth <= 640 ? deliveryImages.small : deliveryImages.large;
 }
-
 
 window.addEventListener("resize", changeBannerImage);
 window.addEventListener("DOMContentLoaded", changeBannerImage);
 
 //Category section
 async function fillCategory() {
-  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
+  const res = await fetch(
+    "https://jayasaha811733.github.io/ReimagineAPI/assets.json"
+  );
   const data = await res.json();
   const mainCategory = document.querySelector(".main-category");
   const discoverWrapper = document.querySelector(".discover-wrapper");
@@ -647,21 +661,18 @@ async function fillCategory() {
         slidesPerView: 3.5,
         spaceBetween: 15,
       },
-      1024:{
+      1024: {
         slidesPerView: 4,
         spaceBetween: 15,
-
       },
-      1250:{
+      1250: {
         slidesPerView: 4,
         spaceBetween: 15,
-
-      }
-      
+      },
     },
   });
 
- // Categories
+  // Categories
   const categoryFragment = document.createDocumentFragment();
   data.categories.forEach((category, i) => {
     const categoryDiv = document.createElement("div");
@@ -687,7 +698,7 @@ async function fillCategory() {
   });
   mainCategory.appendChild(categoryFragment);
 
-  let list= data.categories;
+  let list = data.categories;
   // console.log(list)
 }
 
@@ -699,7 +710,9 @@ let prevButton = document.getElementById("prev");
 let carousel = document.querySelector(".carousel");
 
 async function newCollectionProducts() {
-  const res = await fetch("https://jayasaha811733.github.io/ReimagineAPI/assets.json");
+  const res = await fetch(
+    "https://jayasaha811733.github.io/ReimagineAPI/assets.json"
+  );
   const data = await res.json();
   const wrapper = document.querySelector(".carousel .list");
 
