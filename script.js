@@ -731,7 +731,7 @@ async function newCollectionProducts() {
                   BACCA BUCCI
                 </div>
                 <div class="pName w-[300px] md:my-4 font-spartan font-[500] text-2xl sm:text-4xl md:text-5xl ">
-                  Lorem ipsum 
+                  ${element.name} 
                 </div>
                 <div class="price flex flex-wrap items-center">
 
@@ -746,7 +746,7 @@ async function newCollectionProducts() {
                 </div>
 
 
-                <div class="des md:w-[280px] mt-4 font-[lato] ">${element.name} </div>
+                <div class="des md:w-[280px] mt-4 font-[lato] ">${element.description } </div>
 
                 <div
                 class="addToCart button mt-4 border  rounded-full px-2 py-2 text-[#ddc56f] font-[lato] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max flex justify-center"
