@@ -830,7 +830,7 @@ async function newCollectionProducts() {
       
       let json={
           'image':cartItem[1].src,
-          'name':(cartItem[3].getAttribute('name')).slice(12,70),
+          'name':(cartItem[3].getAttribute('name')).slice(12,50),
           'price':(cartItem[9].innerHTML).slice(3,).replace(/,/,"")
 
         }
@@ -878,28 +878,28 @@ async function newCollectionProducts() {
   function updateItemsToCart(json, idx){
 
     cartItemContainer.innerHTML= cartItemContainer.innerHTML+`<div class="cartItem flex ml-[10px] shadow-lg mb-3 border border-1 border-[#b1afaf] ">
-            <img src="${json.image}" class="aspect-square w-[120px] sm:w-[150px] m-2 rounded" alt="">
+            <img src="${json.image}" class="aspect-square w-[100px] sm:w-[120px] md:w-[150px] m-1 rounded" alt="">
   
-            <div class="des ml-[10px] relative  w-[70%]">
-              <p class="itemName font-spartan text-lg font-bold pb-1.5 md:pb-1"> ${json.name}... </p>
+            <div class="des m-1.5 ml-[10px] relative  w-[70%]">
+              <p class="itemName font-spartan text-sm sm:text-base md:text-lg font-bold pb-1.5 md:pb-1"> ${json.name}... </p>
   
-              <div class="price font-[lato] font-semibold text-[#4E3505] pb-1.5 md:pb-1 "> 
+              <div class="price text-sm sm:text-base md:text-lg font-[lato] font-semibold text-[#4E3505] pb-1.5 md:pb-1 "> 
                 <label for="price" class="font-[Roboto] font-[400] text-[black] ">
                   Price: 
                 </label> 
                 <label > &#8377</label>
                 <label class="cartPrice">${json.price}</label> </div>
               
-              <label for="Qty">Qty : </label>
+              <label class="text-sm sm:text-base md:text-lg" for="Qty">Qty : </label>
               <input
-                class="border text-center w-[50px] rounded"
+                class="border text-center leading-3 w-[30px] rounded"
                 type="number"
                 name="qty"
                 value="1"
                 min="1" max="5"
               />
   
-              <div class="removeItem absolute bottom-3 right-5 text-[#4E3505]  "
+              <div class="removeItem absolute bottom-1 sm:bottom-3 right-1 sm:right-3 md:right-5 text-[#4E3505] text-sm sm:text-base md:text-lg  "
               index="${idx}">
                 <i class="fa-solid fa-trash"></i>
                 <label for="trash"> Remove</label>
@@ -970,7 +970,7 @@ async function newCollectionProducts() {
   featureCartBtn.addEventListener('click',()=>{
     let json={
       'image':featureImg[0].src,
-      'name':(featureName.innerHTML).slice(0,70),
+      'name':(featureName.innerHTML).slice(0,50),
       'price':(featurePrice.innerHTML).slice(3,).replace(/,/,""),
 
     }
@@ -1000,7 +1000,7 @@ async function newCollectionProducts() {
     
       let json={
           'image':cartItem.querySelector('img').src,
-          'name':cartItem.querySelector('.pName ').textContent.replace('...',''),
+          'name':cartItem.querySelector('.pName ').textContent.replace('...','').slice(0,50),
           'price':(cartItem.querySelector(' .pPrice ').textContent).slice(3,).replace(/,/,"")
 
         }
