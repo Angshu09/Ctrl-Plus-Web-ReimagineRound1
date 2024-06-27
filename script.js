@@ -166,9 +166,7 @@ async function fillBestSellerWrapper() {
             <div class="tranding-slide-content flex gap-2 sm:gap-0 sm:justify-between flex-col w-full sm:w-[55%] pl-[15px] py-[15px]">
               <div><h3 class="font-[Nunito-Sans-light] text-[#AA740A] text-[16px] font-semibold">BACCA BUCCI</h3>
               </div>
-              <div><p class=" pName font-spartan text-[#4E3505] font-bold text-[18px] lg:text-2xl">${data.bestsellers[
-                i
-              ].name.slice(12, 50)}...</p></div>
+              <div><p class=" pName font-spartan text-[#4E3505] font-bold text-[18px] lg:text-2xl">${data.bestsellers[i].name.slice(12, 50)}...</p></div>
               <div class="item-color gap-2 flex">
                     <div
                       class="border-[1px] border-[black] w-[24px] h-[24px] rounded-full p-[1px] flex items-center justify-center"
@@ -282,6 +280,7 @@ async function collectionProducts() {
     
 
     list[idx].forEach((element) => {
+      let space=(element.name).length>30?"...":" ";
       slider.innerHTML =
         slider.innerHTML +
         `<div class=" h-max swiper-slide card my-3 ">
@@ -294,9 +293,7 @@ async function collectionProducts() {
                     alt=""
                   />
     
-                  <p class="font-[lora] text-[black] font-bold text-sm" name=" ${element.name} ">
-                    ${element.name.slice(12, 30)}...
-                  </p>
+                  <p class="font-[lora] text-[black] font-bold text-sm" name=" ${element.name} ">${element.name.slice(12, 30)}${space}</p>
                   <p class="font-[lora] text-xs font-bold text-[black]">2024</p>
     
                   <p
@@ -517,9 +514,7 @@ async function seasonalProducts() {
                 alt=""
               />
 
-              <p class="font-[lora] text-[black] font-bold text-xs sm:text-sm" name=" ${element.name} ">
-                ${(element.name).slice(12, 30)}${space}
-              </p>
+              <p class="font-[lora] text-[black] font-bold text-xs sm:text-sm" name=" ${element.name} ">${(element.name).slice(12, 30)}${space}</p>
               <p class="font-[lora] text-xs font-bold text-[black]">2024</p>
 
               <p
@@ -528,7 +523,7 @@ async function seasonalProducts() {
                 Bacca Bucci
               </p>
 
-              <span class="font-[oswald] font-bold text-sm sm:text-md">Rs ${(element.price).slice(0,-3)}</span>
+              <span class="font-[oswald] font-bold text-sm sm:text-md">Rs ${element.price}</span>
               <span class="font-[lora] text-[grey] line-through text-xs"
                 >Mrp 2,799</span
               >
@@ -850,7 +845,9 @@ async function newCollectionProducts() {
           cartList.push(JSON.stringify(json));
           updateLocalStorage()
         }
-        // console.log(cartList)
+        console.log(cartList[3])
+        console.log(cartList[2])
+        console.log(cartList[3]===cartList[2])
 
         
 
