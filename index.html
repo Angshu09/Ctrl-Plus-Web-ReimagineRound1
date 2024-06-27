@@ -57,7 +57,7 @@
       }
 
       li {
-        cursor: pointer;
+        cursor: grab;
       }
 
       .custom-left {
@@ -280,20 +280,6 @@
           </label>
 
           <ul
-            class="right flex h-[100%] items-center justify-evenly w-[30%] float-right text-2xl text-[#4E3505]"
-          >
-            <li>
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </li>
-            <li>
-              <i class="fa-solid fa-bag-shopping cartIcon"></i>
-            </li>
-            <li>
-              <i class="fa-solid fa-user"></i>
-            </li>
-          </ul>
-
-          <ul
             class="center fixed top-[80px] left-[-1000px] block text-center bg-brand_yellow w-11/12 font-[Anton] text-[#4E3505] shadow-lg text-lg transition-all ease-in-out duration-1000 md:flex justify-center gap-10 md:shadow-none md:top-0 md:bg-opacity-0 md:h-[80px] items-center md:left-0 md:transition-none border-8 border-brand_yellow pb-[10px] md:p-none"
           >
             <li
@@ -320,13 +306,36 @@
               <a href="#">Collections</a>
             </li>
           </ul>
+
+          <ul
+            class="right flex h-[100%] items-center justify-evenly w-[30%]  text-2xl text-[#4E3505] absolute right-0 "
+          >
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="cartIcon">
+              <i class="fa-solid fa-bag-shopping "></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-user"></i>
+            </li>
+          </ul>
+
+          
         </div>
 
         <div
-          class="cart w-[90%] min-h-[400px] shadow-lg fixed bg-[white] top-[80px] right-[-10px] z-20 rounded-lg  hidden"
-        >
+          class="cart w-[90%] sm:w-[80%] md:w-[600px] min-h-[80%] md:min-h-[700px] shadow-lg fixed bg-[white] top-[70px] right-[-1000px] z-20 rounded-b-2xl transition-all ease-in-out duration-1000 ">
+
+
+          <div class="cartItemContainer  w-[95%] h-[78%] absolute bottom-[120px] overflow-scroll a-auto">
+
+            
+
+          </div>
+
           <p
-            class="cartTotal font-[lato] w-[85%] font-bold absolute bottom-[65px] left-[50%] translate-x-[-50%]"
+            class="cartTotal font-[lato] w-[85%] font-bold absolute bottom-[65px] left-[50%] translate-x-[-50%] text-xl"
           >
             Total : 0
           </p>
@@ -467,7 +476,7 @@
         </div>
 
         <div class="category-container py-5">
-          <div class="text-center mt-[2rem] md:mt-[5rem] mb-[3rem] px-3">
+          <div class="text-center mt-[2rem] lg:mt-[5rem] mb-[3rem] px-3">
             <!-- <h1
               class="font-[lato] text-[#734E07] font-[550] text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-10 tracking-tight sm:tracking-wide drop-shadow-2xl textShadow"
             >
@@ -629,7 +638,7 @@
       </section>
 
       <!-- Best Of BaccaBucci Section  -->
-      <section class="collection">
+      <section class="collection ">
         <div
           class="multiTab-container mt-10 w-full h-max text-[#601406] relative overflow-hidden pb-0 md:pb-[1%] "
         >
@@ -884,10 +893,9 @@
               </p>
 
               <p
-                class="font-spartan font-bold text-2xl leading-5 text-[#3D2B07] mb-6 lg:text-3xl"
+                class=" featureName font-spartan font-bold text-2xl leading-5 text-[#3D2B07] mb-6 lg:text-3xl"
               >
-                Multiverse 2.0 Shimmering Silver Streak Low-Top Dance Sensation
-                Sneakers
+                Multiverse 2.0 Shimmering Silver Streak Low-Top Dance Sensation Sneakers
               </p>
 
               <div
@@ -903,7 +911,7 @@
               </p>
 
               <span
-                class="font-[oswald] font-bold text-lg lg:text-2xl text-[#601406]"
+                class=" featurePrice font-[oswald] font-bold text-lg lg:text-2xl text-[#601406]"
                 >Rs. 1,399.00</span
               >
               <span
@@ -949,6 +957,7 @@
                   type="number"
                   name="qty"
                   value="1"
+                  min="1" max="5"
                 />
               </div>
 
@@ -959,7 +968,7 @@
               </div>
 
               <div
-                class="addToCart button mt-4 border text-center rounded-full px-5 py-2 text-[white] font-[lora] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max"
+                class="addToCartFeature button mt-4 border text-center rounded-full px-5 py-2 text-[white] font-[lora] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max"
               >
                 <i class="fa-solid fa-plus text-2xl mr-3"></i> ADD TO CART
               </div>
