@@ -592,6 +592,12 @@ function changeBannerImage() {
     large:
       "https://www.youtube.com/embed/DY9C-3lQIzE",
   };
+  const videoTitle = {
+    small:
+      "Rannvijay x Baccabucci: Elevate Your Sneaker Game with Bacca Bucci! Limited Stocks, Infinite Style",
+    large:
+      "Discover Allure of Bacca Bucci Boots | A Cinematic Boot Adventure | Unleashing Essence of Adventure",
+  };
 
 
 
@@ -641,6 +647,8 @@ function changeBannerImage() {
     windowWidth <= 640 ? deliveryImages.small : deliveryImages.large;
   video.src=
     windowWidth<=768? videoSrc.small:videoSrc.large;
+  video.title=
+    windowWidth<=768? videoTitle.small:videoTitle.large;
 }
 
 window.addEventListener("resize", changeBannerImage);
