@@ -839,10 +839,11 @@ async function newCollectionProducts() {
         let localCart=cartList
         let localJson=JSON.stringify(json)
         // console.log(localCart.includes(localJson))
+        // console.log( JSON.stringify(localCart).includes(json.image))
 
         
 
-        if(!localCart.includes(localJson) && !JSON.stringify(localCart).includes(json.name)){
+        if(!localCart.includes(localJson) && !JSON.stringify(localCart).includes(json.image)){
           
           updateItemsToCart(json,cartList.length)
           cartList.push(JSON.stringify(json));
@@ -1043,7 +1044,7 @@ async function newCollectionProducts() {
     let localJson=JSON.stringify(json)
 
     
-    if(!localCart.includes(localJson) && !JSON.stringify(localCart).includes(json.name)){
+    if(!localCart.includes(localJson) && !JSON.stringify(localCart).includes(json.image)){
           
       updateItemsToCart(json,cartList.length)
       cartList.push(JSON.stringify(json));
@@ -1074,7 +1075,7 @@ async function newCollectionProducts() {
         
       let localCart=cartList
       let localJson=JSON.stringify(json)
-      if(!localCart.includes(localJson) && !JSON.stringify(localCart).includes(json.name)){
+      if(!localCart.includes(localJson) && !JSON.stringify(localCart).includes(json.image)){
             
         updateItemsToCart(json,cartList.length)
         cartList.push(JSON.stringify(json));
