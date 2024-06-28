@@ -1061,8 +1061,8 @@ async function newCollectionProducts() {
   function emptycart(){
     if(!cartList || cartList.length<1){
       // console.log('connected')
-      cartItemContainer.style.backgroundImage='url(/media/emptycart.png)';
-      cartItemContainer.classList.add('bg-no-repeat','bg-center')
+      cartItemContainer.style.backgroundImage='url(https://static.vecteezy.com/system/resources/previews/016/462/240/non_2x/empty-shopping-cart-illustration-concept-on-white-background-vector.jpg)';
+      cartItemContainer.classList.add('bg-no-repeat','bg-center','bg-contain')
   
     }else{
       cartItemContainer.style.backgroundImage='none';
@@ -1070,6 +1070,7 @@ async function newCollectionProducts() {
 
   }
   emptycart()
+  
   
  
 
