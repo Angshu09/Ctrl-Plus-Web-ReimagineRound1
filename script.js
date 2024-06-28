@@ -508,24 +508,24 @@ async function seasonalProducts() {
     wrapper.innerHTML =
       wrapper.innerHTML +
       `<div class=" h-max  ">
-              <div class=" md:w-[230px] xl:w-[250px] h-max rounded-[5%] py-[8%] px-[10%] sm:py-3 sm:px-4 bg-[white] m-auto shadow-lg">
+              <div class=" md:w-[230px] xl:w-[250px] h-max rounded-[5%] py-[8%] px-[9%] sm:py-3 sm:px-4 bg-[white] m-auto shadow-lg">
               <img
                 class=" sm:w-[200px] xl:w-[230px] rounded-[10%] mb-2 seasonImg aspect-square"
                 src=" ${element.url} "
                 alt=""
               />
 
-              <p class="font-[lora] text-[black] font-bold text-xs sm:text-sm" name=" ${element.name} ">${(element.name).slice(12, 30)}${space}</p>
-              <p class="font-[lora] text-xs font-bold text-[black]">2024</p>
+              <p class="font-[lora] text-[black] font-bold text-[10px] sm:text-sm" name=" ${element.name} ">${(element.name).slice(12, 30)}${space}</p>
+              <p class="font-[lora] text-[10px] sm:text-sm font-bold text-[black]">2024</p>
 
               <p
-                class="font-[lato] text-[#c1860f] font-[500] leading-4 sm:leading-8 text-xs sm:text-sm"
+                class="font-[lato] text-[#c1860f] font-[500] leading-4 sm:leading-8 text-[10px] sm:text-sm"
               >
                 Bacca Bucci
               </p>
 
-              <span class="font-[oswald] font-bold text-sm sm:text-md">Rs ${element.price}</span>
-              <span class="font-[lora] text-[grey] line-through text-xs"
+              <span class="font-[oswald] font-bold text-[12px] sm:text-[18px]">Rs ${element.price}</span>
+              <span class="font-[lora] text-[grey] line-through text-[8px] sm:text-xs"
                 >Mrp 2,799</span
               >
 
@@ -1061,8 +1061,8 @@ async function newCollectionProducts() {
   function emptycart(){
     if(!cartList || cartList.length<1){
       // console.log('connected')
-      cartItemContainer.style.backgroundImage='url(/media/emptycart.png)';
-      cartItemContainer.classList.add('bg-no-repeat','bg-center')
+      cartItemContainer.style.backgroundImage='url(https://static.vecteezy.com/system/resources/previews/016/462/240/non_2x/empty-shopping-cart-illustration-concept-on-white-background-vector.jpg)';
+      cartItemContainer.classList.add('bg-no-repeat','bg-center','bg-contain')
   
     }else{
       cartItemContainer.style.backgroundImage='none';
