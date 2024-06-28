@@ -975,31 +975,32 @@ async function newCollectionProducts() {
     cartQty.forEach((element, idx) => {
       element.addEventListener('change',()=>{
 
-        // console.log(element.getAttribute('value'))
-        
-
-        // console.log(JSON.parse(cartList[idx]).image)
-        
-        let qty=parseInt(element.value);
+        let qty=!element.value|| parseInt(element.value)<1?1:parseInt(element.value);
         let image=JSON.parse(cartList[idx]).image;
         let name=JSON.parse(cartList[idx]).name;
         let price=JSON.parse(cartList[idx]).price;
 
+        let cartQtyBefore=JSON.parse(cartList[idx]).qty
+        
         element.parentNode.querySelector('.cartPrice').innerHTML=price*qty;
         
         if(JSON.parse(cartList[idx]).qty<qty){
-          total+=parseInt(price)
+          total+=price*qty-cartQtyBefore*price
           cartTotal.innerHTML=`Total : ${total}`;
 
           // console.log(total)
           cartCount.innerHTML=`${++countTotal}`;
         }else{
-          total-=parseInt(price)
+          total=total-cartQtyBefore*price+qty*price
           cartTotal.innerHTML=`Total : ${total}`;
           // console.log(total)
           cartCount.innerHTML=`${--countTotal}`;
         }
-        element.setAttribute('value',qty);
+        if(qty<1){
+          element.setAttribute('value',1);
+        }else{
+          element.setAttribute('value',qty);
+        }
         
         let json={
           'image':image,
