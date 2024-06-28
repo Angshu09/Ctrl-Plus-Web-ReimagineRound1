@@ -933,7 +933,7 @@ async function newCollectionProducts() {
                 type="number"
                 name="qty"
                 value="${json.qty}"
-                min="1" max="5"
+                min="1" 
               />
   
               <div class="removeItem absolute bottom-1 sm:bottom-3 right-1 sm:right-3 md:right-5 text-[#4E3505] text-sm sm:text-base md:text-lg  "
