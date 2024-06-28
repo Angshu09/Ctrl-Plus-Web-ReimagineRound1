@@ -1060,7 +1060,7 @@ async function newCollectionProducts() {
 
   function emptycart(){
     if(!cartList || cartList.length<1){
-      console.log('connected')
+      // console.log('connected')
       cartItemContainer.style.backgroundImage='url(/media/emptycart.png)';
       cartItemContainer.classList.add('bg-no-repeat','bg-center')
   
