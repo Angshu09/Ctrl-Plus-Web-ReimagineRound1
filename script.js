@@ -630,9 +630,9 @@ function changeBannerImage() {
   };
   const videoSlider2Images = {
     small:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1719548282/baccabucci/rliho8bfn3s4miwkhnve.jpg" ,
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1719582415/baccabucci/gftrxf9nozrwycxtgqzn.jpg" ,
     large:
-      "/media/image.png",
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1719583104/baccabucci/sshoracn3rmcvmomlfgu.png",
   };
 
 
