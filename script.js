@@ -372,8 +372,8 @@ async function collectionProducts() {
       modifier: 0,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".tab-next",
+      prevEl: ".tab-prev",
     },
   });
 }
@@ -761,7 +761,7 @@ async function newCollectionProducts() {
                 <div class="des md:w-[280px] mt-4 font-[lato] ">${element.description} </div>
 
                 <div
-                class="addToCartCollection button mt-4 border  rounded-full px-2 py-2 text-[#ddc56f] font-[lato] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max flex justify-center"
+                class="addToCartCollection button mt-4 border  rounded-full px-3 py-2 text-[#ddc56f] font-[lato] bg-[#4E3505] lg:py-[10px] lg:text-xl lg:mt-10 w-max flex items-center justify-center"
               >
                 <i class="fa-solid fa-plus text-sm sm:text-xl mr-2"></i> ADD TO CART
               </div>
