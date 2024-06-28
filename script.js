@@ -831,13 +831,14 @@ async function newCollectionProducts() {
       let json={
           'image':cartItem[1].src,
           'name':(cartItem[3].getAttribute('name')).slice(12,50),
-          'price':(cartItem[9].innerHTML).slice(3,).replace(/,/,"")
+          'price':(cartItem[9].innerHTML).slice(3,).replace(/,/,""),
+          'qty':1
 
         }
         
         let localCart=cartList
         let localJson=JSON.stringify(json)
-        console.log(localCart.includes(localJson))
+        // console.log(localCart.includes(localJson))
 
         if(!localCart.includes(localJson)){
           
@@ -845,11 +846,7 @@ async function newCollectionProducts() {
           cartList.push(JSON.stringify(json));
           updateLocalStorage()
         }
-        console.log(cartList[3])
-        console.log(cartList[2])
-        console.log(cartList[3]===cartList[2])
 
-        
 
     })
 
@@ -865,7 +862,8 @@ async function newCollectionProducts() {
     let json={
       'image':JSON.parse(element).image,
       'name':JSON.parse(element).name,
-      'price':JSON.parse(element).price
+      'price':JSON.parse(element).price,
+      'qty':JSON.parse(element).qty
   
     }
     // console.log(json)
@@ -876,6 +874,7 @@ async function newCollectionProducts() {
   });
 
   function updateItemsToCart(json, idx){
+    
 
     cartItemContainer.innerHTML= cartItemContainer.innerHTML+`<div class="cartItem flex ml-[10px] shadow-lg mb-3 border border-1 border-[#b1afaf] ">
             <img src="${json.image}" class="aspect-square w-[100px] sm:w-[120px] md:w-[150px] m-1 rounded" alt="">
@@ -888,14 +887,14 @@ async function newCollectionProducts() {
                   Price: 
                 </label> 
                 <label > &#8377</label>
-                <label class="cartPrice">${json.price}</label> </div>
+                <label class="cartPrice">${json.price* json.qty}</label> </div>
               
-              <label class="text-sm sm:text-base md:text-lg" for="Qty">Qty : </label>
+              <label class="  text-sm sm:text-base md:text-lg" for="Qty" >Qty : </label>
               <input
-                class="border text-center leading-3 w-[30px] rounded"
+                class="border cartQty text-center leading-3 w-[30px] rounded"
                 type="number"
                 name="qty"
-                value="1"
+                value="${json.qty}"
                 min="1" max="5"
               />
   
@@ -943,13 +942,55 @@ async function newCollectionProducts() {
                     }
         
         let localJson=JSON.stringify(object)
-        console.log(cartList.indexOf(localJson))
+        // console.log(cartList.indexOf(localJson))
         cartItemList[idx].remove()
         cartList.splice(cartList.indexOf(localJson),1);
         
         updateLocalStorage()
         // console.log(cartList)
 
+      })
+      
+    });
+
+    const cartQty=cartItemContainer.querySelectorAll('.cartQty');
+
+    cartQty.forEach((element, idx) => {
+      element.addEventListener('change',()=>{
+
+        // console.log(JSON.parse(cartList[idx]).image)
+        // console.log(cartTotal)
+        
+        let qty=parseInt(element.value);
+        let image=JSON.parse(cartList[idx]).image;
+        let name=JSON.parse(cartList[idx]).name;
+        let price=JSON.parse(cartList[idx]).price;
+
+        element.parentNode.querySelector('.cartPrice').innerHTML=price*qty;
+        // total=parseInt(cartTotal.textContent.slice(-4))
+        // console.log(JSON.parse(cartList[idx]).qty<qty);
+        // console.log(JSON.parse(cartList[idx]).qty>qty);
+        
+        if(JSON.parse(cartList[idx]).qty<qty){
+          total+=parseInt(price)
+          cartTotal.innerHTML=`Total : ${total}`;
+          // console.log(total)
+        }else{
+          total-=parseInt(price)
+          cartTotal.innerHTML=`Total : ${total}`;
+          // console.log(total)
+        }
+        
+      
+        let json={
+          'image':image,
+          'name':name,
+          'price':price,
+          'qty':qty
+        }
+        // console.log(json)
+        cartList[idx]=JSON.stringify(json)
+        updateLocalStorage()
       })
       
     });
@@ -972,6 +1013,7 @@ async function newCollectionProducts() {
       'image':featureImg[0].src,
       'name':(featureName.innerHTML).slice(0,50),
       'price':(featurePrice.innerHTML).slice(3,).replace(/,/,""),
+      'qty':1
 
     }
     // console.log(json)
@@ -1001,7 +1043,8 @@ async function newCollectionProducts() {
       let json={
           'image':cartItem.querySelector('img').src,
           'name':cartItem.querySelector('.pName ').textContent.replace('...','').slice(0,50),
-          'price':(cartItem.querySelector(' .pPrice ').textContent).slice(3,).replace(/,/,"")
+          'price':(cartItem.querySelector(' .pPrice ').textContent).slice(3,).replace(/,/,""),
+          'qty':1
 
         }
       // console.log(json)
@@ -1026,6 +1069,39 @@ async function newCollectionProducts() {
   });
 
 
+  // const cartQty=cartItemContainer.querySelectorAll('.cartQty');
+  // const totalCost=document.querySelector('.cartTotal');
+
+  // cartQty.forEach((element, idx) => {
+  //   element.addEventListener('change',()=>{
+
+  //     // console.log(JSON.parse(cartList[idx]).image)
+  //     console.log(totalCost)
+      
+  //     let qty=parseInt(element.value);
+  //     let image=JSON.parse(cartList[idx]).image;
+  //     let name=JSON.parse(cartList[idx]).name;
+  //     let price=JSON.parse(cartList[idx]).price;
+
+  //     element.parentNode.querySelector('.cartPrice').innerHTML=price*qty;
+  //     let total=parseInt(totalCost.textContent.slice(-4))
+  //     console.log(total)
+  //     totalCost.innerHTML=`Total : ${total-price+(price*qty)}`;
+      
+
+
+  //     let json={
+  //       'image':image,
+  //       'name':name,
+  //       'price':price,
+  //       'qty':qty
+  //     }
+  //     cartList[idx]=JSON.stringify(json)
+  //     updateLocalStorage()
+  //   })
+    
+  // });
+
 
   
 
@@ -1037,3 +1113,5 @@ function updateLocalStorage(){
   localStorage.setItem("Cart", JSON.stringify(cartList));
 
 }
+
+
