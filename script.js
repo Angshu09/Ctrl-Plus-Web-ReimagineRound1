@@ -589,7 +589,7 @@ function changeBannerImage() {
 
   const deliveryImages = {
     small:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1718794130/baccabucci/mtz28rxkgtv8skb0jvgd.png",
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1719580070/baccabucci/hcez75blwh9mzapuu9j5.jpg",
     large:
       "https://res.cloudinary.com/dojcchveo/image/upload/v1718952469/baccabucci/nqbc4fr7w7v0insklvy8.png",
   };
