@@ -840,7 +840,9 @@ async function newCollectionProducts() {
         let localJson=JSON.stringify(json)
         // console.log(localCart.includes(localJson))
 
-        if(!localCart.includes(localJson)){
+        
+
+        if(!localCart.includes(localJson) && !JSON.stringify(localCart).includes(json.name)){
           
           updateItemsToCart(json,cartList.length)
           cartList.push(JSON.stringify(json));
@@ -913,13 +915,20 @@ async function newCollectionProducts() {
     
     const cartTotal=document.querySelector('.cartTotal');
     const cartPrice=document.querySelectorAll('.cartPrice');
+    const cartCount=document.querySelector('.cartCount');
+    const cartQuantity=document.querySelectorAll('.cartQty')
     
     let total=0;
-    cartPrice.forEach(element => {
+    let countTotal=0;
+    cartPrice.forEach((element,idx) => {
       total+=parseInt(element.textContent);
+      countTotal+=parseInt(cartQuantity[idx].value)
+      
     });
-    // console.log(total)
+
+    // console.log(countTotal)
     cartTotal.innerHTML=`Total: &#8377 ${total}`;
+    cartCount.innerHTML=`${countTotal}`;
     
     const removeItemList=document.querySelectorAll('.removeItem');
     
@@ -932,9 +941,16 @@ async function newCollectionProducts() {
         const parentImg=( (element.parentNode).parentNode).childNodes
         const parentDes=(element.parentNode).childNodes
         const price=parseInt((element.parentNode).querySelector('.cartPrice').textContent)
+        const cartqty=parseInt((element.parentNode).querySelector('.cartQty').value)
+      
+        
         total-=price;
+        countTotal-=cartqty;
+       
+
         cartTotal.innerHTML=`Total: &#8377 ${total}`;
-        // let idx= element.getAttribute('index');
+        cartCount.innerHTML=`${countTotal}`;
+       
         let object={'image':parentImg[1].src,
                     'name':parentDes[1].textContent.slice(1,-4),
                     'price':(parentDes[3].childNodes)[5].textContent
@@ -942,12 +958,12 @@ async function newCollectionProducts() {
                     }
         
         let localJson=JSON.stringify(object)
-        // console.log(cartList.indexOf(localJson))
+        
         cartItemList[idx].remove()
         cartList.splice(cartList.indexOf(localJson),1);
         
         updateLocalStorage()
-        // console.log(cartList)
+        
 
       })
       
@@ -958,8 +974,10 @@ async function newCollectionProducts() {
     cartQty.forEach((element, idx) => {
       element.addEventListener('change',()=>{
 
+        // console.log(element.getAttribute('value'))
+        
+
         // console.log(JSON.parse(cartList[idx]).image)
-        // console.log(cartTotal)
         
         let qty=parseInt(element.value);
         let image=JSON.parse(cartList[idx]).image;
@@ -967,35 +985,38 @@ async function newCollectionProducts() {
         let price=JSON.parse(cartList[idx]).price;
 
         element.parentNode.querySelector('.cartPrice').innerHTML=price*qty;
-        // total=parseInt(cartTotal.textContent.slice(-4))
-        // console.log(JSON.parse(cartList[idx]).qty<qty);
-        // console.log(JSON.parse(cartList[idx]).qty>qty);
         
         if(JSON.parse(cartList[idx]).qty<qty){
           total+=parseInt(price)
           cartTotal.innerHTML=`Total : ${total}`;
+
           // console.log(total)
+          cartCount.innerHTML=`${++countTotal}`;
         }else{
           total-=parseInt(price)
           cartTotal.innerHTML=`Total : ${total}`;
           // console.log(total)
+          cartCount.innerHTML=`${--countTotal}`;
         }
+        element.setAttribute('value',qty);
         
-      
         let json={
           'image':image,
           'name':name,
           'price':price,
           'qty':qty
         }
-        // console.log(json)
         cartList[idx]=JSON.stringify(json)
         updateLocalStorage()
       })
       
     });
 
+    
+   
+
         
+
 
   }
  
@@ -1020,7 +1041,9 @@ async function newCollectionProducts() {
 
     let localCart=cartList
     let localJson=JSON.stringify(json)
-    if(!localCart.includes(localJson)){
+
+    
+    if(!localCart.includes(localJson) && !JSON.stringify(localCart).includes(json.name)){
           
       updateItemsToCart(json,cartList.length)
       cartList.push(JSON.stringify(json));
@@ -1049,16 +1072,14 @@ async function newCollectionProducts() {
         }
       // console.log(json)
         
-        let localCart=cartList
-        let localJson=JSON.stringify(json)
-        // console.log(localCart.includes(localJson))
-
-        if(!localCart.includes(localJson)){
-          
-          updateItemsToCart(json,cartList.length)
-          cartList.push(JSON.stringify(json));
-          updateLocalStorage()
-        }
+      let localCart=cartList
+      let localJson=JSON.stringify(json)
+      if(!localCart.includes(localJson) && !JSON.stringify(localCart).includes(json.name)){
+            
+        updateItemsToCart(json,cartList.length)
+        cartList.push(JSON.stringify(json));
+        updateLocalStorage()
+      }
         // console.log(cartList)
 
         
@@ -1068,39 +1089,6 @@ async function newCollectionProducts() {
     
   });
 
-
-  // const cartQty=cartItemContainer.querySelectorAll('.cartQty');
-  // const totalCost=document.querySelector('.cartTotal');
-
-  // cartQty.forEach((element, idx) => {
-  //   element.addEventListener('change',()=>{
-
-  //     // console.log(JSON.parse(cartList[idx]).image)
-  //     console.log(totalCost)
-      
-  //     let qty=parseInt(element.value);
-  //     let image=JSON.parse(cartList[idx]).image;
-  //     let name=JSON.parse(cartList[idx]).name;
-  //     let price=JSON.parse(cartList[idx]).price;
-
-  //     element.parentNode.querySelector('.cartPrice').innerHTML=price*qty;
-  //     let total=parseInt(totalCost.textContent.slice(-4))
-  //     console.log(total)
-  //     totalCost.innerHTML=`Total : ${total-price+(price*qty)}`;
-      
-
-
-  //     let json={
-  //       'image':image,
-  //       'name':name,
-  //       'price':price,
-  //       'qty':qty
-  //     }
-  //     cartList[idx]=JSON.stringify(json)
-  //     updateLocalStorage()
-  //   })
-    
-  // });
 
 
   

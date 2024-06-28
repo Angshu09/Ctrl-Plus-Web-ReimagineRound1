@@ -312,8 +312,9 @@
             <li>
               <i class="fa-solid fa-magnifying-glass"></i>
             </li>
-            <li class="cartIcon">
-              <i class="fa-solid fa-bag-shopping "></i>
+            <li class="cartIcon relative">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <label for="cartCount" class=" cartCount absolute text-sm px-1 top-[3px] font-bold left-[-18px] text-[red] bg-[#ffffffb9] rounded-full text-center">0</label>
             </li>
             <li>
               <i class="fa-solid fa-user"></i>
@@ -549,21 +550,28 @@
               <div
                 class="flex justify-between absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[90%]"
               >
-                <div class="tranding-prev">
+                <div class="tranding-prev relative ">
                   <div
-                    class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                    class="ping w-full h-full animate-ping absolute inline-flex  rounded-full bg-[white]"
                   ></div>
-                  <i
-                    class="fa-solid fa-circle-arrow-left text-5xl text-[#ffffffc6] hover:animate-pulse transition-all"
+                  <div class="  w-[50px] h-[50px] bg-[#808080c3] rounded-full text-center relative">
+                    <i
+                    class="fa-solid  fa-arrow-left text-4xl text-[white] absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] z-[2] hover:animate-pulse transition-all "
                   ></i>
+
+                  </div>
                 </div>
-                <div class="tranding-next">
+                <div class="tranding-next relative">
                   <div
-                    class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                    class="ping w-full h-full animate-ping absolute inline-flex  rounded-full bg-[white]"
                   ></div>
-                  <i
-                    class="fa-solid fa-circle-arrow-right text-5xl text-[#ffffffc6] hover:animate-pulse transition-all"
+                  <div class="  w-[50px] h-[50px] bg-[#808080c3] rounded-full text-center relative">
+                    <i
+                    class="fa-solid  fa-arrow-right text-4xl text-[white] absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] z-[2] hover:animate-pulse transition-all "
                   ></i>
+
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -627,7 +635,7 @@
           >
             <div id="prev">
               <i
-                class="fa-solid fa-circle-chevron-left text-5xl bg-[black] text-[white] rounded-full"
+                class="fa-solid fa-circle-chevron-left text-5xl bg-[black] text-[white] rounded-full "
               ></i>
             </div>
 
@@ -897,9 +905,7 @@
 
               <p
                 class=" featureName font-spartan font-bold text-2xl leading-5 text-[#3D2B07] mb-6 lg:text-3xl"
-              >
-                Multiverse 2.0 Shimmering Silver Streak Low-Top Dance Sensation Sneakers
-              </p>
+              >Multiverse 2.0 Shimmering Silver Streak Low-Top Dance Sensation Sneakers</p>
 
               <div
                 class="border-[1px] border-[grey] w-[24px] h-[24px] rounded-full p-[1px]"
