@@ -268,46 +268,68 @@
       <!-- Hero Section and navbar -->
       <section class="hero relative">
         <div
-          class="navbar w-full h-[80px] bg-brand_yellow fixed transition-all z-30"
+          class="navbar w-full h-[80px] bg-brand_yellow fixed transition-all z-30 flex"
         >
-          <i
-            class="checkbtn fa fa-bars block text-[#4E3505] text-[30px] float-start m-4 md:opacity-0"
-          ></i>
+          <div class="flex gap-5 items-center justify-center px-5 md:px-10">
+            <div class="block md:hidden">
+              <i
+              class="checkbtn fa fa-bars  text-[#4E3505] text-[30px] "
+              ></i>
+            </div>
 
-          <label class="logo float-left my-4">
-            <img class="w-8" src="media/Bacca Bucci.webp" alt="" />
-          </label>
+            <label class="logo my-4">
+              <img class="w-8" src="media/Bacca Bucci.webp" alt="" />
+            </label>
+          </div>
 
           <ul
-            class="center fixed top-[80px] left-[-1000px] block text-center bg-brand_yellow w-11/12 font-[Anton] text-[#4E3505] shadow-lg text-lg transition-all ease-in-out duration-1000 md:flex justify-center gap-10 md:shadow-none md:top-0 md:bg-opacity-0 md:h-[80px] items-center md:left-0 md:transition-none border-8 border-brand_yellow pb-[10px] md:p-none"
+            class="center fixed top-[80px] left-[-1000px] block text-center bg-gradient-to-b from-brand_yellow to-[#FD7D52] w-11/12 font-[Anton] text-[#4E3505] shadow-2xl text-[14px] lg:text-lg transition-all ease-in-out duration-1000 md:flex justify-center gap-10 md:shadow-none rounded-br-3xl md:top-0 md:bg-opacity-0 md:h-[80px] items-center md:left-0 md:transition-none pb-[10px] md:p-none md:bg-brand_yellow md:bg-none"
           >
             <li
-              class="hover:animate-pulse p-10 font-bold w-[80%] m-auto border-b-4 border-[white] md:w-max md:m-0 md:border-none md:p-0"
+              class="hover:animate-pulse p-10 font-bold w-[97%] m-auto border-b-[1.5px] border-[white] md:w-max md:m-0 md:border-none md:p-0"
             >
               <a class="" href="#">Men</a>
             </li>
 
             <li
-              class="hover:animate-pulse p-10 font-bold w-[80%] m-auto border-b-4 border-[white] md:w-max md:m-0 md:border-none md:p-0"
+              class="hover:animate-pulse p-10 font-bold w-[97%] m-auto border-b-[1.5px] border-[white] md:w-max md:m-0 md:border-none md:p-0"
             >
               <a href="# ">Women</a>
             </li>
 
             <li
-              class="hover:animate-pulse p-10 font-bold w-[80%] m-auto border-b-4 border-[white] md:w-max md:m-0 md:border-none md:p-0"
+              class="hover:animate-pulse p-10 font-bold w-[97%] m-auto border-b-[1.5px] border-[white] md:w-max md:m-0 md:border-none md:p-0"
             >
               <a href="#">Accessories</a>
             </li>
 
             <li
-              class="hover:animate-pulse p-10 font-bold w-[80%] m-auto border-b-4 border-[white] md:w-max md:m-0 md:border-none md:p-0"
+              class="hover:animate-pulse p-10 font-bold w-[97%] m-auto border-b-[1.5px] border-[white] md:w-max md:m-0 md:border-none md:p-0"
             >
               <a href="#">Collections</a>
+            </li>
+
+            <li
+              class="hover:animate-pulse p-10 font-bold w-[97%] m-auto border-b-[1.5px] border-[white] md:w-max md:m-0 md:border-none md:p-0"
+            >
+              <a href="#">Orders</a>
+            </li>
+
+            <li
+              class="m-auto p-10 md:w-max md:m-0 flex justify-center items-center md:p-0"
+            >
+              <div>
+                <img
+                  class="w-[120px] md:hidden"
+                  src="https://res.cloudinary.com/dojcchveo/image/upload/v1718519059/baccabucci/cli9m22eo8iqclhvgkhq.png"
+                  alt=""
+                />
+              </div>
             </li>
           </ul>
 
           <ul
-            class="right flex h-[100%] items-center justify-evenly w-[30%] text-2xl text-[#4E3505] absolute right-0"
+            class="right flex h-[100%] items-center justify-evenly px-5 gap-5 sm:gap-10 md:px-10 text-2xl text-[#4E3505] absolute right-0"
           >
             <li>
               <i class="fa-solid fa-magnifying-glass"></i>
@@ -460,10 +482,10 @@
                       class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                     ></div>
                     <div
-                      class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                     >
                       <i
-                        class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                        class="fa-solid fa-arrow-left text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                       ></i>
                     </div>
                   </div>
@@ -472,10 +494,10 @@
                       class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                     ></div>
                     <div
-                      class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                     >
                       <i
-                        class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                        class="fa-solid fa-arrow-right text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                       ></i>
                     </div>
                   </div>
@@ -562,10 +584,10 @@
                       class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                     ></div>
                     <div
-                      class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                     >
                       <i
-                        class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                        class="fa-solid fa-arrow-left text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                       ></i>
                     </div>
                   </div>
@@ -574,10 +596,10 @@
                       class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                     ></div>
                     <div
-                      class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                     >
                       <i
-                        class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                        class="fa-solid fa-arrow-right text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                       ></i>
                     </div>
                   </div>
@@ -634,15 +656,21 @@
           <div
             class="arrows absolute bottom-[40px] md:bottom-[100px] w-[1140px] max-w-[90%] left-[50%] translate-x-[-50%] flex justify-center gap-16 items-center"
           >
-            <div id="prev">
+            <div
+              id="prev"
+              class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
+            >
               <i
-                class="fa-solid fa-circle-chevron-left text-4xl sm:text-5xl bg-[black] text-[#d9d7d7fc] rounded-full"
+                class="fa-solid fa-arrow-left text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
               ></i>
             </div>
 
-            <div id="next">
+            <div
+              id="next"
+              class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
+            >
               <i
-                class="fa-solid fa-circle-chevron-right text-4xl sm:text-5xl bg-[black] text-[#d9d7d7fc] rounded-full"
+                class="fa-solid fa-arrow-right text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
               ></i>
             </div>
           </div>
@@ -717,10 +745,10 @@
                         class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                       ></div>
                       <div
-                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                        class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                       >
                         <i
-                          class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                          class="fa-solid fa-arrow-left text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                         ></i>
                       </div>
                     </div>
@@ -729,10 +757,10 @@
                         class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                       ></div>
                       <div
-                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                        class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                       >
                         <i
-                          class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                          class="fa-solid fa-arrow-right text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                         ></i>
                       </div>
                     </div>
@@ -756,10 +784,10 @@
                         class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                       ></div>
                       <div
-                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                        class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                       >
                         <i
-                          class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                          class="fa-solid fa-arrow-left text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                         ></i>
                       </div>
                     </div>
@@ -768,10 +796,10 @@
                         class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                       ></div>
                       <div
-                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                        class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                       >
                         <i
-                          class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                          class="fa-solid fa-arrow-right text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                         ></i>
                       </div>
                     </div>
@@ -795,10 +823,10 @@
                         class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                       ></div>
                       <div
-                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                        class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                       >
                         <i
-                          class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                          class="fa-solid fa-arrow-left text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                         ></i>
                       </div>
                     </div>
@@ -807,10 +835,10 @@
                         class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                       ></div>
                       <div
-                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                        class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                       >
                         <i
-                          class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                          class="fa-solid fa-arrow-right text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                         ></i>
                       </div>
                     </div>
@@ -834,10 +862,10 @@
                         class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                       ></div>
                       <div
-                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                        class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                       >
                         <i
-                          class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                          class="fa-solid fa-arrow-left text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                         ></i>
                       </div>
                     </div>
@@ -846,10 +874,10 @@
                         class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                       ></div>
                       <div
-                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                        class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                       >
                         <i
-                          class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                          class="fa-solid fa-arrow-right text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                         ></i>
                       </div>
                     </div>
@@ -873,10 +901,10 @@
                         class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                       ></div>
                       <div
-                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                        class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                       >
                         <i
-                          class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                          class="fa-solid fa-arrow-left text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                         ></i>
                       </div>
                     </div>
@@ -885,10 +913,10 @@
                         class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
                       ></div>
                       <div
-                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                        class="bg-[#808080b4] rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] justify-center flex items-center"
                       >
                         <i
-                          class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                          class="fa-solid fa-arrow-right text-2xl sm:text-3xl text-[white] hover:animate-pulse transition-all"
                         ></i>
                       </div>
                     </div>
@@ -1315,7 +1343,7 @@
           </div>
 
           <div class="p-5 text-center bg-brand_yellow">
-            <p class="font-[Lato] color-[#3B2A1C] text-[16px] font-extrabold">
+            <p class="font-[Lato] color-[#3B2A1C] text-xs sm:text-[16px] font-extrabold">
               &copy; Bacca Bucci 2023-24. All Rights Reserved
             </p>
           </div>
