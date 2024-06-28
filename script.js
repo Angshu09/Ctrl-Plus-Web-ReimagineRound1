@@ -294,7 +294,7 @@ async function collectionProducts() {
                     alt=""
                   />
     
-                  <p class="font-[lora] text-[black] font-bold text-sm" name=" ${element.name} ">${element.name.slice(12, 30)}${space}</p>
+                  <p class="font-[lora] text-[black] font-bold text-[13px]" name=" ${element.name} ">${element.name.slice(12, 30)}${space}</p>
                   <p class="font-[lora] text-xs font-bold text-[black]">2024</p>
     
                   <p
