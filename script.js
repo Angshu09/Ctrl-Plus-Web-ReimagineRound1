@@ -883,6 +883,7 @@ async function newCollectionProducts() {
           cartList.push(JSON.stringify(json));
           updateLocalStorage()
         }
+        emptycart()
 
 
     })
@@ -905,6 +906,7 @@ async function newCollectionProducts() {
     }
     // console.log(json)
     updateItemsToCart(json, idx)
+    emptycart()
 
   
   
@@ -912,7 +914,6 @@ async function newCollectionProducts() {
 
   function updateItemsToCart(json, idx){
     
-
     cartItemContainer.innerHTML= cartItemContainer.innerHTML+`<div class="cartItem flex ml-[10px] shadow-lg mb-3 border border-1 border-[#b1afaf] ">
             <img src="${json.image}" class="aspect-square w-[100px] sm:w-[120px] md:w-[150px] m-1 rounded" alt="">
   
@@ -998,6 +999,7 @@ async function newCollectionProducts() {
         cartList.splice(cartList.indexOf(localJson),1);
         
         updateLocalStorage()
+        emptycart();
         
 
       })
@@ -1051,12 +1053,24 @@ async function newCollectionProducts() {
     });
 
     
-   
 
-        
-
+    
 
   }
+
+  function emptycart(){
+    if(!cartList || cartList.length<1){
+      // console.log('connected')
+      cartItemContainer.style.backgroundImage='url(/media/emptycart.png)';
+      cartItemContainer.classList.add('bg-no-repeat','bg-center')
+  
+    }else{
+      cartItemContainer.style.backgroundImage='none';
+    }
+
+  }
+  emptycart()
+  
  
 
   const featureCartBtn=document.querySelector('.addToCartFeature');
@@ -1087,6 +1101,7 @@ async function newCollectionProducts() {
       cartList.push(JSON.stringify(json));
       updateLocalStorage()
     }
+    emptycart();
 
 
 
@@ -1119,10 +1134,12 @@ async function newCollectionProducts() {
         updateLocalStorage()
       }
         // console.log(cartList)
+      emptycart()
 
         
 
     })
+
 
     
   });
@@ -1139,5 +1156,7 @@ function updateLocalStorage(){
   localStorage.setItem("Cart", JSON.stringify(cartList));
 
 }
+
+
 
 
