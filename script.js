@@ -929,7 +929,7 @@ async function newCollectionProducts() {
               
               <label class="  text-sm sm:text-base md:text-lg" for="Qty" >Qty : </label>
               <input
-                class="border cartQty text-center leading-3 w-[30px] rounded"
+                class="border cartQty text-center leading-3 w-[50px] rounded"
                 type="number"
                 name="qty"
                 value="${json.qty}"
