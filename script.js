@@ -632,7 +632,7 @@ function changeBannerImage() {
     small:
       "https://res.cloudinary.com/dojcchveo/image/upload/v1719548282/baccabucci/rliho8bfn3s4miwkhnve.jpg" ,
     large:
-      "media/image.png",
+      "/media/image.png",
   };
 
 
