@@ -372,8 +372,8 @@ async function collectionProducts() {
       modifier: 0,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".tab-next",
+      prevEl: ".tab-prev",
     },
   });
 }

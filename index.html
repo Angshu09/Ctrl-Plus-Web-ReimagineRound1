@@ -307,31 +307,26 @@
           </ul>
 
           <ul
-            class="right flex h-[100%] items-center justify-evenly w-[30%]  text-2xl text-[#4E3505] absolute right-0 "
+            class="right flex h-[100%] items-center justify-evenly w-[30%] text-2xl text-[#4E3505] absolute right-0"
           >
             <li>
               <i class="fa-solid fa-magnifying-glass"></i>
             </li>
             <li class="cartIcon">
-              <i class="fa-solid fa-bag-shopping "></i>
+              <i class="fa-solid fa-bag-shopping"></i>
             </li>
             <li>
               <i class="fa-solid fa-user"></i>
             </li>
           </ul>
-
-          
         </div>
 
         <div
-          class="cart w-[90%] sm:w-[80%] md:w-[600px] min-h-[80%] shadow-lg fixed bg-[white] top-[80px] right-[-1000px] z-20 rounded-b-2xl transition-all ease-in-out duration-1000 ">
-
-
-          <div class="cartItemContainer  w-[95%] h-[78%] absolute top-[15px] overflow-scroll a-auto">
-
-            
-
-          </div>
+          class="cart w-[90%] sm:w-[80%] md:w-[600px] min-h-[80%] shadow-lg fixed bg-[white] top-[80px] right-[-1000px] z-20 rounded-b-2xl transition-all ease-in-out duration-1000"
+        >
+          <div
+            class="cartItemContainer w-[95%] h-[78%] absolute top-[15px] overflow-scroll a-auto"
+          ></div>
 
           <p
             class="cartTotal font-[lato] w-[85%] font-bold absolute bottom-[65px] left-[50%] translate-x-[-50%] text-xl"
@@ -457,21 +452,33 @@
               <div class="swiper-wrapper discover-wrapper"></div>
 
               <div
-                class="flex justify-between absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10 w-[97%]"
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[98%]"
               >
-                <div
-                  class="discover-prev bg-[#808080b4] rounded-full w-[40px] h-[40px] justify-center flex items-center"
-                >
-                  <i
-                    class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
-                  ></i>
-                </div>
-                <div
-                  class="discover-next bg-[#808080b4] rounded-full w-[40px] h-[40px] justify-center flex items-center"
-                >
-                  <i
-                    class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
-                  ></i>
+                <div class="flex justify-between">
+                  <div class="discover-prev flex items-center justify-center">
+                    <div
+                      class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                    ></div>
+                    <div
+                      class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="discover-next flex items-center justify-center">
+                    <div
+                      class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                    ></div>
+                    <div
+                      class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                      ></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -540,75 +547,77 @@
 
           <div class="w-full flex justify-center items-center">
             <div
-              class="relative bg-gradient-to-r from-brand_yellow to-[#FD7D52] sm:w-[90%] rounded-3xl"
+              class="relative bg-gradient-to-r from-brand_yellow to-[#FD7D52] w-full sm:w-[90%] rounded-none sm:rounded-3xl"
             >
               <div class="swiper tranding-slider relative !py-8">
                 <div class="swiper-wrapper bestSeller-wrapper"></div>
               </div>
 
               <div
-                class="flex justify-between absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[90%]"
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[90%]"
               >
-                <div class="tranding-prev">
-                  <div
-                    class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
-                  ></div>
-                  <i
-                    class="fa-solid fa-circle-arrow-left text-5xl text-[#ffffffc6] hover:animate-pulse transition-all"
-                  ></i>
-                </div>
-                <div class="tranding-next">
-                  <div
-                    class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
-                  ></div>
-                  <i
-                    class="fa-solid fa-circle-arrow-right text-5xl text-[#ffffffc6] hover:animate-pulse transition-all"
-                  ></i>
+                <div class="flex justify-between">
+                  <div class="tranding-prev flex items-center justify-center">
+                    <div
+                      class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                    ></div>
+                    <div
+                      class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="tranding-next flex items-center justify-center">
+                    <div
+                      class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                    ></div>
+                    <div
+                      class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                      ></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        
-
-          <div class="heading mt-16">
-            <div class="text-center px-1.5 sm:px-3">
-              <h3 class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4" >
-                <i
-                  class="fa-solid fa-arrow-left-long text-[#982009]"
-                ></i>
-                <span class="font-josefin text-[#AA740A] text-[10px] sm:text-xs md:text-lg  font-bold tracking-tight">"BE FAST" TO GRAB</span>
-                <i
-                  class="fa-solid fa-arrow-right-long  text-[#982009]"
-                ></i>
-              </h3>
-
-              <h1
-                class="font-[lato] text-[#734E07] font-[550] text-lg sm:text-3xl md:text-4xl lg:text-5xl leading-10 tracking-tighter sm:tracking-wide textShadow"
+        <div class="heading mt-16">
+          <div class="text-center px-1.5 sm:px-3">
+            <h3
+              class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4"
+            >
+              <i class="fa-solid fa-arrow-left-long text-[#982009]"></i>
+              <span
+                class="font-josefin text-[#AA740A] text-[10px] sm:text-xs md:text-lg font-bold tracking-tight"
+                >"BE FAST" TO GRAB</span
               >
-                NEW COLLECTIONS
-              </h1>
-            </div>
-            
-          </div>
+              <i class="fa-solid fa-arrow-right-long text-[#982009]"></i>
+            </h3>
 
-        
+            <h1
+              class="font-[lato] text-[#734E07] font-[550] text-lg sm:text-3xl md:text-4xl lg:text-5xl leading-10 tracking-tighter sm:tracking-wide textShadow"
+            >
+              NEW COLLECTIONS
+            </h1>
+          </div>
+        </div>
 
         <div class="carousel h-[500px] md:h-[800px] overflow-hidden relative">
-          <div
-            class="text-center md:hidden pt-10 "
-          >
-          
+          <div class="text-center md:hidden pt-10">
             <div class="text-center px-1.5 sm:px-3">
-              <h3 class="flex items-center justify-center gap-4 sm:gap-10 " >
-                <i
-                  class="fa-solid fa-arrow-left-long text-[#982009]"
-                ></i>
-                <span class="font-josefin text-[#AA740A] text-[8px] sm:text-[12px] md:text-lg  font-bold tracking-tight">"BE FAST" TO GRAB</span>
-                <i
-                  class="fa-solid fa-arrow-right-long  text-[#982009]"
-                ></i>
+              <h3 class="flex items-center justify-center gap-4 sm:gap-10">
+                <i class="fa-solid fa-arrow-left-long text-[#982009]"></i>
+                <span
+                  class="font-josefin text-[#AA740A] text-[8px] sm:text-[12px] md:text-lg font-bold tracking-tight"
+                  >"BE FAST" TO GRAB</span
+                >
+                <i class="fa-solid fa-arrow-right-long text-[#982009]"></i>
               </h3>
 
               <h1
@@ -641,44 +650,44 @@
       </section>
 
       <!-- Best Of BaccaBucci Section  -->
-      <section class="collection ">
+      <section class="collection">
         <div
-          class="multiTab-container mt-10 w-full h-max text-[#601406] relative overflow-hidden pb-0 md:pb-[1%] "
+          class="multiTab-container mt-10 w-full h-max text-[#601406] relative overflow-hidden pb-0 md:pb-[1%]"
         >
-        <div class="">
-          <div class="text-center px-1.5 sm:px-3">
-            <h3 class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4" >
-              <i
-                class="fa-solid fa-arrow-left-long text-[#982009]"
-              ></i>
-              <span class="font-josefin text-[#AA740A] text-xs md:text-base  font-bold">THE CURATED</span>
-              <i
-                class="fa-solid fa-arrow-right-long  text-[#982009]"
-              ></i>
-            </h3>
+          <div class="">
+            <div class="text-center px-1.5 sm:px-3">
+              <h3
+                class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4"
+              >
+                <i class="fa-solid fa-arrow-left-long text-[#982009]"></i>
+                <span
+                  class="font-josefin text-[#AA740A] text-xs md:text-base font-bold"
+                  >THE CURATED</span
+                >
+                <i class="fa-solid fa-arrow-right-long text-[#982009]"></i>
+              </h3>
 
-            <h1
-              class="font-[lato] text-[#734E07] font-[550] text-3xl md:text-5xl lg:text-6xl leading-10 tracking-wide textShadow"
+              <h1
+                class="font-[lato] text-[#734E07] font-[550] text-3xl md:text-5xl lg:text-6xl leading-10 tracking-wide textShadow"
+              >
+                COLLECTION
+              </h1>
+            </div>
+            <div
+              class="flex justify-center items-center gap-2 text-xs md:text-base pt-2 sm:pt-4 md:pt-5 lg:pt-6"
             >
-              COLLECTION
-            </h1>
-          </div>
-          <div
-            class="flex justify-center items-center gap-2 text-xs md:text-base pt-2 sm:pt-4 md:pt-5 lg:pt-6"
-          >
-            <div>
-              <p class="font-[Lora] font-[100] text-[#3f2d15]">BEST OF</p>
-            </div>
-            <div>
-              <img
-                class="w-[100px] sm:w-[130px] "
-                src="https://res.cloudinary.com/dojcchveo/image/upload/v1718519059/baccabucci/cli9m22eo8iqclhvgkhq.png"
-                alt="logo"
-              />
+              <div>
+                <p class="font-[Lora] font-[100] text-[#3f2d15]">BEST OF</p>
+              </div>
+              <div>
+                <img
+                  class="w-[100px] sm:w-[130px]"
+                  src="https://res.cloudinary.com/dojcchveo/image/upload/v1718519059/baccabucci/cli9m22eo8iqclhvgkhq.png"
+                  alt="logo"
+                />
+              </div>
             </div>
           </div>
-        </div>
-          
 
           <div
             class="tab-container w-[95%] min-h-[500px] m-auto mt-[50px] md:mt-[100px]"
@@ -696,24 +705,38 @@
             <div
               class="tab w-full md:w-[95%] m-auto mt-5 md:my-8 bg-[white] px-3 rounded-2xl hidden"
             >
-              <div class="swiper tabSlider ">
+              <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
 
-                <div class="swiper-button-prev slider-arrow absolute">
-                  <div
-                    class="ping w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse"
-                  ></div>
-                  <i
-                    class="fa-solid fa-arrow-left text-2xl text-[black] transition-all absolute"
-                  ></i>
-                </div>
-                <div class="swiper-button-next slider-arrow absolute">
-                  <div
-                    class="ping w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse"
-                  ></div>
-                  <i
-                    class="fa-solid fa-arrow-right text-2xl text-[black] transition-all absolute"
-                  ></i>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[98%]"
+                >
+                  <div class="flex justify-between">
+                    <div class="tab-prev flex items-center justify-center">
+                      <div
+                        class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                      ></div>
+                      <div
+                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="tab-next flex items-center justify-center">
+                      <div
+                        class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                      ></div>
+                      <div
+                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -724,21 +747,35 @@
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
 
-                <div class="swiper-button-prev slider-arrow absolute">
-                  <div
-                    class="ping w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse"
-                  ></div>
-                  <i
-                    class="fa-solid fa-arrow-left text-2xl text-[black] transition-all absolute"
-                  ></i>
-                </div>
-                <div class="swiper-button-next slider-arrow absolute">
-                  <div
-                    class="ping w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse"
-                  ></div>
-                  <i
-                    class="fa-solid fa-arrow-right text-2xl text-[black] transition-all absolute"
-                  ></i>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[98%]"
+                >
+                  <div class="flex justify-between">
+                    <div class="tab-prev flex items-center justify-center">
+                      <div
+                        class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                      ></div>
+                      <div
+                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="tab-next flex items-center justify-center">
+                      <div
+                        class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                      ></div>
+                      <div
+                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -746,74 +783,116 @@
             <div
               class="tab w-full md:w-[95%] m-auto my-5 md:my-8 bg-[white] px-3 rounded-2xl"
             >
-              <div class="swiper tabSlider ">
+              <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
 
-                <div class="swiper-button-prev slider-arrow absolute">
-                  <div
-                    class="ping w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse"
-                  ></div>
-                  <i
-                    class="fa-solid fa-arrow-left text-2xl text-[black] transition-all absolute"
-                  ></i>
-                </div>
-                <div class="swiper-button-next slider-arrow absolute">
-                  <div
-                    class="ping w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse"
-                  ></div>
-                  <i
-                    class="fa-solid fa-arrow-right text-2xl text-[black] transition-all absolute"
-                  ></i>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[98%]"
+                >
+                  <div class="flex justify-between">
+                    <div class="tab-prev flex items-center justify-center">
+                      <div
+                        class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                      ></div>
+                      <div
+                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="tab-next flex items-center justify-center">
+                      <div
+                        class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                      ></div>
+                      <div
+                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div
-              class="tab w-full md:w-[95%] m-auto my-5 md:my-8  bg-[white] px-3 rounded-2xl hidden"
+              class="tab w-full md:w-[95%] m-auto my-5 md:my-8 bg-[white] px-3 rounded-2xl hidden"
             >
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
 
-                <div class="swiper-button-prev slider-arrow absolute">
-                  <div
-                    class="ping w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse"
-                  ></div>
-                  <i
-                    class="fa-solid fa-arrow-left text-2xl text-[black] transition-all absolute"
-                  ></i>
-                </div>
-                <div class="swiper-button-next slider-arrow absolute">
-                  <div
-                    class="ping w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse"
-                  ></div>
-                  <i
-                    class="fa-solid fa-arrow-right text-2xl text-[black] transition-all absolute"
-                  ></i>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[98%]"
+                >
+                  <div class="flex justify-between">
+                    <div class="tab-prev flex items-center justify-center">
+                      <div
+                        class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                      ></div>
+                      <div
+                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="tab-next flex items-center justify-center">
+                      <div
+                        class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                      ></div>
+                      <div
+                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div
-              class="tab w-full md:w-[95%] m-auto my-5 md:my-8  bg-[white] px-3 rounded-2xl hidden"
+              class="tab w-full md:w-[95%] m-auto my-5 md:my-8 bg-[white] px-3 rounded-2xl hidden"
             >
               <div class="swiper tabSlider">
                 <div class="swiper-wrapper collectionTabSliders"></div>
 
-                <div class="swiper-button-prev slider-arrow absolute">
-                  <div
-                    class="ping w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse"
-                  ></div>
-                  <i
-                    class="fa-solid fa-arrow-left text-2xl text-[black] transition-all absolute"
-                  ></i>
-                </div>
-                <div class="swiper-button-next slider-arrow absolute">
-                  <div
-                    class="ping w-[40px] h-[40px] absolute rounded-full bg-[#ffffffc6] hover:animate-pulse"
-                  ></div>
-                  <i
-                    class="fa-solid fa-arrow-right text-2xl text-[black] transition-all absolute"
-                  ></i>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[98%]"
+                >
+                  <div class="flex justify-between">
+                    <div class="tab-prev flex items-center justify-center">
+                      <div
+                        class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                      ></div>
+                      <div
+                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-left text-3xl text-[white] hover:animate-pulse transition-all"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="tab-next flex items-center justify-center">
+                      <div
+                        class="ping animate-ping w-[40px] h-[40px] absolute rounded-full bg-[white]"
+                      ></div>
+                      <div
+                        class="bg-[#808080b4] rounded-full w-[50px] h-[50px] justify-center flex items-center"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right text-3xl text-[white] hover:animate-pulse transition-all"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -829,26 +908,25 @@
           ></div>
 
           <div class="mb-10 md:mb-16">
-            <div class="text-center px-1.5 sm:px-3 ">
-              <h3 class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4" >
-                <i
-                  class="fa-solid fa-arrow-left-long text-[#982009]"
-                ></i>
-                <span class="font-[coustard] text-[#AA740A] text-xs md:text-base  font-light tracking-[5px]">Pick Of The Month</span>
-                <i
-                  class="fa-solid fa-arrow-right-long  text-[#982009]"
-                ></i>
+            <div class="text-center px-1.5 sm:px-3">
+              <h3
+                class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4"
+              >
+                <i class="fa-solid fa-arrow-left-long text-[#982009]"></i>
+                <span
+                  class="font-[coustard] text-[#AA740A] text-xs md:text-base font-light tracking-[5px]"
+                  >Pick Of The Month</span
+                >
+                <i class="fa-solid fa-arrow-right-long text-[#982009]"></i>
               </h3>
-  
+
               <h1
-                class="font-josefin text-[#734E07] font-[550] text-2xl  md:text-5xl lg:text-6xl leading-10 tracking-wide  "
+                class="font-josefin text-[#734E07] font-[550] text-2xl md:text-5xl lg:text-6xl leading-10 tracking-wide"
               >
                 FEATURED PRODUCT
               </h1>
             </div>
-            
           </div>
-          
 
           <!-- <p
             class="font-[coustard] tracking-[4px] text-[#AA740A] text-center leading-10"
@@ -887,7 +965,8 @@
                 <p>Save 60%</p>
               </div>
             </div>
-            <div class="description-container w-[90%] sm:w-[80%] md:w-[50%] h-max bg-[white] mt-2 pb-10"
+            <div
+              class="description-container w-[90%] sm:w-[80%] md:w-[50%] h-max bg-[white] mt-2 pb-10"
             >
               <p
                 class="font-[coustard] tracking-[5px] text-[#AA740A] font-[100] text-sm mb-6"
@@ -896,9 +975,10 @@
               </p>
 
               <p
-                class=" featureName font-spartan font-bold text-2xl leading-5 text-[#3D2B07] mb-6 lg:text-3xl"
+                class="featureName font-spartan font-bold text-2xl leading-5 text-[#3D2B07] mb-6 lg:text-3xl"
               >
-                Multiverse 2.0 Shimmering Silver Streak Low-Top Dance Sensation Sneakers
+                Multiverse 2.0 Shimmering Silver Streak Low-Top Dance Sensation
+                Sneakers
               </p>
 
               <div
@@ -914,7 +994,7 @@
               </p>
 
               <span
-                class=" featurePrice font-[oswald] font-bold text-lg lg:text-2xl text-[#601406]"
+                class="featurePrice font-[oswald] font-bold text-lg lg:text-2xl text-[#601406]"
                 >Rs. 1,399.00</span
               >
               <span
@@ -960,7 +1040,8 @@
                   type="number"
                   name="qty"
                   value="1"
-                  min="1" max="5"
+                  min="1"
+                  max="5"
                 />
               </div>
 
@@ -1002,18 +1083,19 @@
 
           <div class="">
             <div class="text-center px-1.5 sm:px-3">
-              <h3 class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4" >
-                <i
-                  class="fa-solid fa-arrow-left-long text-[#982009]"
-                ></i>
-                <span class="font-josefin text-[#AA740A] text-xs md:text-base  font-bold">MUST HAVE THIS</span>
-                <i
-                  class="fa-solid fa-arrow-right-long  text-[#982009]"
-                ></i>
+              <h3
+                class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4"
+              >
+                <i class="fa-solid fa-arrow-left-long text-[#982009]"></i>
+                <span
+                  class="font-josefin text-[#AA740A] text-xs md:text-base font-bold"
+                  >MUST HAVE THIS</span
+                >
+                <i class="fa-solid fa-arrow-right-long text-[#982009]"></i>
               </h3>
-  
+
               <h1
-                class="font-[lato] text-[#734E07] font-[550] text-4xl md:text-5xl lg:text-6xl leading-10  tracking-widest textShadow"
+                class="font-[lato] text-[#734E07] font-[550] text-4xl md:text-5xl lg:text-6xl leading-10 tracking-widest textShadow"
               >
                 SEASON
               </h1>
@@ -1026,7 +1108,7 @@
               </div>
               <div>
                 <img
-                  class="w-[100px] sm:w-[130px] "
+                  class="w-[100px] sm:w-[130px]"
                   src="https://res.cloudinary.com/dojcchveo/image/upload/v1718519059/baccabucci/cli9m22eo8iqclhvgkhq.png"
                   alt="logo"
                 />
