@@ -988,14 +988,16 @@ async function newCollectionProducts() {
           total+=price*qty-cartQtyBefore*price
           cartTotal.innerHTML=`Total : ${total}`;
 
-          // console.log(total)
-          cartCount.innerHTML=`${++countTotal}`;
+          // console.log(total)  
         }else{
           total=total-cartQtyBefore*price+qty*price
           cartTotal.innerHTML=`Total : ${total}`;
           // console.log(total)
-          cartCount.innerHTML=`${--countTotal}`;
         }
+        countTotal=countTotal+qty-cartQtyBefore
+        // console.log(countTotal)
+        cartCount.innerHTML=`${countTotal}`;
+
         if(qty<1){
           element.setAttribute('value',1);
         }else{
