@@ -127,6 +127,7 @@ const videoEl = document.querySelector(".video");
 const videoImageEl = document.querySelector(".videoImage");
 
 playbutton.addEventListener("click", () => {
+  console.log('connected')
   playbutton.classList.add("hidden");
   backbutton.classList.remove("hidden");
   videoEl.classList.remove("hidden");
@@ -578,7 +579,21 @@ function changeBannerImage() {
   const deliveryImg = document.querySelector(".delivery-img");
   const heroSlider1 = document.querySelector(".hero-slider-1");
   const heroSlider2 = document.querySelector(".hero-slider-2");
+  const videoSlider= document.querySelector('.videoImage')
   const windowWidth = window.innerWidth;
+
+  const video = document.querySelector('.video');
+
+ 
+ 
+  const videoSrc = {
+    small:
+      "https://www.youtube.com/embed/s_cKoyRtJK8",
+    large:
+      "https://www.youtube.com/embed/DY9C-3lQIzE",
+  };
+
+
 
   const bannerImages = {
     small:
@@ -607,14 +622,25 @@ function changeBannerImage() {
     large:
       "https://res.cloudinary.com/dojcchveo/image/upload/v1719238759/baccabucci/dtyot6kt9vrldqks9phs.jpg",
   };
+  const videoSlider2Images = {
+    small:
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1719548282/baccabucci/rliho8bfn3s4miwkhnve.jpg" ,
+    large:
+      "media/image.png",
+  };
+
 
   heroSlider1.src =
     windowWidth <= 768 ? heroSlider1Images.small : heroSlider1Images.large;
+  videoSlider.src=
+    windowWidth<=768? videoSlider2Images.small:videoSlider2Images.large;
   heroSlider2.src =
     windowWidth <= 768 ? heroSlider2Images.small : heroSlider2Images.large;
   footerImg.src = windowWidth <= 768 ? bannerImages.small : bannerImages.large;
   deliveryImg.src =
     windowWidth <= 640 ? deliveryImages.small : deliveryImages.large;
+  video.src=
+    windowWidth<=768? videoSrc.small:videoSrc.large;
 }
 
 window.addEventListener("resize", changeBannerImage);
