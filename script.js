@@ -312,22 +312,22 @@ async function collectionProducts() {
     
                   <div class="item-color gap-2 py-2 flex">
                     <div
-                      class="border-[1px] border-[black] w-[24px] h-[24px] rounded-full p-[1px]"
+                      class="border-[1px] border-[black] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                     >
                       <div class="w-[20px] h-[20px] rounded-full bg-[black]"></div>
                     </div>
                     <div
-                      class="border-[1px] border-[grey] w-[24px] h-[24px] rounded-full p-[1px]"
+                      class="border-[1px] border-[grey] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                     >
                       <div class="w-[20px] h-[20px] rounded-full bg-[grey]"></div>
                     </div>
                     <div
-                      class="border-[1px] border-[olive] w-[24px] h-[24px] rounded-full p-[1px]"
+                      class="border-[1px] border-[olive] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                     >
                       <div class="w-[20px] h-[20px] rounded-full bg-[olive]"></div>
                     </div>
                     <div
-                      class="border-[1px] border-[brown] w-[24px] h-[24px] rounded-full p-[1px]"
+                      class="border-[1px] border-[brown] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                     >
                       <div class="w-[20px] h-[20px] rounded-full bg-[brown]"></div>
                     </div>
@@ -531,22 +531,22 @@ async function seasonalProducts() {
 
               <div class="item-color gap-2 py-2 flex ">
                 <div
-                  class="border-[1px] border-[black] w-[24px] h-[24px] rounded-full p-[1px]"
+                  class="border-[1px] border-[black] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                 >
                   <div class="w-[20px] h-[20px] rounded-full bg-[black]"></div>
                 </div>
                 <div
-                  class="border-[1px] border-[grey] w-[24px] h-[24px] rounded-full p-[1px]"
+                  class="border-[1px] border-[grey] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                 >
                   <div class="w-[20px] h-[20px] rounded-full bg-[grey]"></div>
                 </div>
                 <div
-                  class="border-[1px] border-[olive] w-[24px] h-[24px] rounded-full p-[1px]"
+                  class="border-[1px] border-[olive] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                 >
                   <div class="w-[20px] h-[20px] rounded-full bg-[olive]"></div>
                 </div>
                 <div
-                  class="border-[1px] border-[brown] w-[24px] h-[24px] rounded-full p-[1px]"
+                  class="border-[1px] border-[brown] w-[24px] h-[24px] flex justify-center items-center rounded-full p-[1px]"
                 >
                   <div class="w-[20px] h-[20px] rounded-full bg-[brown]"></div>
                 </div>
@@ -603,7 +603,7 @@ function changeBannerImage() {
 
   const bannerImages = {
     small:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1718272363/baccabucci/footer/lnzeezctpp3p7obpeauo.webp",
+      "https://res.cloudinary.com/dojcchveo/image/upload/v1719690052/baccabucci/oe7tazktfpp3u0m4wold.jpg",
     large:
       "https://res.cloudinary.com/dojcchveo/image/upload/v1718270252/baccabucci/footer/egeraxcf41x4boobjcuv.jpg",
   };
