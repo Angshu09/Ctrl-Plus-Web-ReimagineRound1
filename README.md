@@ -80,7 +80,7 @@ npm run start
 - [@Jayashree Saha](https://github.com/JayaSaha811733)
 - [@Angshu Das](https://github.com/Angshu09)
 - [@Debojeet Dutta](https://github.com/BinaryDebojeet)
-- [@Sumit Dutta](https://github.com/JayaSaha811733)
+- [@Sumit Dutta](https://github.com/Sumit02635)
 
 ## Acknowledgements
 
