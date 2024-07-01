@@ -2,10 +2,9 @@
 
 Welcome to our project! This website is a reimagined and recreated version inspired by the Bacca Bucci brand website, which primarily focuses on shoes. Our project is built using HTML, the Tailwind CSS framework, the Swiper JS library, and vanilla JavaScript.
 
-We created this website for the "Re-Imagine Hackathon," a frontend web design competition hosted by Sheryians Coding School. This project was developed for round 1 of the Re-Imagine Hackathon.
+We created this website for the "Re-Imagine Hackathon," a frontend web design competition hosted by Sheryians Coding School. This project was developed for round 1 of the Re-Imagine Hackathon. We are a team of 4 members working on this Project. Our team name is **Ctrl-Plus-Web**.
 
 ## Let's Talk About Our Project
-
 <ul>
    <li style="margin-bottom: 40px;">
         <p>Our project includes a homepage with a cart section positioned in the top right corner. We utilize Swiper to implement sliding functionality for the slides.</p>
