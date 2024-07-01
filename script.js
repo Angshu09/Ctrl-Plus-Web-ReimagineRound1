@@ -970,9 +970,15 @@ async function newCollectionProducts() {
     
     const cartItemList=document.querySelectorAll('.cartItem');
 
+    let cartQty=cartItemContainer.querySelectorAll('.cartQty');
+
+    let counter=5
+
     removeItemList.forEach((element, idx) => {
+
       element.classList.add('cursor-pointer')
       element.addEventListener('click',()=>{
+        --counter;
         
         const parentImg=( (element.parentNode).parentNode).childNodes
         const parentDes=(element.parentNode).childNodes
@@ -998,60 +1004,126 @@ async function newCollectionProducts() {
         
         cartItemList[idx].remove()
         cartList.splice(cartList.indexOf(localJson),1);
+        cartQty=cartItemContainer.querySelectorAll('.cartQty');
         
         updateLocalStorage()
         emptycart();
+        CartQuantity(cartQty)
         
 
       })
       
     });
 
-    const cartQty=cartItemContainer.querySelectorAll('.cartQty');
+    
+    
+    // cartQty.forEach((element, idx) => {
 
-    cartQty.forEach((element, idx) => {
-      element.addEventListener('change',()=>{
 
-        let qty=!element.value|| parseInt(element.value)<1?1:parseInt(element.value);
-        let image=JSON.parse(cartList[idx]).image;
-        let name=JSON.parse(cartList[idx]).name;
-        let price=JSON.parse(cartList[idx]).price;
+    //   element.addEventListener('change',()=>{
+    //     console.log(counter)
+    //     console.log(cartQty)
 
-        let cartQtyBefore=JSON.parse(cartList[idx]).qty
+
+    //     console.log(cartQty)
+
+    //     let qty=!element.value|| parseInt(element.value)<1?1:parseInt(element.value);
+    //     let image=element.parentNode.parentNode.querySelector('img').src;
+    //     let name=element.parentNode.querySelector('.itemName').textContent;
+    //     let price=JSON.parse(cartList[idx]).price;
+
+    //     let cartQtyBefore=JSON.parse(cartList[idx]).qty
         
-        element.parentNode.querySelector('.cartPrice').innerHTML=price*qty;
+    //     element.parentNode.querySelector('.cartPrice').innerHTML=price*qty;
         
-        if(JSON.parse(cartList[idx]).qty<qty){
-          total+=price*qty-cartQtyBefore*price
-          cartTotal.innerHTML=`Total : ${total}`;
+    //     if(JSON.parse(cartList[idx]).qty<qty){
+    //       total+=price*qty-cartQtyBefore*price
+    //       cartTotal.innerHTML=`Total : ${total}`;
 
-          // console.log(total)  
-        }else{
-          total=total-cartQtyBefore*price+qty*price
-          cartTotal.innerHTML=`Total : ${total}`;
-          // console.log(total)
-        }
-        countTotal=countTotal+qty-cartQtyBefore
-        // console.log(countTotal)
-        cartCount.innerHTML=`${countTotal}`;
+    //       // console.log(total)  
+    //     }else{
+    //       total=total-cartQtyBefore*price+qty*price
+    //       cartTotal.innerHTML=`Total : ${total}`;
+    //       // console.log(total)
+    //     }
+    //     countTotal=countTotal+qty-cartQtyBefore
+    //     // console.log(countTotal)
+    //     cartCount.innerHTML=`${countTotal}`;
 
-        if(qty<1){
-          element.setAttribute('value',1);
-        }else{
-          element.setAttribute('value',qty);
-        }
+    //     if(qty<1){
+    //       element.setAttribute('value',1);
+    //     }else{
+    //       element.setAttribute('value',qty);
+    //     }
         
-        let json={
-          'image':image,
-          'name':name,
-          'price':price,
-          'qty':qty
-        }
-        cartList[idx]=JSON.stringify(json)
-        updateLocalStorage()
-      })
+    //     let json={
+    //       'image':image,
+    //       'name':name,
+    //       'price':price,
+    //       'qty':qty
+    //     }
+    //     cartList[idx]=JSON.stringify(json)
+    //     updateLocalStorage()
+    //   })
       
-    });
+    // });
+    function CartQuantity(cartQty){
+      cartQty.forEach((element, idx) => {
+
+
+        element.addEventListener('change',()=>{
+          console.log(counter)
+          console.log(cartQty)
+  
+          console.log(element.parentNode.querySelector('.itemName').textContent)
+  
+          let qty=!element.value|| parseInt(element.value)<1?1:parseInt(element.value);
+          let image=element.parentNode.parentNode.querySelector('img').src;
+          let name=JSON.parse(cartList[idx]).name;
+          let price=JSON.parse(cartList[idx]).price;
+  
+          let cartQtyBefore=JSON.parse(cartList[idx]).qty
+          
+          element.parentNode.querySelector('.cartPrice').innerHTML=price*qty;
+          
+          if(JSON.parse(cartList[idx]).qty<qty){
+            total+=price*qty-cartQtyBefore*price
+            cartTotal.innerHTML=`Total : ${total}`;
+  
+            // console.log(total)  
+          }else{
+            total=total-cartQtyBefore*price+qty*price
+            cartTotal.innerHTML=`Total : ${total}`;
+            // console.log(total)
+          }
+          countTotal=countTotal+qty-cartQtyBefore
+          // console.log(countTotal)
+          cartCount.innerHTML=`${countTotal}`;
+  
+          if(qty<1){
+            element.setAttribute('value',1);
+          }else{
+            element.setAttribute('value',qty);
+          }
+          
+          let json={
+            'image':image,
+            'name':name,
+            'price':price,
+            'qty':qty
+          }
+          cartList[idx]=JSON.stringify(json)
+          updateLocalStorage()
+        })
+        
+      });
+    }
+    try {
+      CartQuantity(cartQty);   
+    } catch (error) {
+      
+    }
+    
 
     
 
