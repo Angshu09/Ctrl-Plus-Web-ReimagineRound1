@@ -72,7 +72,7 @@ npm run start
 #### Get all items
 
 ```http
-  GET https://github.com/JayaSaha811733/ReimagineAPI/assets.json
+    https://github.com/JayaSaha811733/ReimagineAPI/assets.json
 ```
 
 ## Authors
