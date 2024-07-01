@@ -977,19 +977,20 @@ async function newCollectionProducts() {
         const parentImg=( (element.parentNode).parentNode).childNodes
         const parentDes=(element.parentNode).childNodes
         const price=parseInt((element.parentNode).querySelector('.cartPrice').textContent)
-        const cartqty=parseInt((element.parentNode).querySelector('.cartQty').value)
+        let cartqty=parseInt((element.parentNode).querySelector('.cartQty').value)
       
         
+        cartqty=isNaN(cartqty)?1:cartqty
         total-=price;
         countTotal-=cartqty;
-       
 
         cartTotal.innerHTML=`Total: &#8377 ${total}`;
         cartCount.innerHTML=`${countTotal}`;
        
         let object={'image':parentImg[1].src,
                     'name':parentDes[1].textContent.slice(1,-4),
-                    'price':(parentDes[3].childNodes)[5].textContent
+                    'price':((parentDes[3].childNodes)[5].textContent)/cartqty+".00",
+                    'qty':cartqty
 
                     }
         
