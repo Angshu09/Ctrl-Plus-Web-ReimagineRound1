@@ -1072,10 +1072,7 @@ async function newCollectionProducts() {
 
 
         element.addEventListener('change',()=>{
-          console.log(counter)
-          console.log(cartQty)
-  
-          console.log(element.parentNode.querySelector('.itemName').textContent)
+          
   
           let qty=!element.value|| parseInt(element.value)<1?1:parseInt(element.value);
           let image=element.parentNode.parentNode.querySelector('img').src;
