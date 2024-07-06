@@ -1345,18 +1345,19 @@ window.onscroll=()=>{
 
     lazyloadEls[7].style.animation=`lazyloadShow 3s ease  1 forwards` 
     featuredHeadingEl.style.animation='opacityShow2 3s ease 1s 1 forwards'
-    
-     lazyloadEls[8].style.animation=`lazyloadShow 3s ease 2s 1 forwards`
-
+    lazyloadEls[8].style.animation=`lazyloadShow 3s ease 2s 1 forwards`
      featuredItemContainer.style.animation=`opacityShow2 3s ease 2s 1 forwards`  
   }
-  if((scrollY>height*4.2 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*5.6)|| (screenWidth>1023 && scrollY>height*6)){
+  
+
+
+  if((scrollY>height*4.2 && screenWidth<768)){
 
 
     lazyloadEls[9].style.animation=`lazyloadShow 3s ease 1s 1 forwards` 
      
   }
-   if((scrollY>height*5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*6.2)|| (screenWidth>1023 && scrollY>height*6.5)){
+   if((scrollY>height*5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*6)|| (screenWidth>1023 && scrollY>height*6.2)){
 
 
     lazyloadEls[10].style.animation=`lazyloadShow 3s ease 1s 1 forwards` 
