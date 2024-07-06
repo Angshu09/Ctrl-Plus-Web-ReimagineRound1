@@ -665,17 +665,23 @@ async function fillCategory() {
 
   // Discover
   const discoverFragment = document.createDocumentFragment();
-  data.discover.forEach((item) => {
+  
+  data.discover.forEach((item, idx) => {
+    setTimeout
     const slide = document.createElement("div");
-    slide.className = "swiper-slide rounded-3xl shadow";
+    slide.className = "swiper-slide rounded-3xl shadow opacity-0";
     slide.innerHTML = `
       <div class="img-box rounded-2xl w-full overflow-hidden">
         <img src="${item}" alt="Sneakers" class="w-full">
       </div>
     `;
+    
     discoverFragment.appendChild(slide);
   });
   discoverWrapper.appendChild(discoverFragment);
+
+  
+  
 
   // Initialize Swiper
   new Swiper(".card-slider", {
@@ -683,7 +689,7 @@ async function fillCategory() {
     loop: true,
     speed: 1000,
     autoplay: {
-      delay: 1500,
+      delay: 2500,
       disableOnInteraction: false,
     },
     navigation: {
@@ -722,13 +728,16 @@ async function fillCategory() {
     },
   });
 
+
+
   // Categories
   const categoryFragment = document.createDocumentFragment();
   data.categories.forEach((category, i) => {
     const categoryDiv = document.createElement("div");
+    categoryDiv.className = "categoryItems opacity-0";
     if (i === 0 || i === 8) {
       categoryDiv.className =
-        "custom2:row-span-2 flex items-center justify-center flex-col";
+        "custom2:row-span-2 flex items-center justify-center flex-col opacity-0 categoryItems";
     }
     categoryDiv.innerHTML = `
       <div class="hover:scale-[1.1] transition duration-150 flex items-center justify-center p-1 border-4 overflow-hidden rounded-full border-solid" style="border-color: ${category.bg};">
@@ -751,8 +760,9 @@ async function fillCategory() {
   let list = data.categories;
   // console.log(list)
 }
+fillCategory()
 
-fillCategory();
+
 
 //New Collection
 let nextButton = document.getElementById("next");
@@ -1230,6 +1240,104 @@ function updateLocalStorage(){
 
 }
 
+//tryAnimation
+
+
+const categorySlideEl=document.querySelector('.discover-swiper-container')
+const discoveryHeadingEl=document.querySelector('.discoverHeader')
+const categoryHeadingEl=document.querySelector('.categoryText')
+const exploreHeadingEl=document.querySelector('.exploreHeading')
+const carouselEl=document.querySelector('.carousel')
+const newCollectionHeadingEl=document.querySelector('.newCollectionHeading')
+const newHeadingEl=document.querySelector('.newHeading')
+const collectionHeadingEl=document.querySelector('.collectionHeading')
+const tabContainerEl=document.querySelector('.tab-container')
+// console.log(categoryHeadingEl)
+
+if(screenWidth>414){
+  categorySlideEl.style.opacity=0;
+
+}
+discoveryHeadingEl.style.animation=`header 2s ease 0.5s 1 forwards `
+
+const exploreSliderEl= document.querySelector('.best-seller .exploreSlider')
+
+
+
+window.onscroll=()=>{
+  const categorySliderEl= document.querySelectorAll('.category .categoryItems')
+  
+  
+
+
+  if((scrollY>200 && screenWidth<768 && screenWidth>414) || (screenWidth>767 && screenWidth<1024&& scrollY>300)|| (screenWidth>1023 && scrollY>500)){
+
+    categorySlideEl.style.animation=`categoryShow 3s ease 1 forwards`;
+    
+  }
+  let height=window.innerHeight
+  if((scrollY>height*0.8 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*0.9)|| (screenWidth>1023 && scrollY>height*1.1)){
+
+    categoryHeadingEl.style.animation=`header 2s ease  1 forwards `
+    
+  }
+  if((scrollY>height && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*1.1)|| (screenWidth>1023 && scrollY>height*1.3)){
+
+    categorySliderEl.forEach((element, idx )=> {
+      element.style.animation=`opacityShow 2s ease-in-out ${idx*0.1}s 1 forwards`
+      
+    });
+    
+  }
+  if((scrollY>height*2.1 && screenWidth<601) || (screenWidth>600 && screenWidth<1024&& scrollY>height*1.2)|| (screenWidth>1023 && scrollY>height*1.9)){
+
+    exploreHeadingEl.style.animation=`header 2s ease 0.2s 1 forwards `  
+  }
+  if((scrollY>height*2.2 && screenWidth<601) || (screenWidth>600 && screenWidth<1024&& scrollY>height*1.3)|| (screenWidth>1023 && scrollY>height*1.9)){
+
+    exploreSliderEl.style.animation='header 3s ease 1s 1 forwards'
+    
+  }
+
+  if((scrollY>height*2.9 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*1.7)|| (screenWidth>1023 && scrollY>height*2.3)){
+
+    newCollectionHeadingEl.style.animation='header 3s ease 1 forwards'
+    
+  }
+
+   if((scrollY>height*2.9 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*1.7)|| (screenWidth>1023 && scrollY>height*2.3)){
+
+    carouselEl.style.animation='opacityShow2 3s ease 1 forwards'
+    
+  } 
+  if((scrollY>height*2.9 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*1.7)|| (screenWidth>1023 && scrollY>height*2.3)){
+
+    newHeadingEl.style.animation='header 3s ease 0.5s 1 forwards'
+    
+  }
+  if((scrollY>height*3.3 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*2)|| (screenWidth>1023 && scrollY>height*2.5)){
+
+    collectionHeadingEl.style.animation='header 3s ease  1 forwards'
+    
+  }
+  if((scrollY>height*3.35 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*2.1)|| (screenWidth>1023 && scrollY>height*2.6)){
+
+    tabContainerEl.style.animation='opacityShow2 3s ease 1s 1 forwards'
+    
+  }
+  
+
+  
+  
+  
+
+
+}
+function measureTime(){
+  let time=performance.now()
+  return time
+
+}
 
 
 
