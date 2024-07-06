@@ -205,21 +205,11 @@
       }
 
       .category .swiper-slide{
-        animation:opacityShow 2s ease-in-out 1 forwards;
+        animation:opacityShow2 2s ease-in-out 1 forwards;
       }
+
       
-      .category .swiper-slide:nth-child(2){
-        animation-delay: 0.2s;
-      }
-      .category .swiper-slide:nth-child(3){
-        animation-delay: 0.4s;
-      }
-      .category .swiper-slide:nth-child(4){
-        animation-delay: 0.6s;
-      }
-      .category .swiper-slide:nth-child(5){
-        animation-delay: 0.8s;
-      }
+      
     
       
 
@@ -331,6 +321,14 @@
         }
       }
 
+      @keyframes lazyloadShow {
+        
+        to{
+          height: 0;
+        }
+        
+      }
+      
       
 
     </style>
@@ -506,7 +504,7 @@
       <!-- Discover and Category section -->
       <section class="category">
         <div class="discover-container">
-          <div class="discoverHeader my-[3rem] md:my-[5rem] opacity-0">
+          <div class="discoverHeader my-[3rem] md:my-[5rem] ">
             <div class="text-center px-1.5 sm:px-3">
               <h3
                 class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4"
@@ -580,6 +578,7 @@
         </div>
 
         <div class="category-container py-5">
+          <div class="h-[50vh] lazyload"></div>
           <div class="text-center my-[3rem] md:mt-[5rem] md:mb-[5rem] px-3">
             <!-- <h1
               class="font-[lato] text-[#734E07] font-[550] text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-10 tracking-tight sm:tracking-wide drop-shadow-2xl textShadow"
@@ -612,6 +611,7 @@
 
       <!-- Best Sellers and New Collections Section  -->
       <section class="best-seller relative">
+        <div class="h-[50vh] lazyload"></div>
         <div class="bestseller-container sm:mb-10">
           <div class="mb-11 exploreHeading opacity-0">
             <div class="text-center px-1.5 sm:px-3">
@@ -638,6 +638,8 @@
               </div>
             </div>
           </div>
+
+          <div class="h-[50vh] lazyload"></div>
 
           <div class="w-full flex justify-center items-center opacity-0 exploreSlider">
             <div
@@ -680,9 +682,12 @@
             </div>
           </div>
         </div>
-        <!-- <div class="absolute w-[110%] h-[50px] border top-[55%] left-[-10px] bg-gradient-to-r from-brand_yellow to-[#FD7D52] blur-[13px] sm:hidden"></div> -->
 
-        <div class="newCollectionHeading heading mt-[90px] opacity-0">
+
+        
+        
+        <div class="newCollectionHeading heading mt-[90px] ">
+          <div class="h-[50vh] lazyload"></div>
           <div class="text-center px-1.5 sm:px-3">
             <h3
               class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4"
@@ -702,6 +707,7 @@
             </h1>
           </div>
         </div>
+        <div class="h-[50vh] lazyload md:hidden"></div>
 
         <div class="carousel h-[500px] md:h-[800px] overflow-hidden relative">
           <div class="newHeading text-center md:hidden pt-14 opacity-0">
@@ -753,12 +759,19 @@
 
       <!-- Best Of BaccaBucci Section  -->
       <section class="collection relative">
+        
 
+        <div class="h-[50vh] lazyload"></div>
+
+        
         <div class="w-full h-[100px] absolute top-[-80px] right-[-10] bg-gradient-to-r from-[white]  to-[#f0d0ab] pointer-events-none blur-[30px] z-[-1] md:hidden"></div>
+        
+
 
         <div
           class="multiTab-container mt-10 md:mt-4 w-full h-max text-[#601406] relative overflow-hidden pb-0 md:pb-[1%]"
         >
+
           <div class="collectionHeading">
             <div class=" text-center px-1.5 sm:px-3">
               <h3
@@ -793,6 +806,8 @@
               </div>
             </div>
           </div>
+
+          <div class="h-[50vh] lazyload"></div>
 
           <div
             class="tab-container w-[95%] min-h-[500px] m-auto mt-16 md:mt-[80px] opacity-0"
@@ -1012,7 +1027,9 @@
             class="animate-[bounce_3s_ease-in-out_infinite] circle bg-[#F8CF81] rounded-full absolute w-[200px] h-[200px] top-[-100px] right-[-100px] translate-x-2/3 translate-y-[-50%] z-[-1] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] blur-md opacity-[0.5]"
           ></div>
 
-          <div class="mb-10 md:mb-16">
+          <div class="h-[50vh] lazyload"></div>
+
+          <div class="featuredHeading mb-10 md:mb-16 opacity-0">
             <div class="text-center px-1.5 sm:px-3">
               <h3
                 class="flex items-center justify-center gap-4 sm:gap-10 py-2 md:py-3 lg:py-4"
@@ -1033,9 +1050,11 @@
             </div>
           </div>
 
+          <div class="h-[50vh] lazyload"></div>
+
 
           <div
-            class="flex-container flex flex-wrap lg:w-[80%] m-auto justify-evenly shadow-2xl rounded-xl pt-2 pb-5 bg-[white]"
+            class="featuredItemContainer flex-container flex flex-wrap lg:w-[80%] m-auto justify-evenly shadow-2xl rounded-xl pt-2 pb-5 bg-[white] opacity-0"
           >
             <div
               class="image-container w-[90%] sm:w-[80%] md:w-[45%] h-max bg-[white] m-auto mt-2 relative"
@@ -1060,9 +1079,12 @@
                 <p>Save 60%</p>
               </div>
             </div>
+             
+
             <div
               class="description-container w-[90%] sm:w-[80%] md:w-[50%] h-max bg-[white] mt-2 pb-10"
             >
+            <div class="h-[50vh] lazyload"></div>
               <p
                 class="font-[coustard] tracking-[5px] text-[#AA740A] font-[100] text-sm mb-6"
               >
@@ -1148,6 +1170,8 @@
 
       <!-- Season Section  -->
       <section class="season">
+        <div class="h-[50vh] lazyload"></div>
+
         <div class="Seasonal my-16 relative">
           
           <div class="">
@@ -1185,6 +1209,8 @@
             </div>
           </div>
 
+          <div class="h-[50vh] lazyload"></div>
+
           <div
           class="cardContainer h-[80vh] w-[90%] sm:w-full md:w-[95%] lg:w-[90%] xl:w-[85%] m-auto mt-14 py-5 px-2 rounded-2xl overflow-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 2xl:grid-cols-5"
           ></div>
@@ -1194,6 +1220,8 @@
       <!-- Footer Section  -->
       <section class="footer sm:pt-20">
         <div class="footer-container">
+        <div class="h-[50vh] lazyload"></div>
+
           <div class="footer-banner relative">
             <div
               class="footer-heading hidden md:block absolute md:w-auto text-center md:translate-x-0 md:-top-7 lg:-top-11 2xl:-top-14 md:right-[25px]"
@@ -1243,6 +1271,8 @@
               </div>
             </div>
           </div>
+        <div class="h-[50vh] lazyload"></div>
+
 
           <div class="footer-social py-14">
             <div class="text-center">
@@ -1280,6 +1310,8 @@
               />
             </div>
           </div>
+
+        <div class="h-[50vh] lazyload"></div>
 
           <div
             class="footer-links bg-[#3B2A1C] text-[#FAF9F6] px-9 py-9 font-[Lato]"
