@@ -1255,7 +1255,8 @@ const tabContainerEl=document.querySelector('.tab-container')
 const lazyloadEls=document.querySelectorAll('.lazyload');
 const featuredHeadingEl=document.querySelector('.featuredHeading')
 const featuredItemContainer=document.querySelector('.featuredItemContainer')
-const seasonHeaderEl=document.querySelector('.seasonal')
+const seasonHeaderEl=document.querySelector('.seasonHeading')
+const footerBannerEl=document.querySelector('.footer-banner')
 
 console.log(lazyloadEls)
 
@@ -1276,14 +1277,14 @@ window.onscroll=()=>{
   
 
 
-  if((scrollY>200 && screenWidth<768 && screenWidth>414) || (screenWidth>767 && screenWidth<1024&& scrollY>300)|| (screenWidth>1023 && scrollY>500)){
+  let height=window.innerHeight
+  if((scrollY>200 && screenWidth<768 && screenWidth>414) || (screenWidth>767 && screenWidth<1024&& scrollY>height*0.5)|| (screenWidth>1023 && scrollY>height*0.5)){
 
     lazyloadEls[0].style.animation=`lazyloadShow 2s ease 1 forwards`
     
     categorySlideEl.style.animation=`opacityShow2 2s ease 1 forwards`;
     
   }
-  let height=window.innerHeight
   if((scrollY>height*0.8 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*0.9)|| (screenWidth>1023 && scrollY>height*1.1)){
 
 
@@ -1320,7 +1321,7 @@ window.onscroll=()=>{
 
     carouselEl.style.animation='opacityShow2 2s ease 1 forwards'
 
-     newHeadingEl.style.animation='opacityShow2 3s ease 0.5s 1 forwards'
+    newHeadingEl.style.animation='opacityShow2 3s ease 0.5s 1 forwards'
     
   }
 
@@ -1331,22 +1332,22 @@ window.onscroll=()=>{
     collectionHeadingEl.style.animation='opacityShow2 3s ease  1 forwards'
     
   }
-  if((scrollY>height*3.35 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.3)|| (screenWidth>1023 && scrollY>height*4.4)){
+  if((scrollY>height*3.35 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.1)|| (screenWidth>1023 && scrollY>height*4.4)){
 
 
     lazyloadEls[7].style.animation=`lazyloadShow 2s ease  1 forwards`  
-    tabContainerEl.style.animation='opacityShow2 2s ease 1s 1 forwards'
+    tabContainerEl.style.animation=`opacityShow2 2s ease 1 forwards`
    
     
 
     
   }
-  if((scrollY>height*3.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.8)|| (screenWidth>1023 && scrollY>height*5.1)){
+  if((scrollY>height*3.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.5)|| (screenWidth>1023 && scrollY>height*4.9)){
 
 
     lazyloadEls[8].style.animation=`lazyloadShow 2s ease  1 forwards` 
     featuredHeadingEl.style.animation='opacityShow2 2s ease 1s 1 forwards'
-    lazyloadEls[9].style.animation=`lazyloadShow 2s ease 2s 1 forwards`
+    lazyloadEls[9].style.animation=`lazyloadShow 2s ease 1.5s 1 forwards`
      featuredItemContainer.style.animation=`opacityShow2 2s ease 1 forwards`  
   }
   
@@ -1355,38 +1356,45 @@ window.onscroll=()=>{
   if((scrollY>height*4.2 && screenWidth<768)){
 
 
+    // console.log(lazyloadEls[10])
     lazyloadEls[10].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
      
   }
-   if((scrollY>height*5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*6)|| (screenWidth>1023 && scrollY>height*6.2)){
+   if((scrollY>height*5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*5.5)|| (screenWidth>1023 && scrollY>height*5.7)){
 
 
-    lazyloadEls[11].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
+    lazyloadEls[11].style.animation=`lazyloadShow 2s ease 1 forwards` 
+    seasonHeaderEl.style.animation=`opacityShow2 2s ease 1s 1 forwards`
+   
      
   }
-  if((scrollY>height*5.6 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*6.5)|| (screenWidth>1023 && scrollY>height*6.9)){
+  if((scrollY>height*5.6 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*6)|| (screenWidth>1023 && scrollY>height*6.3)){
 
 
-    lazyloadEls[12].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
+    lazyloadEls[12].style.animation=`lazyloadShow 2s ease  1 forwards` 
     seasonItemEl.forEach((element, idx )=> {
       element.style.animation=`opacityShow 3s ease-in-out ${idx*0.07}s 1 forwards`
       
     });
      
   }
-  if((scrollY>height*7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.8)|| (screenWidth>1023 && scrollY>height*8)){
+  if((scrollY>height*7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.2)|| (screenWidth>1023 && scrollY>height*7.8)){
 
+  
 
-    lazyloadEls[13].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
+    lazyloadEls[13].style.animation=`lazyloadShow 2s ease  1 forwards` 
+
+    footerBannerEl.style.animation=`opacityShow2 3s ease  1 forwards`
+   
     
   }
-  if((scrollY>height*7.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*8.2)|| (screenWidth>1023 && scrollY>height*8.4)){
+  if((scrollY>height*7.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.2)|| (screenWidth>1023 && scrollY>height*7.8)){
 
 
     lazyloadEls[14].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
     
   }
-  if((scrollY>height*7.8 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*8.6)|| (screenWidth>1023 && scrollY>height*8.8)){
+  if((scrollY>height*7.7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.6)|| (screenWidth>1023 && scrollY>height*7.8)){
 
 
     lazyloadEls[15].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
