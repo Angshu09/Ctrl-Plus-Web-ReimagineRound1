@@ -1390,13 +1390,13 @@ window.onscroll=()=>{
    
     
   }
-  if((scrollY>height*6.7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.2)|| (screenWidth>1023 && scrollY>height*7.9)){
+  if((scrollY>height*6.9 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.2)|| (screenWidth>1023 && scrollY>height*7.9)){
 
 
     lazyloadEls[15].style.animation=`lazyloadShow 1s ease 0.35s 1 forwards` 
     
   }
-  if((scrollY>height*7.7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.6)|| (screenWidth>1023 && scrollY>height*8)){
+  if((scrollY>height*7.3 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.6)|| (screenWidth>1023 && scrollY>height*8)){
 
 
     lazyloadEls[16].style.animation=`lazyloadShow 1s ease 0.25s 1 forwards` 
