@@ -208,7 +208,7 @@
       }
 
       .category .swiper-slide{
-        animation:opacityShow2 2s ease-in-out 1 forwards;
+        animation:opacityShow2 1s ease-in-out 1 forwards;
       }
 
       
@@ -262,30 +262,7 @@
         }
       }
 
-      @keyframes categoryShow {
-        from{
-          transform: translateX(500px);
-          opacity: 0;
-        }
-        30%
-        {
-          transform: translateX(-100px);
-          opacity: 0.25;
-        }
-        50%{
-          transform: translateX(0px);
-          opacity: 0.5;
-        }
-        70%{
-          transform: translateX(-60px);
-          opacity: 0.75;
-        }        
-        to{
-          transform: translateX(0px);
-          opacity: 1;
-        }
-        
-      }
+      
       @keyframes opacityShow {
         from{
           opacity:0;
@@ -296,7 +273,8 @@
           transform:scale(1) ;
         }
         
-      }@keyframes opacityShow2 {
+      }
+      @keyframes opacityShow2 {
         from{
           opacity:0;
           
@@ -308,21 +286,7 @@
         
       }
 
-      @keyframes header {
-        from{
-          opacity: 0;
-          transform: scale(0.3) ;
-        } 
-        50%{
-          opacity: 0.7;
-          transform: scale(1.2);
-        }
-        to{
-          opacity: 1;
-          transform: scale(1);
-
-        }
-      }
+      
 
       @keyframes lazyloadShow {
         
