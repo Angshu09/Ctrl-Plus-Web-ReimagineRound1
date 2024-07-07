@@ -1304,7 +1304,7 @@ window.onscroll=()=>{
     exploreHeadingEl.style.animation=`opacityShow2 2s ease 0.2s 1 forwards ` 
     lazyloadEls[2].style.animation=`lazyloadShow 2s ease 1 forwards` 
   }
-  if((scrollY>height*2.2 && screenWidth<601) || (screenWidth>600 && screenWidth<1024&& scrollY>height*1.9)|| (screenWidth>1023 && scrollY>height*2.2)){
+  if((scrollY>height*2 && screenWidth<601) || (screenWidth>600 && screenWidth<1024&& scrollY>height*1.9)|| (screenWidth>1023 && scrollY>height*2.2)){
 
     
     exploreSliderEl.style.animation='opacityShow2 2s ease 0.5s 1 forwards'
@@ -1341,13 +1341,13 @@ window.onscroll=()=>{
 
     
   }
-  if((scrollY>height*3.7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.8)|| (screenWidth>1023 && scrollY>height*5.1)){
+  if((scrollY>height*3.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.8)|| (screenWidth>1023 && scrollY>height*5.1)){
 
 
     lazyloadEls[8].style.animation=`lazyloadShow 2s ease  1 forwards` 
-    featuredHeadingEl.style.animation='opacityShow2 3s ease 1s 1 forwards'
+    featuredHeadingEl.style.animation='opacityShow2 2s ease 1s 1 forwards'
     lazyloadEls[9].style.animation=`lazyloadShow 2s ease 2s 1 forwards`
-     featuredItemContainer.style.animation=`opacityShow2 2s ease 0.5s 1 forwards`  
+     featuredItemContainer.style.animation=`opacityShow2 2s ease 1 forwards`  
   }
   
 
