@@ -1297,7 +1297,7 @@ window.onscroll=()=>{
   if((scrollY>height*0.6 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*1.1)|| (screenWidth>1023 && scrollY>height*1.3)){
 
     categorySliderEl.forEach((element, idx )=> {
-      element.style.animation=`opacityShow 2s ease-in-out ${idx*0.07}s 1 forwards`
+      element.style.animation=`opacityShow 2s ease-in-out ${idx*0.04}s 1 forwards`
       
     });
     
@@ -1375,7 +1375,7 @@ window.onscroll=()=>{
 
     lazyloadEls[13].style.animation=`lazyloadShow 2s ease  1 forwards` 
     seasonItemEl.forEach((element, idx )=> {
-      element.style.animation=`opacityShow 3s ease-in-out ${idx*0.07}s 1 forwards`
+      element.style.animation=`opacityShow 3s ease-in-out ${idx*0.05}s 1 forwards`
       
     });
      
