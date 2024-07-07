@@ -1287,14 +1287,14 @@ window.onscroll=()=>{
     categorySlideEl.style.animation=`opacityShow2 2s ease 1 forwards`;
     
   }
-  if((scrollY>height*0.8 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*0.9)|| (screenWidth>1023 && scrollY>height*1.1)){
+  if((scrollY>height*0.4 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*0.9)|| (screenWidth>1023 && scrollY>height*1.1)){
 
 
     categoryHeadingEl.style.animation=`opacityShow2 2s ease  1 forwards `
     lazyloadEls[2].style.animation=`lazyloadShow 2s ease 1 forwards`
     
   }
-  if((scrollY>height && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*1.1)|| (screenWidth>1023 && scrollY>height*1.3)){
+  if((scrollY>height*0.6 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*1.1)|| (screenWidth>1023 && scrollY>height*1.3)){
 
     categorySliderEl.forEach((element, idx )=> {
       element.style.animation=`opacityShow 2s ease-in-out ${idx*0.07}s 1 forwards`
@@ -1302,12 +1302,12 @@ window.onscroll=()=>{
     });
     
   }
-  if((scrollY>height*2.1 && screenWidth<601) || (screenWidth>600 && screenWidth<1024&& scrollY>height*1.5)|| (screenWidth>1023 && scrollY>height*1.9)){
+  if((scrollY>height*1.5 && screenWidth<601) || (screenWidth>600 && screenWidth<1024&& scrollY>height*1.5)|| (screenWidth>1023 && scrollY>height*1.9)){
 
     exploreHeadingEl.style.animation=`opacityShow2 2s ease 0.2s 1 forwards ` 
     lazyloadEls[3].style.animation=`lazyloadShow 2s ease 1 forwards` 
   }
-  if((scrollY>height*2 && screenWidth<601) || (screenWidth>600 && screenWidth<1024&& scrollY>height*1.9)|| (screenWidth>1023 && scrollY>height*2.2)){
+  if((scrollY>height*1.7 && screenWidth<601) || (screenWidth>600 && screenWidth<1024&& scrollY>height*1.9)|| (screenWidth>1023 && scrollY>height*2.2)){
 
     
     exploreSliderEl.style.animation='opacityShow2 2s ease 0.5s 1 forwards'
@@ -1315,7 +1315,7 @@ window.onscroll=()=>{
     
   }
 
-  if((scrollY>height*2.9 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*2.7)|| (screenWidth>1023 && scrollY>height*3)){
+  if((scrollY>height*2.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*2.7)|| (screenWidth>1023 && scrollY>height*3)){
 
     lazyloadEls[5].style.animation=`lazyloadShow 2s ease  1 forwards` 
     lazyloadEls[6].style.animation=`lazyloadShow 2s ease  1 forwards` 
@@ -1399,7 +1399,7 @@ window.onscroll=()=>{
   if((scrollY>height*7.7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.6)|| (screenWidth>1023 && scrollY>height*8)){
 
 
-    lazyloadEls[16].style.animation=`lazyloadShow 2s ease 0.9s 1 forwards` 
+    lazyloadEls[16].style.animation=`lazyloadShow 2s ease 0.5s 1 forwards` 
     
   }
 
