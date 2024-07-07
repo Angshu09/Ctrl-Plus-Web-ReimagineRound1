@@ -1278,8 +1278,9 @@ window.onscroll=()=>{
 
   if((scrollY>200 && screenWidth<768 && screenWidth>414) || (screenWidth>767 && screenWidth<1024&& scrollY>300)|| (screenWidth>1023 && scrollY>500)){
 
+    lazyloadEls[0].style.animation=`lazyloadShow 2s ease 1 forwards`
     
-    categorySlideEl.style.animation=`opacityShow2 3s ease 1 forwards`;
+    categorySlideEl.style.animation=`opacityShow2 2s ease 1 forwards`;
     
   }
   let height=window.innerHeight
@@ -1287,7 +1288,7 @@ window.onscroll=()=>{
 
 
     categoryHeadingEl.style.animation=`opacityShow2 2s ease  1 forwards `
-    lazyloadEls[0].style.animation=`lazyloadShow 3s ease 1 forwards`
+    lazyloadEls[1].style.animation=`lazyloadShow 2s ease 1 forwards`
     
   }
   if((scrollY>height && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*1.1)|| (screenWidth>1023 && scrollY>height*1.3)){
@@ -1301,23 +1302,23 @@ window.onscroll=()=>{
   if((scrollY>height*2.1 && screenWidth<601) || (screenWidth>600 && screenWidth<1024&& scrollY>height*1.5)|| (screenWidth>1023 && scrollY>height*1.9)){
 
     exploreHeadingEl.style.animation=`opacityShow2 2s ease 0.2s 1 forwards ` 
-    lazyloadEls[1].style.animation=`lazyloadShow 3s ease 1 forwards` 
+    lazyloadEls[2].style.animation=`lazyloadShow 2s ease 1 forwards` 
   }
   if((scrollY>height*2.2 && screenWidth<601) || (screenWidth>600 && screenWidth<1024&& scrollY>height*1.9)|| (screenWidth>1023 && scrollY>height*2.2)){
 
     
-    exploreSliderEl.style.animation='opacityShow2 3s ease 1s 1 forwards'
-    lazyloadEls[2].style.animation=`lazyloadShow 3s ease  1 forwards` 
+    exploreSliderEl.style.animation='opacityShow2 2s ease 0.5s 1 forwards'
+    lazyloadEls[3].style.animation=`lazyloadShow 2s ease  1 forwards` 
     
   }
 
   if((scrollY>height*2.9 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*2.7)|| (screenWidth>1023 && scrollY>height*3)){
 
-    lazyloadEls[3].style.animation=`lazyloadShow 2s ease  1 forwards` 
     lazyloadEls[4].style.animation=`lazyloadShow 2s ease  1 forwards` 
-    newCollectionHeadingEl.style.animation='opacityShow2 3s ease 1 forwards'
+    lazyloadEls[5].style.animation=`lazyloadShow 2s ease  1 forwards` 
+    newCollectionHeadingEl.style.animation='opacityShow2 2s ease 1 forwards'
 
-    carouselEl.style.animation='opacityShow2 3s ease 1 forwards'
+    carouselEl.style.animation='opacityShow2 2s ease 1 forwards'
 
      newHeadingEl.style.animation='opacityShow2 3s ease 0.5s 1 forwards'
     
@@ -1325,28 +1326,28 @@ window.onscroll=()=>{
 
   if((scrollY>height*3.3 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*3.8)|| (screenWidth>1023 && scrollY>height*3.9)){
 
-    lazyloadEls[5].style.animation=`lazyloadShow 3s ease 1 forwards` 
+    lazyloadEls[6].style.animation=`lazyloadShow 2s ease 1 forwards` 
 
     collectionHeadingEl.style.animation='opacityShow2 3s ease  1 forwards'
     
   }
-  if((scrollY>height*3.35 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.3)|| (screenWidth>1023 && scrollY>height*4.8)){
+  if((scrollY>height*3.35 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.3)|| (screenWidth>1023 && scrollY>height*4.4)){
 
 
-    lazyloadEls[6].style.animation=`lazyloadShow 3s ease  1 forwards`  
-    tabContainerEl.style.animation='opacityShow2 3s ease 1s 1 forwards'
+    lazyloadEls[7].style.animation=`lazyloadShow 2s ease  1 forwards`  
+    tabContainerEl.style.animation='opacityShow2 2s ease 1s 1 forwards'
    
     
 
     
   }
-  if((scrollY>height*3.7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*5)|| (screenWidth>1023 && scrollY>height*5.5)){
+  if((scrollY>height*3.7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.8)|| (screenWidth>1023 && scrollY>height*5.1)){
 
 
-    lazyloadEls[7].style.animation=`lazyloadShow 3s ease  1 forwards` 
+    lazyloadEls[8].style.animation=`lazyloadShow 2s ease  1 forwards` 
     featuredHeadingEl.style.animation='opacityShow2 3s ease 1s 1 forwards'
-    lazyloadEls[8].style.animation=`lazyloadShow 3s ease 2s 1 forwards`
-     featuredItemContainer.style.animation=`opacityShow2 3s ease 2s 1 forwards`  
+    lazyloadEls[9].style.animation=`lazyloadShow 2s ease 2s 1 forwards`
+     featuredItemContainer.style.animation=`opacityShow2 2s ease 0.5s 1 forwards`  
   }
   
 
@@ -1354,19 +1355,19 @@ window.onscroll=()=>{
   if((scrollY>height*4.2 && screenWidth<768)){
 
 
-    lazyloadEls[9].style.animation=`lazyloadShow 3s ease 1s 1 forwards` 
+    lazyloadEls[10].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
      
   }
    if((scrollY>height*5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*6)|| (screenWidth>1023 && scrollY>height*6.2)){
 
 
-    lazyloadEls[10].style.animation=`lazyloadShow 3s ease 1s 1 forwards` 
+    lazyloadEls[11].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
      
   }
   if((scrollY>height*5.6 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*6.5)|| (screenWidth>1023 && scrollY>height*6.9)){
 
 
-    lazyloadEls[11].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
+    lazyloadEls[12].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
     seasonItemEl.forEach((element, idx )=> {
       element.style.animation=`opacityShow 3s ease-in-out ${idx*0.07}s 1 forwards`
       
@@ -1376,32 +1377,22 @@ window.onscroll=()=>{
   if((scrollY>height*7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.8)|| (screenWidth>1023 && scrollY>height*8)){
 
 
-    lazyloadEls[12].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
+    lazyloadEls[13].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
     
   }
   if((scrollY>height*7.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*8.2)|| (screenWidth>1023 && scrollY>height*8.4)){
 
 
-    lazyloadEls[13].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
+    lazyloadEls[14].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
     
   }
   if((scrollY>height*7.8 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*8.6)|| (screenWidth>1023 && scrollY>height*8.8)){
 
 
-    lazyloadEls[14].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
+    lazyloadEls[15].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
     
   }
-  
 
-  
-  
-  
-
-
-}
-function measureTime(){
-  let time=performance.now()
-  return time
 
 }
 
