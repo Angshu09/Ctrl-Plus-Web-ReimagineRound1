@@ -1262,10 +1262,10 @@ console.log(lazyloadEls)
 
 if(screenWidth>414){
   categorySlideEl.style.opacity=0;
+  lazyloadEls[0].style.animation=`lazyloadShow 2s ease 1 forwards`
 
 }
 
-lazyloadEls[0].style.animation=`lazyloadShow 2s ease 1 forwards`
 
 
 const exploreSliderEl= document.querySelector('.best-seller .exploreSlider')
@@ -1285,6 +1285,7 @@ window.onscroll=()=>{
     lazyloadEls[1].style.animation=`lazyloadShow 1s ease 1 forwards`
     
     categorySlideEl.style.animation=`opacityShow2 1s ease 1 forwards`;
+    
     
   }
   if((scrollY>height*0.4 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*0.9)|| (screenWidth>1023 && scrollY>height*1.1)){
