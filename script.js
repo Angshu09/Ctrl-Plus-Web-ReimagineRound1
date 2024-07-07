@@ -1378,7 +1378,7 @@ window.onscroll=()=>{
     });
      
   }
-  if((scrollY>height*7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.2)|| (screenWidth>1023 && scrollY>height*7.8)){
+  if((scrollY>height*7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.2)|| (screenWidth>1023 && scrollY>height*7.9)){
 
   
 
@@ -1388,7 +1388,7 @@ window.onscroll=()=>{
    
     
   }
-  if((scrollY>height*7.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.2)|| (screenWidth>1023 && scrollY>height*7.8)){
+  if((scrollY>height*7.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.2)|| (screenWidth>1023 && scrollY>height*7.9)){
 
 
     lazyloadEls[14].style.animation=`lazyloadShow 2s ease 1s 1 forwards` 
