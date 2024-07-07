@@ -262,31 +262,18 @@
         }
       }
 
-      @keyframes categoryShow {
+      
+      @keyframes opacityShow {
         from{
-          transform: translateX(500px);
-          opacity: 0;
-        }
-        30%
-        {
-          transform: translateX(-100px);
-          opacity: 0.25;
-        }
-        50%{
-          transform: translateX(0px);
-          opacity: 0.5;
-        }
-        70%{
-          transform: translateX(-60px);
-          opacity: 0.75;
-        }        
-        to{
-          transform: translateX(0px);
+          opacity:0;
+          transform: scale(0.2) ;
+          
+        }to{
           opacity: 1;
+          transform:scale(1) ;
         }
         
       }
-
       @keyframes opacityShow2 {
         from{
           opacity:0;
@@ -299,6 +286,7 @@
         
       }
 
+      
 
       @keyframes lazyloadShow {
         
