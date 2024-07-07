@@ -1316,7 +1316,7 @@ window.onscroll=()=>{
     
   }
 
-  if((scrollY>height*2.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*2.7)|| (screenWidth>1023 && scrollY>height*3)){
+  if((scrollY>height*2.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*2.6)|| (screenWidth>1023 && scrollY>height*3)){
 
     lazyloadEls[5].style.animation=`lazyloadShow 1s ease  1 forwards` 
     lazyloadEls[6].style.animation=`lazyloadShow 1s ease  1 forwards` 
