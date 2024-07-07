@@ -15,7 +15,7 @@ if(!cartList){
 
 let screenWidth = window.innerWidth;
 
-if (screenWidth > 768) {
+if (screenWidth > 767) {
   headingNewCollection.classList.remove("hidden");
 } else {
   headingNewCollection.classList.add("hidden");
@@ -1328,14 +1328,14 @@ window.onscroll=()=>{
     
   }
 
-  if((scrollY>height*3.3 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*3.8)|| (screenWidth>1023 && scrollY>height*3.9)){
+  if((scrollY>height*3.3 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*3.2)|| (screenWidth>1023 && scrollY>height*3.9)){
 
     lazyloadEls[7].style.animation=`lazyloadShow 1s ease 1 forwards` 
 
     collectionHeadingEl.style.animation='opacityShow2 1.5s ease  1 forwards'
     
   }
-  if((scrollY>height*3.35 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.1)|| (screenWidth>1023 && scrollY>height*4.4)){
+  if((scrollY>height*3.35 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*3.4)|| (screenWidth>1023 && scrollY>height*4.4)){
 
 
     lazyloadEls[8].style.animation=`lazyloadShow 1s ease  1 forwards`  
@@ -1345,7 +1345,7 @@ window.onscroll=()=>{
 
     
   }
-  if((scrollY>height*3.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.5)|| (screenWidth>1023 && scrollY>height*4.9)){
+  if((scrollY>height*3.5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*3.8)|| (screenWidth>1023 && scrollY>height*4.9)){
 
 
     lazyloadEls[9].style.animation=`lazyloadShow 1s ease  1 forwards` 
@@ -1363,7 +1363,7 @@ window.onscroll=()=>{
     lazyloadEls[11].style.animation=`lazyloadShow 1s ease 0.5s 1 forwards` 
      
   }
-   if((scrollY>height*5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*5.5)|| (screenWidth>1023 && scrollY>height*5.7)){
+   if((scrollY>height*5 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.5)|| (screenWidth>1023 && scrollY>height*5.7)){
 
 
     lazyloadEls[12].style.animation=`lazyloadShow 1s ease 1 forwards` 
@@ -1371,7 +1371,7 @@ window.onscroll=()=>{
    
      
   }
-  if((scrollY>height*5.6 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*6)|| (screenWidth>1023 && scrollY>height*6.3)){
+  if((scrollY>height*5.6 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*4.9)|| (screenWidth>1023 && scrollY>height*6.3)){
 
 
     lazyloadEls[13].style.animation=`lazyloadShow 1s ease  1 forwards` 
@@ -1381,7 +1381,7 @@ window.onscroll=()=>{
     });
      
   }
-  if((scrollY>height*6.7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.2)|| (screenWidth>1023 && scrollY>height*7.9)){
+  if((scrollY>height*6.7 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*5.5)|| (screenWidth>1023 && scrollY>height*7.9)){
 
   
 
@@ -1391,13 +1391,13 @@ window.onscroll=()=>{
    
     
   }
-  if((scrollY>height*6.9 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.2)|| (screenWidth>1023 && scrollY>height*7.9)){
+  if((scrollY>height*6.9 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*5.5)|| (screenWidth>1023 && scrollY>height*7.9)){
 
 
     lazyloadEls[15].style.animation=`lazyloadShow 1s ease 0.35s 1 forwards` 
     
   }
-  if((scrollY>height*7.3 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*7.6)|| (screenWidth>1023 && scrollY>height*8)){
+  if((scrollY>height*7.3 && screenWidth<768) || (screenWidth>767 && screenWidth<1024&& scrollY>height*5.8)|| (screenWidth>1023 && scrollY>height*8)){
 
 
     lazyloadEls[16].style.animation=`lazyloadShow 1s ease 0.25s 1 forwards` 
