@@ -603,36 +603,36 @@ function changeBannerImage() {
 
   const bannerImages = {
     small:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1719690052/baccabucci/oe7tazktfpp3u0m4wold.jpg",
+      "media/footerbannersmall.png",
     large:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1718270252/baccabucci/footer/egeraxcf41x4boobjcuv.jpg",
+      "media/footerbannerbig.png",
   };
 
   const deliveryImages = {
     small:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1719580070/baccabucci/hcez75blwh9mzapuu9j5.jpg",
+      "media/deliverysmall.png",
     large:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1718952469/baccabucci/nqbc4fr7w7v0insklvy8.png",
+      "media/delivery.png",
   };
 
   const heroSlider1Images = {
     small:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1719238176/baccabucci/hx01xmk9jfg8fbxgiqci.jpg",
+      "media/b1small.png",
     large:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1719238761/baccabucci/qg2be42m2ccskau5xmvp.jpg",
+      "media/b1big.png",
   };
 
   const heroSlider2Images = {
     small:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1719238178/baccabucci/mhxxgfq2uwanec2oigiq.jpg",
+      "media/b2small.png",
     large:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1719238759/baccabucci/dtyot6kt9vrldqks9phs.jpg",
+      "media/b2big.png",
   };
   const videoSlider2Images = {
     small:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1719582415/baccabucci/gftrxf9nozrwycxtgqzn.jpg" ,
+      "media/bvsmall.png" ,
     large:
-      "https://res.cloudinary.com/dojcchveo/image/upload/v1719583104/baccabucci/sshoracn3rmcvmomlfgu.png",
+      "media/bvbig.png",
   };
 
 
