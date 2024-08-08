@@ -603,36 +603,36 @@ function changeBannerImage() {
 
   const bannerImages = {
     small:
-      "media/footerbannersmall.png",
+      "https://raw.githubusercontent.com/Angshu09/Ctrl-Plus-Web-ReimagineRound1/main/media/footerbannersmall.png",
     large:
-      "media/footerbannerbig.png",
+      "https://raw.githubusercontent.com/Angshu09/Ctrl-Plus-Web-ReimagineRound1/main/media/footerbannerbig.png",
   };
 
   const deliveryImages = {
     small:
-      "media/deliverysmall.png",
+      "https://raw.githubusercontent.com/Angshu09/Ctrl-Plus-Web-ReimagineRound1/main/media/deliverysmall.png",
     large:
-      "media/delivery.png",
+      "https://raw.githubusercontent.com/Angshu09/Ctrl-Plus-Web-ReimagineRound1/main/media/delivery.png",
   };
 
   const heroSlider1Images = {
     small:
-      "media/b1small.png",
+      "https://raw.githubusercontent.com/Angshu09/Ctrl-Plus-Web-ReimagineRound1/main/media/b1small.png",
     large:
-      "media/b1big.png",
+      "https://raw.githubusercontent.com/Angshu09/Ctrl-Plus-Web-ReimagineRound1/main/media/b1big.png",
   };
 
   const heroSlider2Images = {
     small:
-      "media/b2small.png",
+      "https://raw.githubusercontent.com/Angshu09/Ctrl-Plus-Web-ReimagineRound1/main/media/b2small.png",
     large:
-      "media/b2big.png",
+      "https://raw.githubusercontent.com/Angshu09/Ctrl-Plus-Web-ReimagineRound1/main/media/b2big.png",
   };
   const videoSlider2Images = {
     small:
-      "media/bvsmall.png" ,
+      "https://raw.githubusercontent.com/Angshu09/Ctrl-Plus-Web-ReimagineRound1/main/media/bvsmall.png" ,
     large:
-      "media/bvbig.png",
+      "https://raw.githubusercontent.com/Angshu09/Ctrl-Plus-Web-ReimagineRound1/main/media/bvbig.png",
   };
 
 
